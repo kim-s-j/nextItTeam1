@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .slidebox {
+        width: 100%;
+      }
+      .slidebox .slidelist {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0;
+        overflow: hidden;
+      }
+      .slidebox .slidelist .slideitem {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        background-color: #fff;
+        width: 100%;
+        transition: all 1s;
+      }
+      .slidebox .slidelist .slideitem > a {
+        display: block;
+        width: auto;
+        position: relative;
+      }
+      .slidebox .slidelist .slideitem > a img {
+        width: 100%;
+      }
+
+      #slide01:checked ~ .slidelist .slideitem {
+        left: 0;
+      }
+      #slide02:checked ~ .slidelist .slideitem {
+        left: -100%;
+      }
+      #slide03:checked ~ .slidelist .slideitem {
+        left: -200%;
+      }
+      #slide04:checked ~ .slidelist .slideitem {
+        left: -300%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slidebox">
+      <input type="radio" name="slide" id="slide01" checked />
+      <input type="radio" name="slide" id="slide02" />
+      <input type="radio" name="slide" id="slide03" />
+      <input type="radio" name="slide" id="slide04" />
+      <ul class="slidelist">
+        <li class="slideitem">
+          <a><img src="/images/짱구 콜라보 홍보 이미지.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="/images/슈크리미3종 홍보 이미지.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="/images/블루캔디월드 홍보 이미지.jpg" /></a>
+        </li>
+        <li class="slideitem">
+          <a><img src="/images/멤버십활성화 이미지.jpg" /></a>
+        </li>
+      </ul>
+      <div class="slide-control">
+        <div class="control01">
+          <label for="slide04" class="prev"></label>
+          <label for="slide02" class="next"></label>
+        </div>
+        <div class="control02">
+          <label for="slide01" class="prev"></label>
+          <label for="slide03" class="next"></label>
+        </div>
+        <div class="control03">
+          <label for="slide02" class="prev"></label>
+          <label for="slide04" class="next"></label>
+        </div>
+        <div class="control04">
+          <label for="slide03" class="prev"></label>
+          <label for="slide01" class="next"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

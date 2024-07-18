@@ -4,14 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+        margin: 0;
+      }
+      #promotion {
+        width: 100%;
+      }
+      #promotion > #slide {
+        width: 100%;
+      }
+      #promotion > input {
+        position: relative;
+        left: 50%;
+        bottom: 50px;
+      }
+      #promotion > #slide > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: inline-block;
+        transform: translateX(100vw);
+      }
+      #promotion > #slide > .startImg {
+        transform: translateX(0vw);
+      }
+    </style>
   </head>
   <body>
-    <div id="div1">
-      <a href="/project/menubar/CeoComment.html"
-        ><img src="/images/movie.PNG" disabled="disabled" alt=""
-      /></a>
-      <button id="btn1">테스트</button>
+    <div id="promotion">
+      <div id="slide">
+        <img
+          class="startImg"
+          src="/images/짱구 콜라보 홍보 이미지.jpg"
+          alt=""
+        />
+        <img src="/images/슈크리미3종 홍보 이미지.jpg" alt="" />
+        <img src="/images/블루캔디월드 홍보 이미지.jpg" alt="" />
+        <img src="/images/멤버십활성화 이미지.jpg" alt="" />
+      </div>
+      <input class="promotion_rdo1" type="radio" name="promotion_rdo" checked />
+      <input class="promotion_rdo2" type="radio" name="promotion_rdo" />
+      <input class="promotion_rdo3" type="radio" name="promotion_rdo" />
+      <input class="promotion_rdo4" type="radio" name="promotion_rdo" />
     </div>
-    <script></script>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      //for()
+      window.onload = function () {
+        //setInterval("PromotionLoof()", 2000);
+        //setInterval("PromotionLoof2()", 2000);
+      };
+      var nowImg;
+      var lastImg;
+      function PromotionLoof() {
+        nowImg = $("img").eq(0);
+        lastImg = $("img").eq(-1);
+        console.log("실행중");
+        lastImg
+          .addClass("startImg")
+          .css("opacity", 0)
+          .animate({ opacity: 1 }, 1000, function () {
+            $("#promotion").prepend(lastImg);
+            nowImg.removeClass("startImg");
+          });
+      }
+    </script>
   </body>
 </html>
