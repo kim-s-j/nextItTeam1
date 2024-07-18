@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기업소개</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        line-height: 1;
+        position: relative;
+        max-width: 1920px;
+        margin: auto;
+      }
+      div {
+        display: block;
+        unicode-bidi: isolate;
+      }
+      h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      }
+      dl {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        unicode-bidi: isolate;
+      }
+      dt {
+        display: block;
+        unicode-bidi: isolate;
+      }
+      span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #071f60;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 28px;
+        font-weight: 700;
+        color: #202020;
+        line-height: 1.4em;
+        padding: 0;
+        margin: 0;
+      }
+      dd {
+        display: block;
+        margin-inline-start: 40px;
+        unicode-bidi: isolate;
+      }
+      .identifier_h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #202020;
+        text-align: center;
+      }
+      .identifier_h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        margin: 25px auto 50px;
+        background: #202020;
+      }
+      .identifier_dl {
+        text-align: center;
+      }
+      .identifier_dl dt {
+        margin-bottom: 20px;
+      }
+      .identifier_dl dt p {
+        font-size: 28px;
+        font-weight: 700;
+        color: #202020;
+        line-height: 1.4em;
+      }
+      .identifier_dl dd {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #606060;
+        line-height: 1.4em;
+      }
+      .identifier_dl dd p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #606060;
+        line-height: 1.4em;
+      }
+      .logo {
+        margin-top: 40px;
+      }
+      .logo .logo1 {
+        width: 100%;
+        padding: 30px 0px 30px 0px;
+        margin-bottom: 40px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/check_bg.gif)
+          top center;
+        background-size: 115% auto;
+      }
+
+      .logo .logo1 p {
+        width: 80%;
+        max-width: 722px;
+        margin: auto;
+      }
+      .identifier {
+        width: 92%;
+        max-width: 1150px;
+        margin: 65px auto 0 auto;
+      }
+
+      .logo_ul {
+        font-size: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        text-align: -webkit-match-parent;
+        unicode-bidi: isolate;
+      }
+
+      .logo_ul li {
+        display: inline-block;
+        width: 30%;
+        margin-right: 5%;
+        vertical-align: middle;
+      }
+
+      .logo_ul li:last-child {
+        margin-right: 0;
+      }
+      .color {
+        width: 92%;
+        max-width: 1150px;
+        margin: 80px auto 0 auto;
+        padding-top: 80px;
+        border-top: 1px solid #ddd;
+      }
+      .color .color_dl {
+        text-align: center;
+      }
+
+      .color_dl dt {
+        margin-bottom: 20px;
+      }
+
+      .color_dl dt > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #071f60;
+        letter-spacing: 2px;
+      }
+      .color_dl dt p {
+        font-size: 28px;
+        font-weight: 700;
+        color: #202020;
+        line-height: 1.4em;
+      }
+      .color .paiks_color {
+        margin: 40px 0 60px 0;
+      }
+
+      .color .paiks_color li {
+        max-width: 360px;
+        margin: 0 auto 25px auto;
+        padding: 25px 30px 25px 30px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .paiks_color li {
+          float: left;
+          width: 32%;
+          max-width: none;
+          margin-right: 2%;
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 760px) {
+        .color .paiks_color li {
+          height: 265px;
+        }
+      }
+
+      @media screen and (min-width: 1020px) {
+        .color .paiks_color li {
+          height: 282px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .color .paiks_color li {
+          width: 360px;
+          height: auto;
+          padding: 40px 40px 40px 40px;
+          margin-right: 35px;
+        }
+      }
+
+      .color .paiks_color li:last-child {
+        margin: 0 auto 0 auto;
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .paiks_color li:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .color .paiks_color li:nth-child(1) .color_box {
+        background: #001f60;
+      }
+      .color .paiks_color li:nth-child(2) .color_box {
+        background: #ffe800;
+      }
+      .color .paiks_color li:nth-child(3) .color_box {
+        background: #e6e7e8;
+      }
+      .color .paiks_color li:nth-child(1) dt {
+        color: #001f60;
+      }
+      .color .paiks_color li:nth-child(2) dt {
+        color: #ffe800;
+      }
+      .color .paiks_color li:nth-child(3) dt {
+        color: #b8b9b9;
+      }
+
+      .color .paiks_color li .color_box {
+        display: block;
+        width: 100%;
+        height: 35px;
+      }
+
+      .color .paiks_color li dt {
+        margin: 20px 0 20px 0;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .color .paiks_color li dd {
+        margin: 0;
+      }
+      .color .paiks_color li dd p {
+        font-size: 18px;
+        color: #606060;
+        line-height: 1.4em;
+      }
+      .color .color_logo dl {
+        display: table;
+        margin: 0 auto 25px auto;
+      }
+
+      .color .color_logo dl dt {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #606060;
+      }
+      @media screen and (min-width: 1020px) {
+        .color .color_logo dl dt {
+          margin-bottom: 12px;
+          font-size: 20px;
+        }
+      }
+
+      .color .color_logo dl:nth-child(1) dd {
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+      }
+      .color .color_logo dl:nth-child(2) dd {
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+      }
+      .color .color_logo dl:nth-child(3) dd {
+        background: #ffe417;
+      }
+      .color .color_logo dl:nth-child(4) dd {
+        background: #182c54;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .color .color_logo dl dd {
+          padding: 22px 0;
+        }
+      }
+      @media screen and (min-width: 670px) {
+        .color .color_logo dl dd {
+          max-width: none;
+        }
+      }
+
+      .color .color_logo dl dd {
+        max-width: 360px;
+        padding: 15px 15px 15px 15px;
+        text-align: center;
+        margin: 0;
+      }
+      .color .color_logo dl dd img {
+        width: 60%;
+      }
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .color_logo {
+          font-size: 0;
+        }
+      }
+
+      .color .color_logo dl {
+        display: table;
+        margin: 0 auto 25px;
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .color_logo dl {
+          display: inline-block;
+          width: 48%;
+          margin-right: 2%;
+        }
+      }
+
+      @media screen and (min-width: 1020px) {
+        .color .color_logo dl {
+          margin: 0 2% 40px 0;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .color .color_logo dl {
+          width: 540px;
+          margin-right: 70px;
+        }
+      }
+      .color .color_logo dl:last-child {
+        margin: 0 auto 0 auto;
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .color_logo dl:nth-child(even) {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="identifier">
+      <h2 class="identifier_h2">BRAND IDENTIFIER</h2>
+
+      <dl class="identifier_dl">
+        <dt>
+          <span>PRIMARY IDENTIFIER</span>
+          <p></p>
+          <p>빽다방 브랜드 규정</p>
+        </dt>
+        <dd>
+          <p>
+            빽다방 Idenfitire는 빽다방을 대표하는 중요한 상징요소로, 심볼마크와
+            로고타입의 조합을 의미합니다.
+          </p>
+          <p>
+            빽다방의 시각 아이덴티티 구축은 정확한 Identifier 규정에 따라야
+            하며, 어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
+            안됩니다.
+          </p>
+        </dd>
+      </dl>
+      <div class="logo">
+        <div class="logo1">
+          <p><img src="/이미지/standard_logo.png" alt="빽다방" /></p>
+        </div>
+        <ul class="logo_ul">
+          <li>
+            <img src="/이미지/paiks_logo01.jpg" alt="PAIK'S COFFEE" />
+          </li>
+          <li>
+            <img src="/이미지/paiks_logo02.jpg" alt="뺵다방" />
+          </li>
+          <li>
+            <img src="/이미지/paiks_logo03.jpg" alt="PAIK'S COFFEE" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="color">
+      <dl class="color_dl">
+        <dt>
+          <span>BRAND COLOR</span>
+          <p></p>
+          <p>빽다방 컬러 시스템</p>
+        </dt>
+      </dl>
+      <ul class="paiks_color">
+        <li>
+          <div class="color_box"></div>
+          <dl>
+            <dt>PAIK’S NAVY BLUE</dt>
+            <dd>
+              <p>CMYK : C100 / M98 / Y58 / K14</p>
+              <p>RGB : G31 / B96</p>
+              <p>#001F60</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="color_box"></div>
+          <dl>
+            <dt>PAIK’S YELLOW</dt>
+            <dd>
+              <p>CMYK : M11 / Y87</p>
+              <p>RGB : R255 / G232</p>
+              <p>#FFE800</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="color_box"></div>
+          <dl>
+            <dt>PAIK’S LIGHT GRAY</dt>
+            <dd>
+              <p>CMYK : K10</p>
+              <p>RGB : R230 / G231 / B232</p>
+              <p>#E6E7E8</p>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+      <div class="color_logo">
+        <dl>
+          <dt>WHITE BACKGROUND / NAVY COLOR</dt>
+          <dd>
+            <img src="/이미지/color_logo01.jpg" alt="PAIK'S COFFEE" />
+          </dd>
+        </dl>
+        <dl>
+          <dt>WHITE BACKGROUND / BLACK COLOR</dt>
+          <dd>
+            <img src="/이미지/color_logo02.jpg" alt="PAIK'S COFFEE" />
+          </dd>
+        </dl>
+        <dl>
+          <dt>YELLOW BACKGROUND / NAVY COLOR</dt>
+          <dd>
+            <img src="/이미지/color_logo03.jpg" alt="PAIK'S COFFEE" />
+          </dd>
+        </dl>
+        <dl>
+          <dt>NAVY BACKGROUND / YELLOW COLOR</dt>
+          <dd>
+            <img src="/이미지/color_logo04.jpg" alt="PAIK'S COFFEE" />
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </body>
+</html>
