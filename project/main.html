@@ -4,75 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
       * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
       }
-      body {
-        overflow-x: hidden;
-        margin: 0;
-      }
-      #promotion {
+      .slidebox {
         width: 100%;
       }
-      #promotion > #slide {
-        width: 100%;
-      }
-      #promotion > input {
+      .slidebox .slidelist {
         position: relative;
-        left: 50%;
-        bottom: 50px;
+        white-space: nowrap;
+        font-size: 0;
+        overflow: hidden;
       }
-      #promotion > #slide > img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .slidebox .slidelist .slideitem {
+        position: relative;
         display: inline-block;
-        transform: translateX(100vw);
+        vertical-align: middle;
+        width: 100%;
+        transition: all 1s;
       }
-      #promotion > #slide > .startImg {
-        transform: translateX(0vw);
+      .slidebox .slidelist .slideitem > img {
+        display: block;
+        width: auto;
+        position: relative;
+        width: 100%;
+      }
+
+      #slide01:checked ~ .slidelist .slideitem {
+        left: 0;
+      }
+      #slide02:checked ~ .slidelist .slideitem {
+        left: -100%;
+      }
+      #slide03:checked ~ .slidelist .slideitem {
+        left: -200%;
+      }
+      #slide04:checked ~ .slidelist .slideitem {
+        left: -300%;
       }
     </style>
   </head>
   <body>
-    <div id="promotion">
-      <div id="slide">
-        <img
-          class="startImg"
-          src="/images/짱구 콜라보 홍보 이미지.jpg"
-          alt=""
-        />
-        <img src="/images/슈크리미3종 홍보 이미지.jpg" alt="" />
-        <img src="/images/블루캔디월드 홍보 이미지.jpg" alt="" />
-        <img src="/images/멤버십활성화 이미지.jpg" alt="" />
+    <div class="slidebox">
+      <input
+        id="slide01"
+        type="radio"
+        name="slide"
+        value="1"
+        onclick="slideClick(0,0)"
+        checked
+      />
+      <input
+        id="slide02"
+        type="radio"
+        name="slide"
+        value="2"
+        onclick="slideClick(1,-100)"
+      />
+      <input
+        id="slide03"
+        type="radio"
+        name="slide"
+        value="3"
+        onclick="slideClick(2,-200)"
+      />
+      <input
+        id="slide04"
+        type="radio"
+        name="slide"
+        value="4"
+        onclick="slideClick(3,-300)"
+      />
+      <div class="slidelist">
+        <li class="slideitem" id="li1">
+          <img src="/images/짱구 콜라보 홍보 이미지.jpg" />
+        </li>
+        <li class="slideitem" id="li2">
+          <img src="/images/슈크리미3종 홍보 이미지.jpg" />
+        </li>
+        <li class="slideitem" id="li3">
+          <img src="/images/블루캔디월드 홍보 이미지.jpg" />
+        </li>
+        <li class="slideitem" id="li4">
+          <img src="/images/멤버십활성화 이미지.jpg" />
+        </li>
       </div>
-      <input class="promotion_rdo1" type="radio" name="promotion_rdo" checked />
-      <input class="promotion_rdo2" type="radio" name="promotion_rdo" />
-      <input class="promotion_rdo3" type="radio" name="promotion_rdo" />
-      <input class="promotion_rdo4" type="radio" name="promotion_rdo" />
     </div>
-
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-      //for()
-      window.onload = function () {
-        //setInterval("PromotionLoof()", 2000);
-        //setInterval("PromotionLoof2()", 2000);
-      };
-      var nowImg;
-      var lastImg;
-      function PromotionLoof() {
-        nowImg = $("img").eq(0);
-        lastImg = $("img").eq(-1);
-        console.log("실행중");
-        lastImg
-          .addClass("startImg")
-          .css("opacity", 0)
-          .animate({ opacity: 1 }, 1000, function () {
-            $("#promotion").prepend(lastImg);
-            nowImg.removeClass("startImg");
-          });
+      let x_pos = -100;
+      let i = 1;
+      function moveSlide() {
+        for (let j = 1; j < 5; j++) {
+          document.getElementById(`li${j}`).style.left = `${x_pos}%`;
+        }
+        x_pos -= 100;
+        x_pos = x_pos == -400 ? 0 : x_pos;
+        i++;
+        i = i == 5 ? 1 : i;
+        $(`input:radio[name='slide'][value='${i}']`).prop("checked", true);
+      }
+      let interval = setInterval("moveSlide()", 2000);
+      function slideClick(objVal, pos) {
+        i = objVal;
+        x_pos = pos;
+        moveSlide();
+        clearInterval(interval);
+        interval = setInterval("moveSlide()", 2000);
       }
     </script>
   </body>
