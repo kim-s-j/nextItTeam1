@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>기업소개</title>
@@ -8,11 +14,16 @@
       body {
         width: 100vw;
         height: 100vh;
+
         line-height: 1;
         position: relative;
         max-width: 1920px;
         margin: auto;
+        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
+        font-size: 100%;
+        color: #202020;
       }
+
       div {
         display: block;
         unicode-bidi: isolate;
@@ -39,14 +50,7 @@
         display: block;
         unicode-bidi: isolate;
       }
-      span {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 900;
-        color: #071f60;
-        letter-spacing: 2px;
-      }
+
       p {
         font-size: 28px;
         font-weight: 700;
@@ -66,6 +70,12 @@
         color: #202020;
         text-align: center;
       }
+
+      @media screen and (min-width: 1020px) {
+        .identifier_h2 {
+          font-size: 45px;
+        }
+      }
       .identifier_h2::after {
         content: "";
         display: block;
@@ -73,6 +83,29 @@
         height: 2px;
         margin: 25px auto 50px;
         background: #202020;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .identifier_h2::after {
+          width: 60px;
+          margin: 40px auto 80px;
+        }
+      }
+
+      .identifier_dl dt > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #071f60;
+        letter-spacing: 2px;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .identifier_dl dt > span {
+          margin-bottom: 12px;
+          font-size: 20px;
+        }
       }
       .identifier_dl {
         text-align: center;
@@ -85,6 +118,12 @@
         font-weight: 700;
         color: #202020;
         line-height: 1.4em;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .identifier_dl dt p {
+          font-size: 32px;
+        }
       }
       .identifier_dl dd {
         margin-bottom: 10px;
@@ -100,6 +139,13 @@
         color: #606060;
         line-height: 1.4em;
       }
+
+      @media screen and (min-width: 1020px) {
+        .identifier_dl dd p {
+          font-size: 20px;
+        }
+      }
+
       .logo {
         margin-top: 40px;
       }
@@ -173,12 +219,34 @@
         color: #071f60;
         letter-spacing: 2px;
       }
+
+      @media screen and (min-width: 1020px) {
+        .color_dl dt > span {
+          margin-bottom: 12px;
+          font-size: 20px;
+        }
+      }
+
       .color_dl dt p {
         font-size: 28px;
         font-weight: 700;
         color: #202020;
         line-height: 1.4em;
       }
+
+      @media screen and (min-width: 1020px) {
+        .color_dl dt p {
+          font-size: 32px;
+        }
+      }
+
+      @media screen and (min-width: 670px) {
+        .color .paiks_color {
+          display: table;
+          width: 100%;
+        }
+      }
+
       .color .paiks_color {
         margin: 40px 0 60px 0;
       }
@@ -257,6 +325,12 @@
         height: 35px;
       }
 
+      @media screen and (min-width: 1020px) {
+        .color .paiks_color li .color_box {
+          height: 50px;
+        }
+      }
+
       .color .paiks_color li dt {
         margin: 20px 0 20px 0;
         font-size: 20px;
@@ -303,6 +377,13 @@
         background: #182c54;
       }
 
+      .color .color_logo dl dd {
+        max-width: 360px;
+        padding: 15px 15px 15px 15px;
+        text-align: center;
+        margin: 0;
+      }
+
       @media screen and (min-width: 1020px) {
         .color .color_logo dl dd {
           padding: 22px 0;
@@ -314,12 +395,6 @@
         }
       }
 
-      .color .color_logo dl dd {
-        max-width: 360px;
-        padding: 15px 15px 15px 15px;
-        text-align: center;
-        margin: 0;
-      }
       .color .color_logo dl dd img {
         width: 60%;
       }
@@ -367,6 +442,374 @@
           margin-right: 0;
         }
       }
+
+      .value {
+        margin: 80px 0 80px 0;
+        padding: 80px 0 80px 0;
+        background: #f8f8f8;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value {
+          margin: 80px 0 120px 0;
+          padding: 120px 0 120px 0;
+        }
+      }
+
+      .value_h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #202020;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value_h2 {
+          font-size: 45px;
+        }
+      }
+      .value_h2:after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        margin: 25px auto 50px;
+        background: #202020;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value_h2:after {
+          width: 60px;
+          margin: 40px auto 80px;
+        }
+      }
+
+      .value .value_ul {
+        width: 92%;
+        max-width: 1150px;
+        margin: auto;
+      }
+
+      @media screen and (min-width: 1200px) {
+        .value .value_ul {
+          display: table;
+          width: auto;
+        }
+      }
+
+      .value .value_ul li {
+        margin-bottom: 35px;
+        font-size: 0;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li {
+          margin-bottom: 60px;
+        }
+      }
+
+      .value .value_ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .value .value_ul li .value_icon {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+        border-radius: 115px 115px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+      }
+      @media screen and (min-width: 670px) {
+        .value .value_ul li .value_icon {
+          display: inline-block;
+          margin-bottom: 0;
+          vertical-align: middle;
+        }
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li .value_icon {
+          width: 230px;
+          height: 230px;
+        }
+      }
+
+      .value .value_ul li:nth-child(1) .value_icon {
+        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon01.png)
+          no-repeat center #fff;
+        background-size: 80px;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li:nth-child(1) .value_icon {
+          background-size: 100px;
+        }
+      }
+
+      .value .value_ul li:nth-child(2) .value_icon {
+        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon02.png)
+          no-repeat center #fff;
+        background-size: 80px;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li:nth-child(2) .value_icon {
+          background-size: 100px;
+        }
+      }
+
+      .value .value_ul li:nth-child(3) .value_icon {
+        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon03.png)
+          no-repeat center #fff;
+        background-size: 80px;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li:nth-child(3) .value_icon {
+          background-size: 100px;
+        }
+      }
+
+      .value .value_ul li dl {
+        text-align: center;
+      }
+      @media screen and (min-width: 670px) {
+        .value .value_ul li dl {
+          display: inline-block;
+          width: calc(100% - 180px);
+          margin-left: 30px;
+          vertical-align: middle;
+          text-align: left;
+        }
+      }
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li dl {
+          width: calc(100% - 290px);
+          margin-left: 60px;
+        }
+      }
+
+      .value .value_ul li dt {
+        font-size: 20px;
+        font-weight: 700;
+        color: #001f60;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li dt {
+          font-size: 24px;
+        }
+      }
+      .value .value_ul li dd {
+        margin-top: 10px;
+        margin-left: 0px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #606060;
+        line-height: 1.4em;
+      }
+      @media screen and (min-width: 1020px) {
+        .value .value_ul li dd {
+          font-size: 22px;
+        }
+      }
+
+      em {
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .value .value_ul li dd em {
+        color: #404040;
+        box-shadow: inset 0 -10px 0 #ffe417;
+      }
+
+      .trend {
+        width: 92%;
+        max-width: 1150px;
+        margin: 0 auto 140px auto;
+      }
+
+      .trend_h2 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #202020;
+        text-align: center;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend_h2 {
+          font-size: 45px;
+        }
+      }
+
+      .trend_h2:after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 2px;
+        margin: 25px auto 50px auto;
+        background: #202020;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend_h2:after {
+          width: 60px;
+          margin: 40px auto 80px;
+        }
+      }
+
+      .trend .trend_ul li {
+        max-width: 520px;
+        margin: auto;
+      }
+
+      .trend .trend_ul li:first-child {
+        margin-bottom: 60px;
+      }
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li {
+          display: table;
+          width: 100%;
+          max-width: none;
+        }
+      }
+
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li:first-child {
+          margin-bottom: 80px;
+        }
+      }
+
+      .trend .trend_ul li .img_con {
+        margin-bottom: 30px;
+        border: 3px solid #ffe417;
+        box-sizing: border-box;
+        box-shadow: 15px 15px 0 rgb(240, 240, 240);
+      }
+
+      @media screen and (min-width: 670px) {
+        .trend .trend_ul li .img_con {
+          border: 4px solid #ffe417;
+        }
+      }
+
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li .img_con {
+          float: right;
+          width: 50%;
+        }
+      }
+
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li:last-child .img_con {
+          float: left;
+        }
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend .trend_ul li .img_con {
+          box-shadow: 30px 30px 0 rgb(240, 240, 240);
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .trend .trend_ul li .img_con {
+          width: 583px;
+        }
+      }
+
+      .trend .trend_ul li .img_con img {
+        width: 100%;
+      }
+
+      .trend .trend_ul li dl {
+        margin: 0;
+      }
+
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li dl {
+          float: left;
+          width: 45%;
+        }
+      }
+      @media screen and (min-width: 760px) {
+        .trend .trend_ul li:last-child dl {
+          float: right;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        .trend .trend_ul li dl {
+          width: 430px;
+          margin-top: 97px;
+        }
+      }
+
+      .trend_dl dt {
+        margin-bottom: 20px;
+      }
+      .trend_dl dt > span {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #071f60;
+        letter-spacing: 2px;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend_dl dt > span {
+          margin-bottom: 12px;
+          font-size: 20px;
+        }
+      }
+
+      .trend_dl dt p {
+        font-size: 28px;
+        font-weight: 700;
+        color: #202020;
+        line-height: 1.4em;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend_dl dt p {
+          font-size: 32px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        span.block_txt {
+          display: block;
+        }
+      }
+
+      .trend_dl dd {
+        margin: 0;
+      }
+
+      .trend_dl dd p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #606060;
+        line-height: 1.4em;
+      }
+
+      @media screen and (min-width: 1020px) {
+        .trend_dl dd p {
+          font-size: 20px;
+        }
+      }
+
+      .trend_dl dd p:last-child {
+        margin-bottom: 0;
+      }
+
+      .trend_dl dd p em {
+        font-weight: 500;
+        color: #404040;
+      }
     </style>
   </head>
   <body>
@@ -386,7 +829,7 @@
           </p>
           <p>
             빽다방의 시각 아이덴티티 구축은 정확한 Identifier 규정에 따라야
-            하며, 어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
+            하며, <br />어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
             안됩니다.
           </p>
         </dd>
@@ -478,6 +921,117 @@
           </dd>
         </dl>
       </div>
+    </div>
+    <div class="value">
+      <h2 class="value_h2">빽다방의 핵심가치</h2>
+      <ul class="value_ul">
+        <li>
+          <div class="value_icon"></div>
+          <dl>
+            <dt>동반성장</dt>
+            <dd>
+              본사와 가맹점주가 상생할 수 있는 경영방침을 추구합니다.
+              <br />
+              <em>안정적이고 건강한 가맹점을 육성</em>하여 오래도록 함께 합니다.
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="value_icon"></div>
+          <dl>
+            <dt>소통</dt>
+            <dd>
+              각 분기별로 지역별 소규모 간담회를 진행하고,
+              <span class="block_txt">
+                매년 말 전체 점주님을 대상으로 하는 점주연수를 진행합니다.</span
+              >
+
+              <em
+                >가맹본부가 발전할 수 있는 방향성에 대해 함께 논의하며 토론</em
+              >
+              합니다.
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="value_icon"></div>
+          <dl>
+            <dt>고객만족도</dt>
+            <dd>
+              유통과정에서 발생하는 가맹본부의 수익을 최소화하여,<span
+                class="block_txt"
+              >
+                고급 식자재를 사용하되 합리적인 가격을 유지하고,
+                <em>만족도 높은 서비스를 제공</em>합니다.</span
+              >
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div class="trend">
+      <h2 class="trend_h2">발 빠른 트렌드 리딩</h2>
+      <ul class="trend_ul">
+        <li>
+          <div class="img_con">
+            <img
+              src="/이미지/trend_img01.jpg"
+              alt="다양한 맛과 비주얼의 시그니처 커피메뉴"
+            />
+          </div>
+          <dl class="trend_dl">
+            <dt>
+              <span>SIGNATURE COFFEE MENU</span>
+              <p></p>
+              <p>
+                다양한 맛과 비주얼의
+                <span class="block_txt">시그니처 커피메뉴</span>
+              </p>
+            </dt>
+            <dd>
+              <p>
+                퀄리티 높은 커피를 다양한 맛과 비주얼로<span class="block_txt">
+                  고객들에게 제공하여 달달연유라떼, 아샷추 등의</span
+                >
+                <em>빽다방 시그니처 커피메뉴로 안착</em>시켰습니다.
+              </p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="img_con">
+            <img
+              src="/이미지/trend_img02.jpg"
+              alt="다시 돌아오는 계속 생각나는 그 음료"
+            />
+          </div>
+          <dl class="trend_dl">
+            <dt>
+              <span>SEASON BACK DRINK</span>
+              <p></p>
+              <p>
+                다시 돌아오는
+                <span class="block_txt">계속 생각나는 그 음료</span>
+              </p>
+            </dt>
+            <dd>
+              <p>
+                고객들이 즐겨 마셨던 시그널한 메뉴들을 재출시하며,
+                <span class="block_txt"
+                  >끊임없이 생각나는 브랜드로 자리잡았습니다.</span
+                >
+              </p>
+              <p>
+                부담 없이 들를 수 있는
+                <em
+                  >합리적인 가격에 트렌디하고 맛있는 음료가 항상 반겨주는
+                  빽다방</em
+                >이 되겠습니다.
+              </p>
+            </dd>
+          </dl>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
