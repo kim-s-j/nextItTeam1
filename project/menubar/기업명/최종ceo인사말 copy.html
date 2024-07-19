@@ -35,8 +35,6 @@
       .first_ul {
         font-size: 0.812rem;
         color: #999;
-        display: flex;
-        flex-wrap: wrap;
       }
 
       .first_br {
@@ -73,14 +71,6 @@
       .width {
         width: 700px;
       }
-      ul li p {
-        white-space: nowrap;
-      }
-      @media (max-width: 1250px) {
-        .first_ul {
-          display: block;
-        }
-      }
     </style>
   </head>
   <body id="first_body" style="display: flex; justify-content: center">
@@ -99,49 +89,69 @@
 
           <h2 class="two_h2">사업약력 및 저서</h2>
           <div style="display: flex" class="first_ul">
-            <ul style="padding-left: 10px">
-              <li>
-                <p><strong class="last_li">2012</strong> 더본재팬 대표이사</p>
-              </li>
-              <li>
-                <p>
-                  <strong class="last_li">2008</strong> 더본아메리카 대표이사
-                </p>
-              </li>
-              <li>
-                <p><strong class="last_li">2005</strong> 더본차이나 대표이사</p>
-              </li>
-              <li>
-                <p><strong class="last_li">1993</strong> 더본코리아 대표이사</p>
-              </li>
-            </ul>
             <ul>
               <li>
-                <p>‘백종원이 추천하는 집밥 메뉴 55’출간(국내 및 대만판 출간)</p>
+                <dl style="display: flex">
+                  <!-- 여기 flex없애면 밑으로 내려옴 -->
+                  <strong>2012</strong>더본재팬 대표이사
+                  <dd style="display: flex">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <ul>
+                      <li>
+                        ‘백종원이 추천하는 집밥 메뉴 55’출간(국내 및 대만판
+                        출간)
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
               </li>
+
               <li>
-                <p>‘백종원이 추천하는 집밥 메뉴 54’출간(국내 및 대만판 출간)</p>
+                <dl style="display: flex">
+                  <!-- 여기 flex없애면 밑으로 내려옴 -->
+                  <strong>2008</strong>더본아메리카 대표이사
+                  <dd style="display: flex">
+                    <ul>
+                      <li>
+                        ‘백종원이 추천하는 집밥 메뉴 54’출간(국내 및 대만판
+                        출간)
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
               </li>
+
               <li>
-                <p>
-                  ‘백종원이 추천하는 집밥 메뉴 52’출간(국내 및
-                  중국판/대만판출간)
-                </p>
+                <dl style="display: flex">
+                  <!-- 여기 flex없애면 밑으로 내려옴 -->
+                  <strong>2005</strong>더본차이나 대표이사
+                  <dd style="display: flex">
+                    &nbsp;&nbsp;&nbsp;
+                    <ul>
+                      <li>
+                        &nbsp; ‘백종원이 추천하는 집밥 메뉴 52’출간(국내 및
+                        중국판/대만판출간)
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
               </li>
+
               <li>
-                <p>‘백종원의 肉’ 출간</p>
-              </li>
-              <li>
-                <p>‘초짜도 대박나는 전문식당’ 출간</p>
-              </li>
-              <li>
-                <p>‘무조건 성공하는 작은식당’ 출간</p>
-              </li>
-              <li>
-                <p>‘백종원의 식당 조리비책’ 출간</p>
-              </li>
-              <li>
-                <p>‘돈버는 식당, 비법은 있다’ 출간</p>
+                <dl style="display: flex">
+                  <!-- 여기 flex없애면 밑으로 내려옴 -->
+                  <strong>1993</strong>더본코리아 대표이사
+                  <dd style="display: flex">
+                    &nbsp;&nbsp;&nbsp;
+                    <ul>
+                      <li>&nbsp; ‘백종원의 肉’ 출간</li>
+                      <li>&nbsp; ‘초짜도 대박나는 전문식당’ 출간</li>
+                      <li>&nbsp; ‘무조건 성공하는 작은식당’ 출간</li>
+                      <li>&nbsp; ‘백종원의 식당 조리비책’ 출간</li>
+                      <li>&nbsp; ‘돈버는 식당, 비법은 있다’ 출간</li>
+                    </ul>
+                  </dd>
+                </dl>
               </li>
             </ul>
           </div>
@@ -233,5 +243,27 @@
         </div>
       </div>
     </div>
+    <script>
+      //   window.onresize = function () {
+      //     var innerWidth = window.innerWidth;
+      //     innerWidth <= "1250"
+      //       ? document.querySelector("first_ul").style.block
+      //       : document.querySelector("first_ul").style.flex;
+      //   };
+
+      window.addEventListener("resize", function () {});
+      window.onresize = function () {
+        const width = window.innerWidth;
+        const first_ul = document.getElementById("clearfix");
+        const ul_width = document.getElementsByClassName("first_ul");
+        // console.log("->", ul_width);
+        if (width < 1250) {
+          //   console.log(first_ul.style);
+          first_ul.classList.remove("flex");
+        } else {
+          first_ul.classList.add("flex");
+        }
+      };
+    </script>
   </body>
 </html>
