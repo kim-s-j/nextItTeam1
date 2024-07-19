@@ -11,89 +11,131 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .slidebox {
+      .slideBox {
         width: 100%;
       }
-      .slidebox .slidelist {
+      .slideBox .slideList {
         position: relative;
         white-space: nowrap;
         font-size: 0;
         overflow: hidden;
       }
-      .slidebox .slidelist .slideitem {
+      .slideBox .slideList .slideItem {
         position: relative;
         display: inline-block;
-        vertical-align: middle;
         width: 100%;
         transition: all 1s;
       }
-      .slidebox .slidelist .slideitem > img {
+      .slideBox .slideList .slideItem > img {
         display: block;
         width: auto;
         position: relative;
         width: 100%;
       }
 
-      #slide01:checked ~ .slidelist .slideitem {
+      #slide01:checked ~ .slideList .slideItem {
         left: 0;
       }
-      #slide02:checked ~ .slidelist .slideitem {
+      #slide02:checked ~ .slideList .slideItem {
         left: -100%;
       }
-      #slide03:checked ~ .slidelist .slideitem {
+      #slide03:checked ~ .slideList .slideItem {
         left: -200%;
       }
-      #slide04:checked ~ .slidelist .slideitem {
+      #slide04:checked ~ .slideList .slideItem {
         left: -300%;
+      }
+
+      .slideBox .inputRadio {
+        position: relative;
+        bottom: 20px;
+        left: -350%;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .goPage1 {
+        width: 50%;
+        height: auto;
+        font-size: 0;
+      }
+      .goPage1 img {
+        width: 100%;
+        height: auto;
+      }
+      section {
+        width: 100%;
+        height: auto;
+      }
+      .flax {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 600px) {
+        .goPage1 {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="slidebox">
-      <input
-        id="slide01"
-        type="radio"
-        name="slide"
-        value="1"
-        onclick="slideClick(0,0)"
-        checked
-      />
-      <input
-        id="slide02"
-        type="radio"
-        name="slide"
-        value="2"
-        onclick="slideClick(1,-100)"
-      />
-      <input
-        id="slide03"
-        type="radio"
-        name="slide"
-        value="3"
-        onclick="slideClick(2,-200)"
-      />
-      <input
-        id="slide04"
-        type="radio"
-        name="slide"
-        value="4"
-        onclick="slideClick(3,-300)"
-      />
-      <div class="slidelist">
-        <li class="slideitem" id="li1">
+    <div class="slideBox">
+      <div class="slideList">
+        <li class="slideItem" id="li1">
           <img src="/images/짱구 콜라보 홍보 이미지.jpg" />
         </li>
-        <li class="slideitem" id="li2">
+        <li class="slideItem" id="li2">
           <img src="/images/슈크리미3종 홍보 이미지.jpg" />
         </li>
-        <li class="slideitem" id="li3">
+        <li class="slideItem" id="li3">
           <img src="/images/블루캔디월드 홍보 이미지.jpg" />
         </li>
-        <li class="slideitem" id="li4">
+        <li class="slideItem" id="li4">
           <img src="/images/멤버십활성화 이미지.jpg" />
         </li>
+        <input
+          id="slide01"
+          class="inputRadio"
+          type="radio"
+          name="slide"
+          value="1"
+          onclick="slideClick(0,0)"
+          checked
+        />
+        <input
+          id="slide02"
+          class="inputRadio"
+          type="radio"
+          name="slide"
+          value="2"
+          onclick="slideClick(1,-100)"
+        />
+        <input
+          id="slide03"
+          class="inputRadio"
+          type="radio"
+          name="slide"
+          value="3"
+          onclick="slideClick(2,-200)"
+        />
+        <input
+          id="slide04"
+          class="inputRadio"
+          type="radio"
+          name="slide"
+          value="4"
+          onclick="slideClick(3,-300)"
+        />
       </div>
     </div>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage1">
+        <img src="/images/커피스토리 바로가기 이미지.png" />
+      </a>
+      <a href="/testPage.html" class="goPage1">
+        <img src="/images/기업명 소개 바로가기 이미지.png" />
+      </a>
+    </section>
+    <p>rmfwk</p>
     <script>
       let x_pos = -100;
       let i = 1;

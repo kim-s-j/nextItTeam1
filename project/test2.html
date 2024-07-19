@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+      #div1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+        height: 100px;
+        background-color: aqua;
+      }
+      #div2 {
+        display: block;
+        width: 50%;
+        height: 50px;
+        background-color: red;
+      }
+      #div3 {
+        display: block;
+        width: 50%;
+        height: 50px;
+        background-color: violet;
+      }
+
+      @media screen and (max-width: 600px) {
+        #div2 {
+          display: block;
+          width: 100%;
+          height: 50px;
+          background-color: red;
+        }
+        #div3 {
+          display: block;
+          width: 100%;
+          height: 50px;
+          background-color: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <ul>
+          <li>2008</li>
+        </ul>
+      </div>
+
+      <div id="div3">
+        <ul>
+          <li>창업함1</li>
+        </ul>
+      </div>
+      <div id="div2">
+        <ul>
+          <li>2009</li>
+        </ul>
+      </div>
+
+      <div id="div3">
+        <ul>
+          <li>창업함2</li>
+        </ul>
+      </div>
+      <div id="div2">
+        <ul>
+          <li>2010</li>
+        </ul>
+      </div>
+
+      <div id="div3">
+        <ul>
+          <li>창업함3</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
