@@ -65,20 +65,23 @@
       }
       .flax .goPage1 {
         width: 50%;
-        height: auto;
-        font-size: 0;
+        height: 240px;
       }
       .flax .goPage2 {
+        width: 50%;
+        height: auto;
+      }
+      .flax .goPage3 {
         width: 100%;
         height: auto;
         font-size: 0;
       }
-      .flax .goPage3 {
+      .flax .goPage4 {
         width: 60%;
         height: auto;
         font-size: 0;
       }
-      .flax .goPage4 {
+      .flax .goPage5 {
         width: 40%;
         height: auto;
         font-size: 0;
@@ -86,7 +89,8 @@
       .flax .goPage1 img,
       .flax .goPage2 img,
       .flax .goPage3 img,
-      .flax .goPage4 img {
+      .flax .goPage4 img,
+      .flax .goPage5 img {
         width: 100%;
         height: 100%;
       }
@@ -98,52 +102,88 @@
         width: 100%;
         height: auto;
       }
-      @media screen and (max-width: 1020px) {
-        .flax .goPage1,
-        .flax .goPage2,
-        .flax .goPage3,
-        .flax .goPage4 {
-          width: 100%;
-        }
-        .flax .goPage2 {
-          content: url("/images/fresh coffee 바로가기 이미지2.jpg");
-        }
-        .flax .goPage3 {
-          content: url("/images/various beverage 바로가기 이미지2.jpg");
-        }
-        .flax .goPage4 {
-          content: url("/images/sweet parik's ccino 바로가기 이미지2.jpg");
-        }
+      .flax .goPage1 {
+        height: 240px;
+        background: url(/images/커피스토리\ 바로가기\ 이미지.jpg) no-repeat;
+        background-size: cover;
+        background-position: 60%;
+        text-decoration-line: none;
       }
-      @media screen and (max-width: 1200px) {
-        .div1 .dt2 {
-          font-size: 0px;
-        }
-      }
-      .goPage1 {
-        width: 100%;
-        height: auto;
+      .flax .goPage2 {
+        width: 50%;
+        height: 240px;
         background: url(/images/기업명\ 소개\ 바로가기\ 이미지.jpg) no-repeat;
         background-color: #243f84;
         background-size: 50%;
         background-position: 80% 80%;
-        height: 240px;
+        text-decoration-line: none;
       }
-      .goPage1 > dl {
+      .flax .goPage1 > dl {
         padding-top: 30px;
         margin: auto !important;
         width: 92%;
       }
-      .dt1 {
+      .flax .goPage2 > dl {
+        padding-top: 30px;
+        margin: auto !important;
+        width: 92%;
+      }
+      .flax .goPage1 .content1 {
+        width: 100%;
+        margin: 5px 0px 10px 0px;
+        color: #071f60;
+        font-size: 40px;
+        font-weight: 900;
+      }
+      .flax .goPage2 .content3 {
         width: 100%;
         color: white;
         font-size: 40px;
         font-weight: 900;
       }
-      .dt2 {
+      .flax .goPage2 .content4 {
         width: 100%;
         color: white;
         margin: 5px 0px 10px 0px;
+      }
+      @media screen and (max-width: 1020px) {
+        .flax .goPage1,
+        .flax .goPage2,
+        .flax .goPage3,
+        .flax .goPage4,
+        .flax .goPage5 {
+          width: 100%;
+        }
+        .flax .goPage3 {
+          content: url("/images/fresh coffee 바로가기 이미지2.jpg");
+        }
+        .flax .goPage4 {
+          content: url("/images/various beverage 바로가기 이미지2.jpg");
+        }
+        .flax .goPage5 {
+          content: url("/images/sweet parik's ccino 바로가기 이미지2.jpg");
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .flax .goPage1 .content2,
+        .flax .goPage2 .content4 {
+          font-size: 0px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .flax .goPage1,
+        .flax .goPage2 {
+          height: 320px;
+        }
+        .flax .goPage1 > dl {
+          margin-left: calc(100% - 600px) !important;
+        }
+        .flax .goPage1 .content2 {
+          margin: 10px 0 0;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 1.4em;
+        }
       }
     </style>
   </head>
@@ -199,29 +239,38 @@
     </div>
     <section class="flax">
       <a href="/testPage.html" class="goPage1">
-        <img src="/images/커피스토리 바로가기 이미지.png" />
-      </a>
-      <a href="/testPage.html" class="goPage1">
-        <!-- <img src="/images/기업명 소개 바로가기 이미지.png" /> -->
         <dl>
-          <dt class="dt1">
+          <dt class="content1">
             PAIK'S BRAND <br />
             STORY
           </dt>
-          <dd class="dt2">합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
+          <dd class="content2">
+            합리적인 가격으로 만나는 맛있고 든든한 빽다방
+          </dd>
+        </dl>
+      </a>
+      <a href="/testPage.html" class="goPage2">
+        <dl>
+          <dt class="content3">
+            PAIK'S BRAND <br />
+            STORY
+          </dt>
+          <dd class="content4">
+            합리적인 가격으로 만나는 맛있고 든든한 빽다방
+          </dd>
         </dl>
       </a>
     </section>
     <section class="flax">
-      <a href="/testPage.html" class="goPage2">
+      <a href="/testPage.html" class="goPage3">
         <img src="/images/fresh coffee 바로가기 이미지.jpg" />
       </a>
     </section>
     <section class="flax">
-      <a href="/testPage.html" class="goPage3">
+      <a href="/testPage.html" class="goPage4">
         <img src="/images/various beverage 바로가기 이미지.jpg" />
       </a>
-      <a href="/testPage.html" class="goPage4">
+      <a href="/testPage.html" class="goPage5">
         <img src="/images/sweet parik's ccino 바로가기 이미지.jpg" />
       </a>
     </section>
