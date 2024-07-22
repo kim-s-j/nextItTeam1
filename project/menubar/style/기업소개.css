@@ -1,0 +1,606 @@
+body {
+  line-height: 1;
+  position: relative;
+  max-width: 1920px;
+  margin: auto;
+  font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
+  font-size: 100%;
+  color: #202020;
+}
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+dt {
+  display: block;
+  unicode-bidi: isolate;
+}
+p {
+  font-size: 28px;
+  color: #202020;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+dd {
+  display: block;
+  margin-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+.content1 .contentEng1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #202020;
+  text-align: center;
+}
+.content1 .contentEng1::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 25px auto 50px;
+  background: #202020;
+}
+.content1 .contentKor1 dt > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #071f60;
+  letter-spacing: 2px;
+}
+.content1 .contentKor1 {
+  text-align: center;
+}
+.content1 .contentKor1 dt {
+  margin-bottom: 20px;
+}
+.content1 .contentKor1 dt p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 1.4em;
+}
+.content1 .contentKor1 dd {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+.content1 .contentKor1 dd p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+.content1 .logoContent {
+  margin-top: 40px;
+}
+.content1 .logoContent .logo1 {
+  width: 100%;
+  padding: 30px 0px 30px 0px;
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/check_bg.gif)
+    top center;
+  background-size: 115% auto;
+}
+.content1 .logoContent .logo1 p {
+  width: 80%;
+  max-width: 722px;
+  margin: auto;
+}
+.content1 {
+  width: 92%;
+  max-width: 1150px;
+  margin: 65px auto 0 auto;
+}
+.content1 .logoContent .logo2 {
+  font-size: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+.content1 .logoContent .logo2 li {
+  display: inline-block;
+  width: 30%;
+  margin-right: 5%;
+  vertical-align: middle;
+}
+.content1 .logoContent .logo2 li:last-child {
+  margin-right: 0;
+}
+.content2 {
+  width: 92%;
+  max-width: 1150px;
+  margin: 80px auto 0 auto;
+  padding-top: 80px;
+  border-top: 1px solid #ddd;
+}
+.content2 .contentKor2 {
+  text-align: center;
+}
+.content2 .contentKor2 dt {
+  margin-bottom: 20px;
+}
+.content2 .contentKor2 dt > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #071f60;
+  letter-spacing: 2px;
+}
+.content2 .contentKor2 dt p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 1.4em;
+}
+.content2 .colorName {
+  margin: 40px 0 60px 0;
+}
+.content2 .colorName li {
+  max-width: 360px;
+  margin: 0 auto 25px auto;
+  padding: 25px 30px 25px 30px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.content2 .colorName li:last-child {
+  margin: 0 auto 0 auto;
+}
+.content2 .colorName li .colorBox {
+  display: block;
+  width: 100%;
+  height: 35px;
+}
+.content2 .colorName li:nth-child(1) .colorBox {
+  background: #001f60;
+}
+.content2 .colorName li:nth-child(2) .colorBox {
+  background: #ffe800;
+}
+.content2 .colorName li:nth-child(3) .colorBox {
+  background: #e6e7e8;
+}
+.content2 .colorName li:nth-child(1) dt {
+  color: #001f60;
+}
+.content2 .colorName li:nth-child(2) dt {
+  color: #ffe800;
+}
+.content2 .colorName li:nth-child(3) dt {
+  color: #b8b9b9;
+}
+.content2 .colorName li dt {
+  margin: 20px 0 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+.content2 .colorName li dd {
+  margin: 0;
+}
+.content2 .colorName li dd p {
+  font-size: 18px;
+  color: #606060;
+  line-height: 1.4em;
+}
+.content2 .logoColor dl {
+  display: table;
+  margin: 0 auto 25px auto;
+}
+.content2 .logoColor dl dt {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #606060;
+}
+.content2 .logoColor dl:nth-child(1) dd {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.content2 .logoColor dl:nth-child(2) dd {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.content2 .logoColor dl:nth-child(3) dd {
+  background: #ffe417;
+}
+.content2 .logoColor dl:nth-child(4) dd {
+  background: #182c54;
+}
+.content2 .logoColor dl dd {
+  /* max-width: 360px; */
+  padding: 15px 15px 15px 15px;
+  text-align: center;
+  margin: 0;
+}
+.content2 .logoColor dl dd img {
+  width: 60%;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.content2 .logoColor dl {
+  display: table;
+  margin: 0 auto 25px;
+}
+.content2 .logoColor dl:last-child {
+  margin: 0 auto 0 auto;
+}
+.content3 {
+  margin: 80px 0 80px 0;
+  padding: 80px 0 80px 0;
+  background: #f8f8f8;
+}
+.content3 .contentMain3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #202020;
+  text-align: center;
+}
+.content3 .contentMain3:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 25px auto 50px;
+  background: #202020;
+}
+.content3 .valueName {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+.content3 .valueName li {
+  margin-bottom: 35px;
+  font-size: 0;
+}
+.content3 .valueName li:last-child {
+  margin-bottom: 0;
+}
+.content3 .valueName li .valueIcon {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 115px 115px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+}
+.content3 .valueName li:nth-child(1) .valueIcon {
+  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon01.png)
+    no-repeat center #fff;
+  background-size: 80px;
+}
+.content3 .valueName li:nth-child(2) .valueIcon {
+  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon02.png)
+    no-repeat center #fff;
+  background-size: 80px;
+}
+.content3 .valueName li:nth-child(3) .valueIcon {
+  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon03.png)
+    no-repeat center #fff;
+  background-size: 80px;
+}
+.content3 .valueName li dl {
+  text-align: center;
+}
+.content3 .valueName li dt {
+  font-size: 20px;
+  font-weight: 700;
+  color: #001f60;
+}
+.content3 .valueName li dd {
+  margin-top: 10px;
+  margin-left: 0px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+em {
+  font-style: normal;
+  font-weight: 700;
+}
+.content3 .valueName li dd em {
+  color: #404040;
+  box-shadow: inset 0 -10px 0 #ffe417;
+}
+.content4 {
+  width: 92%;
+  max-width: 1150px;
+  margin: 0 auto 140px auto;
+}
+.content4 .contentMain4 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #202020;
+  text-align: center;
+}
+.content4 .contentMain4:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 25px auto 50px auto;
+  background: #202020;
+}
+.content4 .trendContent li {
+  max-width: 520px;
+  margin: auto;
+}
+
+.content4 .trendContent li:first-child {
+  margin-bottom: 60px;
+}
+.content4 .trendContent li .imgCon {
+  margin-bottom: 30px;
+  border: 3px solid #ffe417;
+  box-sizing: border-box;
+  box-shadow: 15px 15px 0 rgb(240, 240, 240);
+}
+.content4 .trendContent li .imgCon img {
+  width: 100%;
+}
+.content4 .trendContent li dl {
+  margin: 0;
+}
+.content4 .trendContent .trendName dt {
+  margin-bottom: 20px;
+}
+.content4 .trendContent .trendName dt > span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #071f60;
+  letter-spacing: 2px;
+}
+.content4 .trendContent .trendName dt p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 1.4em;
+}
+.content4 .trendContent .trendName dd {
+  margin: 0;
+}
+.content4 .trendContent .trendName dd p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+
+.content4 .trendContent .trendName dd p:last-child {
+  margin-bottom: 0;
+}
+.content4 .trendContent .trendName dd p em {
+  font-weight: 500;
+  color: #404040;
+}
+@media screen and (min-width: 670px) {
+  .content2 .colorName {
+    display: table;
+    width: 100%;
+  }
+  .content2 .colorName li {
+    float: left;
+    width: 32%;
+    max-width: none;
+    margin-right: 2%;
+    margin-bottom: 0;
+  }
+  .content2 .colorName li:last-child {
+    margin-right: 0;
+  }
+  .content2 .logoColor dl dd {
+    max-width: none;
+  }
+  .content2 .logoColor {
+    font-size: 0;
+  }
+  .content2 .logoColor dl {
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .content2 .logoColor dl:nth-child(even) {
+    margin-right: 0;
+  }
+  .content3 .valueName li .valueIcon {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .content3 .valueName li dl {
+    display: inline-block;
+    width: calc(100% - 180px);
+    margin-left: 30px;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .content4 .trendContent li .imgCon {
+    border: 4px solid #ffe417;
+  }
+}
+@media screen and (min-width: 760px) {
+  .content2 .colorName li {
+    height: 265px;
+  }
+  .content4 .trendContent li {
+    display: table;
+    width: 100%;
+    max-width: none;
+  }
+  .content4 .trendContent li:first-child {
+    margin-bottom: 80px;
+  }
+  .content4 .trendContent li .imgCon {
+    float: right;
+    width: 50%;
+  }
+  .content4 .trendContent li:last-child .imgCon {
+    float: left;
+  }
+  .content4 .trendContent li dl {
+    float: left;
+    width: 45%;
+  }
+  .content4 .trendContent li:last-child dl {
+    float: right;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .contentEng1 {
+    font-size: 45px;
+  }
+  .content1 .contentEng1::after {
+    width: 60px;
+    margin: 40px auto 80px auto;
+  }
+  .content1 .contentKor1 dt > span {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .content1 .contentKor1 dt p {
+    font-size: 32px;
+  }
+  .content1 .contentKor1 dd p {
+    font-size: 20px;
+  }
+  .content2 .contentKor2 dt > span {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .content2 .contentKor2 dt p {
+    font-size: 32px;
+  }
+  .content2 .colorName li {
+    height: 282px;
+  }
+  .content2 .colorName li .colorBox {
+    height: 50px;
+  }
+  .content2 .logoColor dl dt {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .content2 .logoColor dl dd {
+    padding: 22px 0;
+  }
+  .content2 .logoColor dl {
+    margin: 0 2% 40px 0;
+  }
+  .content3 {
+    margin: 80px 0 120px 0;
+    padding: 120px 0 120px 0;
+  }
+  .content3 .contentMain3 {
+    font-size: 45px;
+  }
+  .content3 .contentMain3:after {
+    width: 60px;
+    margin: 40px auto 80px;
+  }
+  .content3 .valueName li {
+    margin-bottom: 60px;
+  }
+  .content3 .valueName li .valueIcon {
+    width: 230px;
+    height: 230px;
+  }
+  .content3 .valueName li:nth-child(1) .valueIcon {
+    background-size: 100px;
+  }
+  .content3 .valueName li:nth-child(2) .valueIcon {
+    background-size: 100px;
+  }
+  .content3 .valueName li:nth-child(3) .valueIcon {
+    background-size: 100px;
+  }
+  .content3 .valueName li dl {
+    width: calc(100% - 290px);
+    margin-left: 60px;
+  }
+  .content3 .valueName li dt {
+    font-size: 24px;
+  }
+  .content3 .valueName li dd {
+    font-size: 22px;
+  }
+  .content4 .contentMain4 {
+    font-size: 45px;
+  }
+  .content4 .contentMain4:after {
+    width: 60px;
+    margin: 40px auto 80px auto;
+  }
+  .content4 .trendContent li .imgCon {
+    box-shadow: 30px 30px 0 rgb(240, 240, 240);
+  }
+  .content4 .trendContent .trendName dt > span {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .content4 .trendContent .trendName dt p {
+    font-size: 32px;
+  }
+  .content4 .trendContent .trendName dd p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content2 .colorName li {
+    width: 360px;
+    height: auto;
+    padding: 40px 40px 40px 40px;
+    margin-right: 35px;
+  }
+  .content2 .logoColor dl {
+    width: 540px;
+    margin-right: 70px;
+  }
+  .content3 .valueName {
+    display: table;
+    width: auto;
+  }
+  .content4 .trendContent li .imgCon {
+    width: 583px;
+  }
+  .content4 .trendContent li dl {
+    width: 430px;
+    margin-top: 97px;
+  }
+  span.blockText {
+    display: block;
+  }
+}
