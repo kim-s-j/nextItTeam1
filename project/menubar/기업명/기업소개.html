@@ -10,813 +10,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>기업소개</title>
-    <style>
-      body {
-        width: 100vw;
-        height: 100vh;
-
-        line-height: 1;
-        position: relative;
-        max-width: 1920px;
-        margin: auto;
-        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
-        font-size: 100%;
-        color: #202020;
-      }
-
-      div {
-        display: block;
-        unicode-bidi: isolate;
-      }
-      h2 {
-        display: block;
-        font-size: 1.5em;
-        margin-block-start: 0.83em;
-        margin-block-end: 0.83em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-        unicode-bidi: isolate;
-      }
-      dl {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        unicode-bidi: isolate;
-      }
-      dt {
-        display: block;
-        unicode-bidi: isolate;
-      }
-
-      p {
-        font-size: 28px;
-        font-weight: 700;
-        color: #202020;
-        line-height: 1.4em;
-        padding: 0;
-        margin: 0;
-      }
-      dd {
-        display: block;
-        margin-inline-start: 40px;
-        unicode-bidi: isolate;
-      }
-      .identifier_h2 {
-        font-size: 30px;
-        font-weight: 700;
-        color: #202020;
-        text-align: center;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .identifier_h2 {
-          font-size: 45px;
-        }
-      }
-      .identifier_h2::after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 2px;
-        margin: 25px auto 50px;
-        background: #202020;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .identifier_h2::after {
-          width: 60px;
-          margin: 40px auto 80px;
-        }
-      }
-
-      .identifier_dl dt > span {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 900;
-        color: #071f60;
-        letter-spacing: 2px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .identifier_dl dt > span {
-          margin-bottom: 12px;
-          font-size: 20px;
-        }
-      }
-      .identifier_dl {
-        text-align: center;
-      }
-      .identifier_dl dt {
-        margin-bottom: 20px;
-      }
-      .identifier_dl dt p {
-        font-size: 28px;
-        font-weight: 700;
-        color: #202020;
-        line-height: 1.4em;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .identifier_dl dt p {
-          font-size: 32px;
-        }
-      }
-      .identifier_dl dd {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 300;
-        color: #606060;
-        line-height: 1.4em;
-      }
-      .identifier_dl dd p {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 300;
-        color: #606060;
-        line-height: 1.4em;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .identifier_dl dd p {
-          font-size: 20px;
-        }
-      }
-
-      .logo {
-        margin-top: 40px;
-      }
-      .logo .logo1 {
-        width: 100%;
-        padding: 30px 0px 30px 0px;
-        margin-bottom: 40px;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/check_bg.gif)
-          top center;
-        background-size: 115% auto;
-      }
-
-      .logo .logo1 p {
-        width: 80%;
-        max-width: 722px;
-        margin: auto;
-      }
-      .identifier {
-        width: 92%;
-        max-width: 1150px;
-        margin: 65px auto 0 auto;
-      }
-
-      .logo_ul {
-        font-size: 0;
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      li {
-        text-align: -webkit-match-parent;
-        unicode-bidi: isolate;
-      }
-
-      .logo_ul li {
-        display: inline-block;
-        width: 30%;
-        margin-right: 5%;
-        vertical-align: middle;
-      }
-
-      .logo_ul li:last-child {
-        margin-right: 0;
-      }
-      .color {
-        width: 92%;
-        max-width: 1150px;
-        margin: 80px auto 0 auto;
-        padding-top: 80px;
-        border-top: 1px solid #ddd;
-      }
-      .color .color_dl {
-        text-align: center;
-      }
-
-      .color_dl dt {
-        margin-bottom: 20px;
-      }
-
-      .color_dl dt > span {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 900;
-        color: #071f60;
-        letter-spacing: 2px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color_dl dt > span {
-          margin-bottom: 12px;
-          font-size: 20px;
-        }
-      }
-
-      .color_dl dt p {
-        font-size: 28px;
-        font-weight: 700;
-        color: #202020;
-        line-height: 1.4em;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color_dl dt p {
-          font-size: 32px;
-        }
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .paiks_color {
-          display: table;
-          width: 100%;
-        }
-      }
-
-      .color .paiks_color {
-        margin: 40px 0 60px 0;
-      }
-
-      .color .paiks_color li {
-        max-width: 360px;
-        margin: 0 auto 25px auto;
-        padding: 25px 30px 25px 30px;
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .paiks_color li {
-          float: left;
-          width: 32%;
-          max-width: none;
-          margin-right: 2%;
-          margin-bottom: 0;
-        }
-      }
-
-      @media screen and (min-width: 760px) {
-        .color .paiks_color li {
-          height: 265px;
-        }
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color .paiks_color li {
-          height: 282px;
-        }
-      }
-
-      @media screen and (min-width: 1200px) {
-        .color .paiks_color li {
-          width: 360px;
-          height: auto;
-          padding: 40px 40px 40px 40px;
-          margin-right: 35px;
-        }
-      }
-
-      .color .paiks_color li:last-child {
-        margin: 0 auto 0 auto;
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .paiks_color li:last-child {
-          margin-right: 0;
-        }
-      }
-
-      .color .paiks_color li:nth-child(1) .color_box {
-        background: #001f60;
-      }
-      .color .paiks_color li:nth-child(2) .color_box {
-        background: #ffe800;
-      }
-      .color .paiks_color li:nth-child(3) .color_box {
-        background: #e6e7e8;
-      }
-      .color .paiks_color li:nth-child(1) dt {
-        color: #001f60;
-      }
-      .color .paiks_color li:nth-child(2) dt {
-        color: #ffe800;
-      }
-      .color .paiks_color li:nth-child(3) dt {
-        color: #b8b9b9;
-      }
-
-      .color .paiks_color li .color_box {
-        display: block;
-        width: 100%;
-        height: 35px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color .paiks_color li .color_box {
-          height: 50px;
-        }
-      }
-
-      .color .paiks_color li dt {
-        margin: 20px 0 20px 0;
-        font-size: 20px;
-        font-weight: 700;
-      }
-
-      .color .paiks_color li dd {
-        margin: 0;
-      }
-      .color .paiks_color li dd p {
-        font-size: 18px;
-        color: #606060;
-        line-height: 1.4em;
-      }
-      .color .color_logo dl {
-        display: table;
-        margin: 0 auto 25px auto;
-      }
-
-      .color .color_logo dl dt {
-        margin-bottom: 10px;
-        font-size: 18px;
-        color: #606060;
-      }
-      @media screen and (min-width: 1020px) {
-        .color .color_logo dl dt {
-          margin-bottom: 12px;
-          font-size: 20px;
-        }
-      }
-
-      .color .color_logo dl:nth-child(1) dd {
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-      }
-      .color .color_logo dl:nth-child(2) dd {
-        border: 1px solid #ddd;
-        box-sizing: border-box;
-      }
-      .color .color_logo dl:nth-child(3) dd {
-        background: #ffe417;
-      }
-      .color .color_logo dl:nth-child(4) dd {
-        background: #182c54;
-      }
-
-      .color .color_logo dl dd {
-        max-width: 360px;
-        padding: 15px 15px 15px 15px;
-        text-align: center;
-        margin: 0;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color .color_logo dl dd {
-          padding: 22px 0;
-        }
-      }
-      @media screen and (min-width: 670px) {
-        .color .color_logo dl dd {
-          max-width: none;
-        }
-      }
-
-      .color .color_logo dl dd img {
-        width: 60%;
-      }
-      img {
-        max-width: 100%;
-        vertical-align: middle;
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .color_logo {
-          font-size: 0;
-        }
-      }
-
-      .color .color_logo dl {
-        display: table;
-        margin: 0 auto 25px;
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .color_logo dl {
-          display: inline-block;
-          width: 48%;
-          margin-right: 2%;
-        }
-      }
-
-      @media screen and (min-width: 1020px) {
-        .color .color_logo dl {
-          margin: 0 2% 40px 0;
-        }
-      }
-      @media screen and (min-width: 1200px) {
-        .color .color_logo dl {
-          width: 540px;
-          margin-right: 70px;
-        }
-      }
-      .color .color_logo dl:last-child {
-        margin: 0 auto 0 auto;
-      }
-
-      @media screen and (min-width: 670px) {
-        .color .color_logo dl:nth-child(even) {
-          margin-right: 0;
-        }
-      }
-
-      .value {
-        margin: 80px 0 80px 0;
-        padding: 80px 0 80px 0;
-        background: #f8f8f8;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value {
-          margin: 80px 0 120px 0;
-          padding: 120px 0 120px 0;
-        }
-      }
-
-      .value_h2 {
-        font-size: 30px;
-        font-weight: 700;
-        color: #202020;
-        text-align: center;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value_h2 {
-          font-size: 45px;
-        }
-      }
-      .value_h2:after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 2px;
-        margin: 25px auto 50px;
-        background: #202020;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value_h2:after {
-          width: 60px;
-          margin: 40px auto 80px;
-        }
-      }
-
-      .value .value_ul {
-        width: 92%;
-        max-width: 1150px;
-        margin: auto;
-      }
-
-      @media screen and (min-width: 1200px) {
-        .value .value_ul {
-          display: table;
-          width: auto;
-        }
-      }
-
-      .value .value_ul li {
-        margin-bottom: 35px;
-        font-size: 0;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li {
-          margin-bottom: 60px;
-        }
-      }
-
-      .value .value_ul li:last-child {
-        margin-bottom: 0;
-      }
-
-      .value .value_ul li .value_icon {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto 20px;
-        border-radius: 115px 115px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
-      }
-      @media screen and (min-width: 670px) {
-        .value .value_ul li .value_icon {
-          display: inline-block;
-          margin-bottom: 0;
-          vertical-align: middle;
-        }
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li .value_icon {
-          width: 230px;
-          height: 230px;
-        }
-      }
-
-      .value .value_ul li:nth-child(1) .value_icon {
-        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon01.png)
-          no-repeat center #fff;
-        background-size: 80px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li:nth-child(1) .value_icon {
-          background-size: 100px;
-        }
-      }
-
-      .value .value_ul li:nth-child(2) .value_icon {
-        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon02.png)
-          no-repeat center #fff;
-        background-size: 80px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li:nth-child(2) .value_icon {
-          background-size: 100px;
-        }
-      }
-
-      .value .value_ul li:nth-child(3) .value_icon {
-        background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon03.png)
-          no-repeat center #fff;
-        background-size: 80px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li:nth-child(3) .value_icon {
-          background-size: 100px;
-        }
-      }
-
-      .value .value_ul li dl {
-        text-align: center;
-      }
-      @media screen and (min-width: 670px) {
-        .value .value_ul li dl {
-          display: inline-block;
-          width: calc(100% - 180px);
-          margin-left: 30px;
-          vertical-align: middle;
-          text-align: left;
-        }
-      }
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li dl {
-          width: calc(100% - 290px);
-          margin-left: 60px;
-        }
-      }
-
-      .value .value_ul li dt {
-        font-size: 20px;
-        font-weight: 700;
-        color: #001f60;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li dt {
-          font-size: 24px;
-        }
-      }
-      .value .value_ul li dd {
-        margin-top: 10px;
-        margin-left: 0px;
-        font-size: 18px;
-        font-weight: 300;
-        color: #606060;
-        line-height: 1.4em;
-      }
-      @media screen and (min-width: 1020px) {
-        .value .value_ul li dd {
-          font-size: 22px;
-        }
-      }
-
-      em {
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .value .value_ul li dd em {
-        color: #404040;
-        box-shadow: inset 0 -10px 0 #ffe417;
-      }
-
-      .trend {
-        width: 92%;
-        max-width: 1150px;
-        margin: 0 auto 140px auto;
-      }
-
-      .trend_h2 {
-        font-size: 30px;
-        font-weight: 700;
-        color: #202020;
-        text-align: center;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend_h2 {
-          font-size: 45px;
-        }
-      }
-
-      .trend_h2:after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 2px;
-        margin: 25px auto 50px auto;
-        background: #202020;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend_h2:after {
-          width: 60px;
-          margin: 40px auto 80px;
-        }
-      }
-
-      .trend .trend_ul li {
-        max-width: 520px;
-        margin: auto;
-      }
-
-      .trend .trend_ul li:first-child {
-        margin-bottom: 60px;
-      }
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li {
-          display: table;
-          width: 100%;
-          max-width: none;
-        }
-      }
-
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li:first-child {
-          margin-bottom: 80px;
-        }
-      }
-
-      .trend .trend_ul li .img_con {
-        margin-bottom: 30px;
-        border: 3px solid #ffe417;
-        box-sizing: border-box;
-        box-shadow: 15px 15px 0 rgb(240, 240, 240);
-      }
-
-      @media screen and (min-width: 670px) {
-        .trend .trend_ul li .img_con {
-          border: 4px solid #ffe417;
-        }
-      }
-
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li .img_con {
-          float: right;
-          width: 50%;
-        }
-      }
-
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li:last-child .img_con {
-          float: left;
-        }
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend .trend_ul li .img_con {
-          box-shadow: 30px 30px 0 rgb(240, 240, 240);
-        }
-      }
-
-      @media screen and (min-width: 1200px) {
-        .trend .trend_ul li .img_con {
-          width: 583px;
-        }
-      }
-
-      .trend .trend_ul li .img_con img {
-        width: 100%;
-      }
-
-      .trend .trend_ul li dl {
-        margin: 0;
-      }
-
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li dl {
-          float: left;
-          width: 45%;
-        }
-      }
-      @media screen and (min-width: 760px) {
-        .trend .trend_ul li:last-child dl {
-          float: right;
-        }
-      }
-
-      @media screen and (min-width: 1200px) {
-        .trend .trend_ul li dl {
-          width: 430px;
-          margin-top: 97px;
-        }
-      }
-
-      .trend_dl dt {
-        margin-bottom: 20px;
-      }
-      .trend_dl dt > span {
-        display: inline-block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 900;
-        color: #071f60;
-        letter-spacing: 2px;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend_dl dt > span {
-          margin-bottom: 12px;
-          font-size: 20px;
-        }
-      }
-
-      .trend_dl dt p {
-        font-size: 28px;
-        font-weight: 700;
-        color: #202020;
-        line-height: 1.4em;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend_dl dt p {
-          font-size: 32px;
-        }
-      }
-
-      @media screen and (min-width: 1200px) {
-        span.block_txt {
-          display: block;
-        }
-      }
-
-      .trend_dl dd {
-        margin: 0;
-      }
-
-      .trend_dl dd p {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: 300;
-        color: #606060;
-        line-height: 1.4em;
-      }
-
-      @media screen and (min-width: 1020px) {
-        .trend_dl dd p {
-          font-size: 20px;
-        }
-      }
-
-      .trend_dl dd p:last-child {
-        margin-bottom: 0;
-      }
-
-      .trend_dl dd p em {
-        font-weight: 500;
-        color: #404040;
-      }
-    </style>
+    <link rel="stylesheet" href="/menubar/style/기업소개.css" />
+    <!-- <style></style> -->
   </head>
   <body>
-    <div class="identifier">
-      <h2 class="identifier_h2">BRAND IDENTIFIER</h2>
+    <div class="content1">
+      <h2 class="contentEng1">BRAND IDENTIFIER</h2>
 
-      <dl class="identifier_dl">
+      <dl class="contentKor1">
         <dt>
           <span>PRIMARY IDENTIFIER</span>
           <p></p>
@@ -829,16 +30,19 @@
           </p>
           <p>
             빽다방의 시각 아이덴티티 구축은 정확한 Identifier 규정에 따라야
-            하며, <br />어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
-            안됩니다.
+            하며,
+            <span class="blockText"
+              >어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
+              안됩니다.</span
+            >
           </p>
         </dd>
       </dl>
-      <div class="logo">
+      <div class="logoContent">
         <div class="logo1">
           <p><img src="/이미지/standard_logo.png" alt="빽다방" /></p>
         </div>
-        <ul class="logo_ul">
+        <ul class="logo2">
           <li>
             <img src="/이미지/paiks_logo01.jpg" alt="PAIK'S COFFEE" />
           </li>
@@ -852,17 +56,17 @@
       </div>
     </div>
 
-    <div class="color">
-      <dl class="color_dl">
+    <div class="content2">
+      <dl class="contentKor2">
         <dt>
           <span>BRAND COLOR</span>
           <p></p>
           <p>빽다방 컬러 시스템</p>
         </dt>
       </dl>
-      <ul class="paiks_color">
+      <ul class="colorName">
         <li>
-          <div class="color_box"></div>
+          <div class="colorBox"></div>
           <dl>
             <dt>PAIK’S NAVY BLUE</dt>
             <dd>
@@ -873,7 +77,7 @@
           </dl>
         </li>
         <li>
-          <div class="color_box"></div>
+          <div class="colorBox"></div>
           <dl>
             <dt>PAIK’S YELLOW</dt>
             <dd>
@@ -884,7 +88,7 @@
           </dl>
         </li>
         <li>
-          <div class="color_box"></div>
+          <div class="colorBox"></div>
           <dl>
             <dt>PAIK’S LIGHT GRAY</dt>
             <dd>
@@ -895,7 +99,7 @@
           </dl>
         </li>
       </ul>
-      <div class="color_logo">
+      <div class="logoColor">
         <dl>
           <dt>WHITE BACKGROUND / NAVY COLOR</dt>
           <dd>
@@ -922,11 +126,11 @@
         </dl>
       </div>
     </div>
-    <div class="value">
-      <h2 class="value_h2">빽다방의 핵심가치</h2>
-      <ul class="value_ul">
+    <div class="content3">
+      <h2 class="contentMain3">빽다방의 핵심가치</h2>
+      <ul class="valueName">
         <li>
-          <div class="value_icon"></div>
+          <div class="valueIcon"></div>
           <dl>
             <dt>동반성장</dt>
             <dd>
@@ -937,15 +141,14 @@
           </dl>
         </li>
         <li>
-          <div class="value_icon"></div>
+          <div class="valueIcon"></div>
           <dl>
             <dt>소통</dt>
             <dd>
               각 분기별로 지역별 소규모 간담회를 진행하고,
-              <span class="block_txt">
+              <span class="blockText">
                 매년 말 전체 점주님을 대상으로 하는 점주연수를 진행합니다.</span
               >
-
               <em
                 >가맹본부가 발전할 수 있는 방향성에 대해 함께 논의하며 토론</em
               >
@@ -954,12 +157,12 @@
           </dl>
         </li>
         <li>
-          <div class="value_icon"></div>
+          <div class="valueIcon"></div>
           <dl>
             <dt>고객만족도</dt>
             <dd>
               유통과정에서 발생하는 가맹본부의 수익을 최소화하여,<span
-                class="block_txt"
+                class="blockText"
               >
                 고급 식자재를 사용하되 합리적인 가격을 유지하고,
                 <em>만족도 높은 서비스를 제공</em>합니다.</span
@@ -969,28 +172,28 @@
         </li>
       </ul>
     </div>
-    <div class="trend">
-      <h2 class="trend_h2">발 빠른 트렌드 리딩</h2>
-      <ul class="trend_ul">
+    <div class="content4">
+      <h2 class="contentMain4">발 빠른 트렌드 리딩</h2>
+      <ul class="trendContent">
         <li>
-          <div class="img_con">
+          <div class="imgCon">
             <img
               src="/이미지/trend_img01.jpg"
               alt="다양한 맛과 비주얼의 시그니처 커피메뉴"
             />
           </div>
-          <dl class="trend_dl">
+          <dl class="trendName">
             <dt>
               <span>SIGNATURE COFFEE MENU</span>
               <p></p>
               <p>
                 다양한 맛과 비주얼의
-                <span class="block_txt">시그니처 커피메뉴</span>
+                <span class="blockText">시그니처 커피메뉴</span>
               </p>
             </dt>
             <dd>
               <p>
-                퀄리티 높은 커피를 다양한 맛과 비주얼로<span class="block_txt">
+                퀄리티 높은 커피를 다양한 맛과 비주얼로<span class="blockText">
                   고객들에게 제공하여 달달연유라떼, 아샷추 등의</span
                 >
                 <em>빽다방 시그니처 커피메뉴로 안착</em>시켰습니다.
@@ -999,25 +202,25 @@
           </dl>
         </li>
         <li>
-          <div class="img_con">
+          <div class="imgCon">
             <img
               src="/이미지/trend_img02.jpg"
               alt="다시 돌아오는 계속 생각나는 그 음료"
             />
           </div>
-          <dl class="trend_dl">
+          <dl class="trendName">
             <dt>
               <span>SEASON BACK DRINK</span>
               <p></p>
               <p>
                 다시 돌아오는
-                <span class="block_txt">계속 생각나는 그 음료</span>
+                <span class="blockText">계속 생각나는 그 음료</span>
               </p>
             </dt>
             <dd>
               <p>
                 고객들이 즐겨 마셨던 시그널한 메뉴들을 재출시하며,
-                <span class="block_txt"
+                <span class="blockText"
                   >끊임없이 생각나는 브랜드로 자리잡았습니다.</span
                 >
               </p>
