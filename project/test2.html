@@ -5,78 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      #div1 {
-        display: flex;
-        flex-wrap: wrap;
-        width: 200px;
-        height: 100px;
-        background-color: aqua;
+      html,
+      body {
+        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
       }
-      #div2 {
-        display: block;
-        width: 50%;
-        height: 50px;
-        background-color: red;
+      .div1 {
+        width: 100%;
+        height: auto;
+        background: url(/images/기업명\ 소개\ 바로가기\ 이미지.jpg) no-repeat;
+        background-color: #243f84;
+        background-size: 50%;
+        background-position: 80% 80%;
+        height: 240px;
       }
-      #div3 {
-        display: block;
-        width: 50%;
-        height: 50px;
-        background-color: violet;
+      .div1 > dl {
+        padding-top: 30px;
+        margin: auto !important;
+        width: 92%;
       }
-
-      @media screen and (max-width: 600px) {
-        #div2 {
-          display: block;
-          width: 100%;
-          height: 50px;
-          background-color: red;
-        }
-        #div3 {
-          display: block;
-          width: 100%;
-          height: 50px;
-          background-color: violet;
+      .dt1 {
+        width: 100%;
+        color: white;
+        font-size: 40px;
+        font-weight: 900;
+      }
+      .dt2 {
+        width: 100%;
+        color: white;
+        margin: 5px 0px 10px 0px;
+      }
+      @media screen and (max-width: 1200px) {
+        .div1 .dt2 {
+          font-size: 0px;
         }
       }
     </style>
   </head>
-  <body>
-    <div id="div1">
-      <div id="div2">
-        <ul>
-          <li>2008</li>
-        </ul>
-      </div>
-
-      <div id="div3">
-        <ul>
-          <li>창업함1</li>
-        </ul>
-      </div>
-      <div id="div2">
-        <ul>
-          <li>2009</li>
-        </ul>
-      </div>
-
-      <div id="div3">
-        <ul>
-          <li>창업함2</li>
-        </ul>
-      </div>
-      <div id="div2">
-        <ul>
-          <li>2010</li>
-        </ul>
-      </div>
-
-      <div id="div3">
-        <ul>
-          <li>창업함3</li>
-        </ul>
-      </div>
+  <body style="margin: 0">
+    <div class="div1">
+      <dl>
+        <dt class="dt1">
+          PAIK'S BRAND <br />
+          STORY
+        </dt>
+        <dd class="dt2">합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
+      </dl>
     </div>
   </body>
 </html>

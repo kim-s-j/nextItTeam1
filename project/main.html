@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
       }
       .slideBox {
         width: 100%;
@@ -53,30 +63,30 @@
         margin-left: 5px;
         margin-right: 5px;
       }
-      .goPage1 {
+      .flax .goPage1 {
         width: 50%;
         height: auto;
         font-size: 0;
       }
-      .goPage2 {
+      .flax .goPage2 {
         width: 100%;
         height: auto;
         font-size: 0;
       }
-      .goPage3 {
+      .flax .goPage3 {
         width: 60%;
         height: auto;
         font-size: 0;
       }
-      .goPage4 {
+      .flax .goPage4 {
         width: 40%;
         height: auto;
         font-size: 0;
       }
-      .goPage1 img,
-      .goPage2 img,
-      .goPage3 img,
-      .goPage4 img {
+      .flax .goPage1 img,
+      .flax .goPage2 img,
+      .flax .goPage3 img,
+      .flax .goPage4 img {
         width: 100%;
         height: 100%;
       }
@@ -88,13 +98,52 @@
         width: 100%;
         height: auto;
       }
-      @media screen and (max-width: 600px) {
-        .goPage1,
-        .goPage2,
-        .goPage3,
-        .goPage4 {
+      @media screen and (max-width: 1020px) {
+        .flax .goPage1,
+        .flax .goPage2,
+        .flax .goPage3,
+        .flax .goPage4 {
           width: 100%;
         }
+        .flax .goPage2 {
+          content: url("/images/fresh coffee 바로가기 이미지2.jpg");
+        }
+        .flax .goPage3 {
+          content: url("/images/various beverage 바로가기 이미지2.jpg");
+        }
+        .flax .goPage4 {
+          content: url("/images/sweet parik's ccino 바로가기 이미지2.jpg");
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .div1 .dt2 {
+          font-size: 0px;
+        }
+      }
+      .goPage1 {
+        width: 100%;
+        height: auto;
+        background: url(/images/기업명\ 소개\ 바로가기\ 이미지.jpg) no-repeat;
+        background-color: #243f84;
+        background-size: 50%;
+        background-position: 80% 80%;
+        height: 240px;
+      }
+      .goPage1 > dl {
+        padding-top: 30px;
+        margin: auto !important;
+        width: 92%;
+      }
+      .dt1 {
+        width: 100%;
+        color: white;
+        font-size: 40px;
+        font-weight: 900;
+      }
+      .dt2 {
+        width: 100%;
+        color: white;
+        margin: 5px 0px 10px 0px;
       }
     </style>
   </head>
@@ -153,7 +202,14 @@
         <img src="/images/커피스토리 바로가기 이미지.png" />
       </a>
       <a href="/testPage.html" class="goPage1">
-        <img src="/images/기업명 소개 바로가기 이미지.png" />
+        <!-- <img src="/images/기업명 소개 바로가기 이미지.png" /> -->
+        <dl>
+          <dt class="dt1">
+            PAIK'S BRAND <br />
+            STORY
+          </dt>
+          <dd class="dt2">합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
+        </dl>
       </a>
     </section>
     <section class="flax">
