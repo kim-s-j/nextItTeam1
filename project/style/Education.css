@@ -1,0 +1,424 @@
+body {
+  line-height: 1;
+  position: relative;
+  font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
+  font-size: 100%;
+  color: #202020;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+h2,
+h3 {
+  font-family: inherit;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+em {
+  font-style: normal;
+  font-weight: 700;
+}
+dl {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+dt {
+  display: block;
+  unicode-bidi: isolate;
+}
+dd {
+  display: block;
+  margin-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  margin: 0;
+  padding: 0;
+  line-height: 150%;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  border-style: none;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.eduStory .barista {
+  width: 92%;
+  max-width: 1150px;
+  margin: 65px auto 80px auto;
+}
+.eduStory .barista .baristaMain {
+  font-size: 30px;
+  font-weight: 700;
+  color: #071f60;
+  text-align: center;
+  line-height: 1.4em;
+}
+.eduStory .barista .baristaMain::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 25px auto 50px auto;
+  background: #202020;
+}
+.eduStory dl {
+  margin: 0;
+}
+.eduStory .barista .baristaInfo {
+  text-align: center;
+}
+.eduStory .barista .baristaInfo dt {
+  font-size: 22px;
+  font-weight: 300;
+  color: #202020;
+  line-height: 1.3em;
+}
+.eduStory .barista .baristaInfo dt em {
+  font-size: 24px;
+  font-weight: 700;
+  color: #071f60;
+  box-shadow: inset 0 -15px 0 #ffe417;
+}
+.eduStory dd {
+  margin: 0;
+}
+.eduStory .barista .baristaInfo dd {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #606060;
+  line-height: 1.3em;
+}
+.eduStory .barista ul {
+  margin-top: 40px;
+}
+.eduStory .barista li {
+  max-width: 550px;
+  margin: auto;
+}
+.eduStory .barista li:first-child {
+  margin-bottom: 40px;
+}
+.eduStory .barista li .baristaText {
+  margin-top: 25px;
+}
+.eduStory .barista li .baristaText > span:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 25px 0 25px 0;
+  background: #202020;
+}
+.eduStory .barista li .baristaText > span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #071f60;
+}
+.eduStory p {
+  line-height: 1.4em;
+}
+.eduStory .barista li .baristaText p {
+  font-size: 20px;
+  color: #202020;
+}
+.eduStory .barista li .baristaText dl {
+  margin-top: 35px;
+}
+.eduStory .barista li .baristaText dl dt {
+  font-size: 20px;
+  font-weight: 700;
+  color: #071f60;
+}
+.eduStory .barista li .baristaText dl dd {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+.eduStory .barista li .baristaText dl dd em {
+  font-weight: 400;
+}
+.eduStory .barista li .baristaText dl:last-child {
+  margin-top: 20px;
+}
+.eduStory .barista li .baristaText dl dd span:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 12px;
+  top: 4px;
+  right: -16px;
+  background: url(/images/arrow.gif) no-repeat;
+}
+.eduStory .barista li .baristaText dl dd span {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  word-break: keep-all;
+}
+.eduStory .barista li .baristaText dl dd span:last-child:after {
+  display: none;
+}
+.eduStory .barista li .baristaText dl dd span:last-child {
+  margin-right: 0;
+}
+.eduStory .qualification {
+  margin: 80px 0 0 0;
+  padding: 80px 0 140px 0;
+  background: #f8f8f8;
+}
+.eduStory .qualification .qualificationContent {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+.eduStory .qualification .qualificationInfo {
+  text-align: center;
+}
+.eduStory .qualification .qualificationMain::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 25px auto 25px auto;
+  background: #202020;
+}
+.eduStory .qualification .qualificationMain {
+  font-size: 24px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 1.4em;
+}
+.eduStory .qualification .qualificationInfo dd {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+}
+.eduStory .qualification .qualificationInfo dd em {
+  font-size: 20px;
+  font-weight: 700;
+  color: #071f60;
+}
+.eduStory .qualification .qualificationInfo dd p {
+  margin-top: 10px;
+}
+.eduStory .qualification .goal {
+  margin-top: 60px;
+  text-align: center;
+}
+.eduStory .qualification .goal ul {
+  max-width: 360px;
+  margin: auto;
+}
+.eduStory .qualification .goal ul li {
+  margin-bottom: 35px;
+}
+.eduStory .qualification .goal ul li dl {
+  margin-top: 25px;
+}
+.eduStory .qualification .goal ul li dt {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #071f60;
+  box-shadow: inset 0 -12px 0 #ffe417;
+}
+.eduStory .qualification .goal ul li dd {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #606060;
+  line-height: 1.4em;
+}
+.eduStory .qualification .goal ul li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 670px) {
+  .eduStory .barista .baristaInfo dt span.blockText {
+    display: block;
+  }
+  .eduStory .qualification .qualificationMain span.blockText {
+    display: block;
+  }
+}
+@media screen and (min-width: 760px) {
+  .eduStory .barista ul {
+    margin-top: 60px;
+  }
+  .eduStory .barista li {
+    display: table;
+    width: 100%;
+    max-width: none;
+  }
+  .eduStory .barista li .baristaImg {
+    float: right;
+    width: 45%;
+    margin-left: 5%;
+  }
+  .eduStory .barista li .baristaText {
+    float: left;
+    width: 50%;
+    margin-top: 0;
+  }
+  .eduStory .barista li:first-child {
+    margin-bottom: 80px;
+  }
+  .eduStory .barista li:last-child .baristaImg {
+    float: left;
+    margin-left: 0;
+    margin-right: 5%;
+  }
+  .eduStory .barista li:last-child .baristaText {
+    float: right;
+  }
+  .eduStory .qualification .goal ul {
+    display: table;
+    width: 100%;
+    max-width: none;
+  }
+  .eduStory .qualification .goal ul li {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+  }
+  .eduStory .qualification .goal ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .eduStory .barista {
+    margin: 120px auto 120px auto;
+  }
+  .eduStory .barista .baristaMain {
+    font-size: 45px;
+  }
+  .eduStory .barista .baristaMain::after {
+    width: 60px;
+    margin: 40px auto 60px auto;
+  }
+  .eduStory .barista .baristaInfo dt {
+    font-size: 24px;
+  }
+  .eduStory .barista .baristaInfo dt em {
+    font-size: 28px;
+  }
+  .eduStory span.blockText {
+    display: block;
+  }
+  .eduStory .barista .baristaInfo dd {
+    font-size: 20px;
+  }
+  .eduStory .barista ul {
+    margin-top: 100px;
+  }
+  .eduStory .barista li .baristaText > span {
+    font-size: 40px;
+  }
+  .eduStory .barista li .baristaText > span:after {
+    width: 40px;
+    margin: 35px 0 35px 0;
+  }
+  .eduStory .barista li .baristaText p {
+    font-size: 22px;
+  }
+  .eduStory .barista li .baristaText dl dt {
+    font-size: 22px;
+  }
+  .eduStory .barista li .baristaText dl dd {
+    font-size: 20px;
+  }
+  .eduStory .barista li .baristaText dl dd span:after {
+    top: 8px;
+  }
+  .eduStory .barista li:first-child {
+    margin-bottom: 100px;
+  }
+  .eduStory .qualification {
+    padding: 120px 0 140px 0;
+  }
+  .eduStory .qualification .qualificationMain::after {
+    width: 40px;
+    margin: 35px auto 35px auto;
+  }
+  .eduStory .qualification .qualificationMain {
+    font-size: 30px;
+  }
+  .eduStory .qualification .qualificationInfo dd em {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  .eduStory .qualification .qualificationInfo dd p {
+    margin-top: 0;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .eduStory .barista li .baristaImg {
+    width: 550px;
+    margin-left: 0;
+  }
+  .eduStory .barista li .baristaText {
+    width: 530px;
+  }
+  .eduStory .barista li:last-child .baristaImg {
+    margin-right: 0;
+  }
+  .eduStory .qualification .qualificationContent {
+    width: 1150px;
+  }
+  .eduStory .qualification .goal ul li {
+    width: 360px;
+    margin-right: 35px;
+  }
+}
