@@ -74,23 +74,20 @@
       .flax .goPage3 {
         width: 100%;
         height: auto;
-        font-size: 0;
       }
       .flax .goPage4 {
         width: 60%;
         height: auto;
-        font-size: 0;
       }
       .flax .goPage5 {
         width: 40%;
         height: auto;
-        font-size: 0;
       }
-      .flax .goPage1 img,
-      .flax .goPage2 img,
-      .flax .goPage3 img,
-      .flax .goPage4 img,
-      .flax .goPage5 img {
+      .flax .goPage6 {
+        width: 100%;
+        height: auto;
+      }
+      .goPageImg {
         width: 100%;
         height: 100%;
       }
@@ -104,7 +101,7 @@
       }
       .flax .goPage1 {
         height: 240px;
-        background: url(/images/coffee_story.jpg) no-repeat;
+        background: url("/images/coffee_story.jpg") no-repeat;
         background-size: cover;
         background-position: 60%;
         text-decoration-line: none;
@@ -118,36 +115,80 @@
         background-position: 80% 80%;
         text-decoration-line: none;
       }
-      .flax .goPage1 > dl {
+      .flax .goPage3,
+      .flax .goPage4,
+      .flax .goPage5,
+      .flax .goPage6 {
+        position: relative;
+        color: inherit;
+        text-decoration-line: none;
+      }
+      .flax .goPage1 dl {
         padding-top: 30px;
         margin: auto !important;
         width: 92%;
       }
-      .flax .goPage2 > dl {
+      .flax .goPage2 dl {
         padding-top: 30px;
         margin: auto !important;
         width: 92%;
+      }
+      .flax .goPage3 dl,
+      .flax .goPage4 dl,
+      .flax .goPage5 dl,
+      .flax .goPage6 dl {
+        position: absolute;
+        width: 92%;
+        top: 30px;
+        left: 4%;
+      }
+      .flax .goPage3 dl {
+        color: #6b4d30;
+      }
+      .flax .goPage4 dl {
+        color: #071f60;
+      }
+      .flax .goPage5 dl {
+        color: #f1ae1d;
+      }
+      .flax .goPage6 dl {
+        color: white;
       }
       .flax .goPage1 .content1 {
-        width: 100%;
         margin: 5px 0px 10px 0px;
         color: #071f60;
-        font-size: 40px;
-        font-weight: 900;
       }
       .flax .goPage1 .content2 {
         color: black;
       }
       .flax .goPage2 .content3 {
-        width: 100%;
         color: white;
-        font-size: 40px;
-        font-weight: 900;
       }
       .flax .goPage2 .content4 {
         width: 100%;
         color: white;
         margin: 5px 0px 10px 0px;
+      }
+      .contentSet {
+        font-weight: 900;
+        font-size: 40px;
+        width: 100%;
+      }
+      @media screen and (max-width: 1200px) {
+        .flax .goPage1 .content2,
+        .flax .goPage2 .content4,
+        .flax .goPage3 .content6,
+        .flax .goPage4 .content8,
+        .flax .goPage5 .content10,
+        .flax .goPage6 .content12 {
+          font-size: 0px;
+        }
+        .flax .goPage3 .content5,
+        .flax .goPage4 .content7,
+        .flax .goPage5 .content9,
+        .flax .goPage6 .content11 {
+          font-size: 25px;
+        }
       }
       @media screen and (max-width: 1020px) {
         .flax .goPage1,
@@ -157,20 +198,23 @@
         .flax .goPage5 {
           width: 100%;
         }
-        .flax .goPage3 {
+        .flax .goPage3 > img {
           content: url("/images/fresh_coffee_2.jpg");
         }
-        .flax .goPage4 {
+        .flax .goPage4 > img {
           content: url("/images/various_beverage2.jpg");
         }
-        .flax .goPage5 {
+        .flax .goPage5 > img {
           content: url("/images/sweet_parik's_ccino2.jpg");
         }
-      }
-      @media screen and (max-width: 1200px) {
-        .flax .goPage1 .content2,
-        .flax .goPage2 .content4 {
-          font-size: 0px;
+        .flax .goPage6 > img {
+          content: url("/images/tasty_ice_cream_dessert2.jpg");
+        }
+        .flax .goPage3 .content5,
+        .flax .goPage4 .content7,
+        .flax .goPage5 .content9,
+        .flax .goPage6 .content11 {
+          font-size: 20px;
         }
       }
       @media screen and (min-width: 1200px) {
@@ -178,11 +222,29 @@
         .flax .goPage2 {
           height: 320px;
         }
-        .flax .goPage1 > dl {
+        .flax .goPage3 dl,
+        .flax .goPage6 dl {
+          width: 1200px;
+          top: 60px;
+          left: 50%;
+          /* left: 50%; */
+          margin-left: -600px;
+        }
+        .flax .goPage4 dl {
+          width: 1200px;
+          top: 60px;
+          left: 83.3%;
+          margin-left: -600px;
+        }
+        .flax .goPage1 dl {
           margin-left: calc(100% - 600px) !important;
         }
         .flax .goPage1 .content2,
-        .flax .goPage2 .content4 {
+        .flax .goPage2 .content4,
+        .flax .goPage3 .content6,
+        .flax .goPage4 .content8,
+        .flax .goPage5 .content10,
+        .flax .goPage6 .content12 {
           margin: 10px 0 0;
           font-size: 18px;
           font-weight: 600;
@@ -244,8 +306,8 @@
     <section class="flax">
       <a href="/testPage.html" class="goPage1">
         <dl>
-          <dt class="content1">
-            PAIK'S BRAND <br />
+          <dt class="content1 contentSet">
+            PAIK'S COFFEE<br />
             STORY
           </dt>
           <dd class="content2">
@@ -255,8 +317,8 @@
       </a>
       <a href="/testPage.html" class="goPage2">
         <dl>
-          <dt class="content3">
-            PAIK'S BRAND <br />
+          <dt class="content3 contentSet">
+            PAIK'S BRAND<br />
             STORY
           </dt>
           <dd class="content4">
@@ -267,15 +329,46 @@
     </section>
     <section class="flax">
       <a href="/testPage.html" class="goPage3">
-        <img src="/images/fresh_coffee.jpg" />
+        <dl>
+          <dt class="content5 contentSet">FRESH<br />COFFEE</dt>
+          <dd class="content6">
+            신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!
+          </dd>
+        </dl>
+        <img src="/images/fresh_coffee.jpg" class="goPageImg" />
       </a>
     </section>
     <section class="flax">
       <a href="/testPage.html" class="goPage4">
-        <img src="/images/various_beverage.jpg" />
+        <dl>
+          <dt class="content7 contentSet">VARIOUS<br />BEVERAGE</dt>
+          <dd class="content8">
+            에이드, 티, 주스 등 취향대로<br />골라 먹는 즐거움!
+          </dd>
+        </dl>
+        <img src="/images/various_beverage.jpg" class="goPageImg" />
       </a>
       <a href="/testPage.html" class="goPage5">
-        <img src="/images/sweet_parik's_ccino.jpg" />
+        <dl>
+          <dt class="content9 contentSet">SWEET<br />PAIK'S CCINO</dt>
+          <dd class="content10">
+            신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!
+          </dd>
+        </dl>
+        <img src="/images/sweet_parik's_ccino.jpg" class="goPageImg" />
+      </a>
+    </section>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage6">
+        <dl>
+          <dt class="content11 contentSet">
+            TASTY<br />ICE CREAM<br />DESSERT
+          </dt>
+          <dd class="content12">
+            달콤한 아이스크림부터<br />든든한 브레드까지!
+          </dd>
+        </dl>
+        <img src="/images/tasty_ice_cream_dessert.jpg" class="goPageImg" />
       </a>
     </section>
 
