@@ -102,8 +102,7 @@ dd {
   margin-bottom: 40px;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/check_bg.gif)
-    top center;
+  background: url(/images/check_bg.gif) top center;
   background-size: 115% auto;
 }
 .content1 .logoContent .logo1 p {
@@ -295,18 +294,15 @@ img {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 .content3 .valueName li:nth-child(1) .valueIcon {
-  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon01.png)
-    no-repeat center #fff;
+  background: url(/images/value_icon01.png) no-repeat center #fff;
   background-size: 80px;
 }
 .content3 .valueName li:nth-child(2) .valueIcon {
-  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon02.png)
-    no-repeat center #fff;
+  background: url(/images//value_icon02.png) no-repeat center #fff;
   background-size: 80px;
 }
 .content3 .valueName li:nth-child(3) .valueIcon {
-  background: url(https://paikdabang.com/wp-content/themes/paikdabang/assets/images/intro/value_icon03.png)
-    no-repeat center #fff;
+  background: url(/images/value_icon03.png) no-repeat center #fff;
   background-size: 80px;
 }
 .content3 .valueName li dl {
@@ -480,7 +476,7 @@ em {
   }
 }
 @media screen and (min-width: 1020px) {
-  .contentEng1 {
+  .content1 .contentEng1 {
     font-size: 45px;
   }
   .content1 .contentEng1::after {
