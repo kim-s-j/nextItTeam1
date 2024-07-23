@@ -2,65 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>test2</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      html,
-      body {
-        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
-      }
-      .div1 {
-        width: 100%;
-        height: auto;
-        background: url(/images/기업명\ 소개\ 바로가기\ 이미지.jpg) no-repeat;
-        background-color: #243f84;
-        background-size: 50%;
-        background-position: 80% 80%;
-        height: 240px;
-      }
-      .div1 > dl {
-        padding-top: 30px;
-        margin: auto !important;
-        width: 92%;
-      }
-      .dt1 {
-        width: 100%;
-        color: white;
-        font-size: 40px;
-        font-weight: 900;
-      }
-      .dt2 {
-        width: 100%;
-        color: white;
-        margin: 5px 0px 10px 0px;
-        font-size: 40px;
-        font-weight: 500;
-      }
-      @media screen and (max-width: 1200px) {
-        .div1 .dt2 {
-          font-size: 0px;
-        }
-      }
-    </style>
   </head>
-  <body style="margin: 0">
-    <div class="div1">
-      <dl>
-        <dt class="dt1">
-          PAIK'S BRAND <br />
-          STORY
-        </dt>
-        <dd class="dt2">PAIK</dd>
+  <body>
+    <div
+      id="map"
+      style="width: 100%; height: 100%; position: relative; overflow: hidden"
+    ></div>
+    <form onsubmit="searchPlaces(); return false;">
+      최대 45개의 검색결과
+      <br />
+      키워드 :
+      <input type="text" value="대전" id="keyWord" size="15" />
+      <button type="submit" onclick="Onclick()">검색하기</button>
+    </form>
 
-        <p style="font-weight: 900; font-size: 40px">PAIK</p>
-      </dl>
-    </div>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"
+    ></script>
+    <script>
+      var places = new kakao.maps.services.Places();
+      let placesKeyWord = document.getElementById("keyWord").value;
+      let placeArr = [];
+      function Onclick() {
+        placesKeyWord = document.getElementById("keyWord").value;
+      }
+      var callback = function (result, status) {
+        placeArr = [];
+        if (status === kakao.maps.services.Status.OK) {
+          result.forEach((element) => {
+            for (const [key, value] of Object.entries(element)) {
+              if (element[key].includes(placesKeyWord)) {
+                if (value === "address_name") {
+                  placeArr.push([key, value]);
+                } else if (key === "road_address_name") {
+                  placeArr.push([key, value]);
+                } else if (key === "place_name") {
+                  placeArr.push([key, value]);
+                }
+              }
+            }
+          });
+        }
+        console.log(result);
+      };
+      function searchPlaces() {
+        console.log(places);
+        places.keywordSearch(`${placesKeyWord}빽다방`, callback, {
+          page: 1,
+          size: 3,
+        });
+        return 0;
+      }
+    </script>
   </body>
 </html>

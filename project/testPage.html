@@ -4,8 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>testPage</title>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"
+    ></script>
   </head>
   <body>
     <p>이동함!</p>
+    <script>
+      var places = new kakao.maps.services.Places();
+
+      var callback = function (result, status, pagination) {
+        if (status === kakao.maps.services.Status.OK) {
+          console.log(result);
+        }
+        console.log(`${pagination.prevPage()} 페이지수${pagination.current}`);
+      };
+
+      places.keywordSearch("치킨", callback, { page: 3 });
+    </script>
   </body>
 </html>
