@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로컬스토리지에 값넣어보장</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      .lineborder {
+        border: 1px solid #c7c0c0;
+        max-width: 350px;
+      }
+      .imgWidth {
+        width: 100%;
+      }
+      .addP {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="whitebg button addP lineborder" onclick="mod()">
+          <img class="imgWidth" src="/images/aspreeso-2-450x588.png" />
+        </div>
+      </li>
+    </ul>
+
+    <script>
+      //   localStorage.clear();
+      //  로컬스트리지에 값 전체삭제
+
+      const korean_name1 = "더블에스프레소";
+      const explanation1 =
+        "브라질 원두 블렌딩으로 다크초콜릿,카라멜,견과류의 고소함을 느낄 수 있는 에스프레소";
+      const serving_size1 = "60ml";
+      const caffeine1 = 237;
+      const salt1 = 0;
+      const saturated_fat1 = 0;
+      const kcal1 = 22;
+      const sugars1 = 0;
+      const protein1 = 1;
+
+      const double_espresso = {
+        korean_name1,
+        explanation1,
+        serving_size1,
+        caffeine1,
+        salt1,
+        saturated_fat1,
+        kcal1,
+        sugars1,
+        protein1,
+      };
+      // 여기까지 에스프레소
+      const korean_name2 = "아메리카노(HOT)";
+      const explanation2 =
+        "빽다방만의 맛과 향을 더한 100% 아라비카 로스팅 원두로 뽑아내 깊고 진한 맛의 앗!메리카노";
+      const serving_size2 = "16oz";
+      const caffeine2 = 237;
+      const salt2 = 4;
+      const saturated_fat2 = 0;
+      const kcal2 = 14;
+      const sugars2 = 0;
+      const protein2 = 0;
+
+      const americanoHot = {
+        korean_name2,
+        explanation2,
+        serving_size2,
+        caffeine2,
+        salt2,
+        saturated_fat2,
+        kcal2,
+        sugars2,
+        protein2,
+      };
+
+      //   const tabel = { double_espresso, americanoHot };
+      //   localStorage.setItem("coffee", JSON.stringify(tabel));
+
+      const storeData = localStorage.getItem("coffee");
+      const coffeeData = JSON.parse(storeData);
+
+      const doubleEspresso = coffeeData.double_espresso;
+      //   console.log(doubleEspresso.korean_name1);
+      //   에스프레쏘 이름은 나옴.
+      const espressoName = doubleEspresso.korean_name1;
+
+      function addP() {
+        const p1 = document.createElement("p");
+        p1.innerText = espressoName;
+        const addPElements = document.getElementsByClassName("addP");
+        addPElements[0].appendChild(p1);
+      }
+
+      addP();
+
+      const button = document.querySelector(".button");
+      console.log(button);
+      button.addEventListener("click", function () {
+        button.style.backgroundColor = "yellow";
+      });
+      const res = button.classList.toggle("whitebg");
+      const mod = () => {
+        if (res) {
+          document.querySelector(".button").style.backgroundColor = "yellow";
+        } else {
+          document.querySelector(".button").style.backgroundColor = "white";
+        }
+      };
+    </script>
+  </body>
+</html>
