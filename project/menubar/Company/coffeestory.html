@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커피이야기</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        max-width: 1920px;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      body {
+        line-height: 1.5;
+        position: relative;
+      }
+      .bgYellow {
+        background-image: url(/images/story_bg.jpg);
+        max-height: 750px;
+        padding-top: 60px;
+      }
+
+      .underScore {
+        display: block;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        width: 37px;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+        content: "";
+      }
+      .bgYellow > .coffeeStory {
+        display: flex;
+        justify-content: center;
+        color: #071f60;
+        font-weight: 900;
+        font-size: 45px;
+      }
+      .ceoLogoCenter {
+        display: flex;
+        justify-content: center;
+      }
+      .ceoLogoSize {
+        max-width: 150px;
+        max-height: 130px;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+      .natureCoffee {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 0px;
+      }
+      .backSignature {
+        font-size: 60px;
+        margin-top: 0px;
+        font-weight: 900;
+      }
+      .ProcessingBold {
+        font-size: 45px;
+        margin-bottom: 0px;
+        font-weight: 900;
+        margin-top: 90px;
+      }
+
+      .rightImg1 {
+        float: right;
+        margin-bottom: 120px;
+      }
+      .specialh3 {
+        font-size: 38px;
+        font-weight: 900;
+        color: #071f60;
+      }
+      .ulNone {
+        list-style: none;
+        justify-items: center;
+        margin-top: 50px;
+      }
+      .highQuality {
+        font-size: 30px;
+        color: #202020;
+      }
+      .highCoffee {
+        background-color: #ffe600;
+        color: #071f60;
+        font-weight: 900;
+      }
+      .specialDd {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #606060;
+        margin-left: 0px;
+        margin-bottom: 120px;
+      }
+
+      .highQualityDd {
+        font-size: 20px;
+        color: #606060;
+        margin-bottom: 250px;
+        margin-top: 30px;
+      }
+      .specialScaa {
+        background: #f5f5f5;
+        margin-top: 60px;
+        color: #606060;
+        font-size: 15.5px;
+        margin-left: 0px;
+        max-width: 440px;
+        margin-bottom: 120px;
+        max-height: 100%;
+        padding: 20px 0px 25px 0px;
+      }
+
+      .coffeeCherry {
+        background: #f5f5f5;
+        color: #606060;
+        font-size: 15.5px;
+        padding: 20px 0px 25px 0px;
+        max-width: 480px;
+        max-height: 100%;
+        margin-left: 500px;
+      }
+
+      .specialTee {
+        color: #071f60;
+        font-size: 20px;
+        font-weight: 900;
+        margin: 20px 25px 20px 25px;
+      }
+
+      .leftImg1 {
+        float: left;
+      }
+
+      .rightImg2 {
+        float: right;
+      }
+      .listMargin {
+        margin: 0% 20% 0% 20%;
+        margin-bottom: 120px;
+      }
+
+      .listMargin2 {
+        margin: 0% 20% 0% 20%;
+        margin-bottom: 150px;
+      }
+
+      .coffeeNoteBackColor {
+        background: #f5f5f5;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: #ffffff;
+        border-radius: 100%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      .circleImg {
+        margin-left: 20%;
+        margin-top: 30%;
+      }
+
+      .CuppingNoteStyle {
+        padding-top: 90px;
+        font-size: 45px;
+        font-weight: 900;
+      }
+
+      .brazilColor {
+        color: #606060;
+        font-size: 21px;
+        margin: -5px;
+      }
+
+      .circleFont {
+        font-size: 24px;
+        color: #202020;
+        font-weight: 100;
+      }
+
+      .table {
+        background-color: #ffffff;
+        max-width: 1150px;
+        max-height: 350px;
+        width: 70%;
+        padding: 5% 10%;
+        margin: 5% auto 8%;
+      }
+
+      .table2 {
+        background-color: #ffffff;
+        max-width: 1150px;
+        max-height: 350px;
+        width: 70%;
+        padding: 5% 10%;
+        margin: 5% auto 8%;
+      }
+
+      .spanTabelYellow {
+        width: 150;
+        height: 12px;
+        background-color: #ffe600;
+        line-height: 30px;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .table1Style {
+        width: 15%;
+        display: flex;
+      }
+
+      .spanTabelgray {
+        width: 150;
+        height: 12px;
+        background-color: #e5e5e5;
+        line-height: 30px;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+
+      .table2Margin {
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+
+      .roastingunderBar {
+        display: block;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        width: 870px;
+        height: 2px;
+        background-color: #dedede;
+        content: "";
+      }
+
+      .roastingunderBar::after {
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 80px;
+        margin-left: 500px;
+        width: 190px;
+        height: 5px;
+        background-color: #ffe600;
+        content: "";
+      }
+
+      .roastingUl {
+        display: flex;
+      }
+
+      .roastingUl > li::before {
+        content: "○";
+        color: #b1aeae;
+        background: #ffffff;
+      }
+
+      .roastingUl > .middleYe::before {
+        content: "○";
+        color: #ffe600;
+        background: #ffffff;
+      }
+
+      .roastingUlNone {
+        list-style: none;
+      }
+
+      .fristMargin {
+        margin-top: 28px;
+        margin-left: -870px;
+      }
+
+      .middleMargin {
+        margin-top: 28px;
+        margin-left: 120px;
+      }
+
+      .lastMargin {
+        margin-top: 28px;
+        margin-left: 120px;
+      }
+
+      .tableMain {
+        font-size: 30px;
+        color: #071f60;
+      }
+
+      .tablefontBold {
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      .tablePmargin {
+        margin-right: 65px;
+        font-size: 20px;
+        font-weight: 900;
+      }
+
+      .tablePmargin2 {
+        margin-right: 50px;
+        font-size: 20px;
+        font-weight: 900;
+      }
+      .roastingFont {
+        font-size: 18px;
+      }
+
+      .roastingFontBold {
+        font-size: 18px;
+        font-weight: 900;
+        color: #071f60;
+      }
+
+      .signatureImg {
+        border: 2px solid #ffe600;
+      }
+
+      .SignatureTop {
+        font-size: 45px;
+        font-weight: 900;
+      }
+
+      .signatureName {
+        font-size: 20px;
+        font-weight: 900;
+        padding: 0px 15px;
+      }
+
+      .signaturecoffee {
+        font-size: 17px;
+        color: #606060;
+        margin-left: 0;
+        padding: 0px 15px;
+      }
+
+      .width100 {
+        width: 100%;
+      }
+
+      .circledivMargin {
+        margin-right: 70px;
+      }
+
+      #middleChoco {
+        display: flex;
+        margin-bottom: 5%;
+      }
+      .noneSpan {
+        display: none;
+      }
+
+      .signatureDiv {
+        display: flex;
+      }
+
+      .table1Margin {
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+
+      .coffeekong {
+        margin-bottom: 120px;
+      }
+
+      .listDivPosition {
+        position: relative;
+        left: 10%;
+      }
+      @media screen and (min-width: 1020px) {
+        .ProcessingBold > div > ul > li {
+          margin-bottom: 150px;
+        }
+      }
+
+      @media screen and(max-width:1249px) {
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        iframe {
+          width: 1150px;
+          height: 640px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .longTasteFont {
+          display: none;
+        }
+        .noneSpan {
+          display: block;
+          margin-left: 260px;
+        }
+        .table {
+          padding: 0px;
+          white-space: normal;
+        }
+        .table2 {
+          padding: 0px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .longTasteFont {
+          display: none;
+        }
+        .noneSpan {
+          display: block;
+          margin-left: 180px;
+        }
+        .tablePmargin {
+          margin: 0px;
+        }
+        .tablePmargin2 {
+          margin: 0px;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .noneSpan {
+          display: block;
+          margin-left: 80px;
+        }
+      }
+
+      @media screen and(max-width:1100px) {
+        .table {
+          padding: 10px 10px;
+          width: 100%;
+        }
+        .table2 {
+          padding: 10px 10px;
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1600px) {
+        .coffeeCherry {
+          margin: 0px;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        .circleImg {
+          margin-top: 20%;
+          margin-left: 20%;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .signatureUlDiv > ul {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .signatureUlDiv > ul > li {
+          width: 45%;
+          margin: 2.5%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .signatureUlDiv > ul > li > div > img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        .table {
+          width: 90%;
+          padding: 6% 4%;
+        }
+
+        .table2 {
+          width: 90%;
+          padding: 6% 4%;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .ulNone > #middleChoco {
+          display: inline-block;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .ulNone > #middleChoco {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        #middleChoco > div:nth-child(3) {
+          width: 100%;
+          text-align: center;
+        }
+        .circleImg {
+          margin-top: 20%;
+          margin-left: 20%;
+        }
+        .icon4 {
+          margin-right: 25%;
+        }
+        .icon4Span {
+          margin-left: -50px;
+        }
+      }
+
+      @media screen and (max-width: 1060px) {
+        .table2 > .roastingunderBar {
+          width: 800px;
+        }
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 490px;
+        }
+        .table2 {
+          padding: 10px;
+        }
+        .table {
+          padding: 10px;
+        }
+      }
+
+      @media screen and (max-width: 990px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 490px;
+        }
+      }
+
+      @media screen and (max-width: 1040px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 500px;
+        }
+      }
+      @media screen and (max-width: 1060px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 500px;
+        }
+      }
+
+      @media screen and (max-width: 1020px) {
+        .roastingunderBar::after {
+          width: 140px;
+          margin-left: 370px;
+        }
+        .roastingunderBar {
+          width: 650px;
+          margin-right: 200px;
+        }
+        .lastMargin {
+          margin-left: 90px;
+        }
+        .middleMargin {
+          margin-left: 80px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .brazilColor {
+          margin: 10%;
+        }
+        .CuppingNoteStyle {
+          margin: 10%;
+        }
+      }
+      @media screen and (max-width: 820px) {
+        .middleMargin {
+          margin-left: 50px;
+        }
+        .roastingunderBar::after {
+          width: 130px;
+          margin-left: 350px;
+        }
+        .roastingunderBar {
+          width: 600px;
+          margin-right: 260px;
+        }
+        .lastMargin {
+          margin-left: 70px;
+        }
+        .middleMargin {
+          margin-left: 70px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .middleMargin {
+          margin-left: 20px;
+        }
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar::after {
+          width: 50px;
+          margin-left: 190px;
+        }
+        .tableMarfin {
+          margin-left: 120px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 360px;
+          margin-right: 500px;
+        }
+        .lastMargin {
+          margin-left: 30px;
+        }
+        .middleMargin {
+          margin-left: 30px;
+        }
+        .roastingunderBar::after {
+          width: 80px;
+          margin-left: 200px;
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 310px;
+          margin-right: 550px;
+        }
+        .lastMargin {
+          margin-left: 20px;
+        }
+        .middleMargin {
+          margin-left: 20px;
+        }
+        .roastingunderBar::after {
+          width: 60px;
+          margin-left: 180px;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 250px;
+          margin-right: 600px;
+        }
+        .lastMargin {
+          margin-left: 10px;
+        }
+        .middleMargin {
+          margin-left: 10px;
+        }
+        .roastingunderBar::after {
+          width: 50px;
+          margin-left: 140px;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 200px;
+          margin-right: 660px;
+        }
+        .lastMargin {
+          margin-left: 0px;
+        }
+        .middleMargin {
+          margin-left: 0px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 120px;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 180px;
+          margin-right: 680px;
+        }
+        .lastMargin {
+          margin-left: -5px;
+        }
+        .middleMargin {
+          margin-left: -5px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 100px;
+        }
+      }
+
+      @media screen and (max-width: 260px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 180px;
+          margin-right: 680px;
+        }
+        .lastMargin {
+          margin-left: -10px;
+        }
+        .middleMargin {
+          margin-left: -10px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgYellow">
+      <h1 class="coffeeStory">PAIK’S COFFEE STORY</h1>
+      <div class="ceoLogoCenter">
+        <img class="ceoLogoSize" src="/images/about1.png" />
+      </div>
+      <div>
+        <p class="center natureCoffee">자연이 키운 커피</p>
+      </div>
+      <div>
+        <h1 class="center backSignature">빽다방 시그니처 블렌딩</h1>
+      </div>
+      <div class="center" style="width: auto">
+        <iframe
+          width="100%"
+          src="https://www.youtube.com/embed/1-zO9VZgAuw?si=YxyoAG68JWMwwT6k"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- 여기서부터 동영상 밑 -->
+      <div class="firstFontSize">
+        <h2 class="ProcessingBold center">Coffee Bean Quality & Processing</h2>
+        <div class="center">
+          <br class="underScore" />
+        </div>
+
+        <ul class="ulNone">
+          <li class="listMargin">
+            <div class="rightImg1">
+              <img class="width100" src="/images/story_img01.jpg" />
+            </div>
+            <div>
+              <h3 class="specialh3">
+                SPECIALTY<br />
+                COFFEE BLENDING
+              </h3>
+              <dl>
+                <dt>
+                  <strong class="highQuality">
+                    빽다방에서 만나는<br />
+                    <strong class="highCoffee">고품질의 커피</strong>
+                  </strong>
+                </dt>
+                <dd class="specialDd">
+                  산지의 특징이 명확하고, 향미가 뛰어나며,<br />
+                  극소량만 생산되는 최고등급의 스페셜티 커피<br />
+                  원두를 활용하여 블렌딩했습니다.
+                </dd>
+                <dd class="specialScaa">
+                  <strong class="specialTee">*스페셜티 커피란?</strong> <br />
+                  미국 스페셜티 커피 협회(SCAA)의 평가에서 80점 이상을 받은
+                  우수등급의 커피입니다.
+                </dd>
+              </dl>
+            </div>
+          </li>
+
+          <li class="listMargin2">
+            <div class="leftImg1">
+              <img class="width100" src="/images/story_img02.jpg" />
+            </div>
+            <div class="listDivPosition">
+              <h3 class="specialh3">VELOSO COFFEE</h3>
+              <dl>
+                <dt>
+                  <strong class="highQuality">
+                    좋은 토양에서 자라 온 <br />
+                    <strong class="highCoffee">빽다방의 커피</strong>
+                  </strong>
+                </dt>
+                <dd class="highQualityDd">
+                  빽다방은 고품질 커피 원산지로 인정받고 있는 <br />
+                  브라질의 벨로소 농장에서 생산된 원두를 사용합니다.<br />
+                  좋은 토양에서 자란 커피 체리가 만들어내는 <br />
+                  신선하고 풍부한 향미를 즐겨보세요.<br />
+                </dd>
+              </dl>
+            </div>
+          </li>
+
+          <li class="listMargin2">
+            <div class="rightImg2">
+              <img class="width100" src="/images/story_img03.jpg" />
+            </div>
+            <div>
+              <h3 class="specialh3">
+                NEW CROP <br />
+                COFFEE BEANS
+              </h3>
+              <dl>
+                <dt>
+                  <strong class="highQuality">
+                    신선함이 살아있는 <br />
+                    <strong class="highCoffee">빽다방의 커피</strong>
+                  </strong>
+                </dt>
+                <dd class="specialDd" style="margin-bottom: 300px">
+                  수확한지 1년 미만의 햇생두, <br />
+                  뉴크롭원두를 사용하여 신선함이 살아있습니다. <br />
+                </dd>
+              </dl>
+            </div>
+          </li>
+
+          <li class="listMargin2">
+            <div class="leftImg1">
+              <img class="width100" src="/images/story_img04.jpg" />
+            </div>
+            <div class="listDivPosition">
+              <h3 class="specialh3">
+                DOT(Dried On Tree) <br />
+                PROCESSING
+              </h3>
+              <dl>
+                <dt>
+                  <strong class="highQuality">
+                    커피 본연의 맛이 느껴지는 <br />
+                    <strong class="highCoffee">빽다방의 커피</strong>
+                  </strong>
+                </dt>
+                <dd class="specialDd">
+                  DOT 프로세싱으로 커피의 단맛과 향미가 한층 더 도드라져,
+                  <br />
+                  커피 본연의 맛을 더 풍부하게 느낄 수 있습니다. <br />
+                </dd>
+                <dd class="coffeeCherry">
+                  <strong class="specialTee">*DOT 프로세싱이란?</strong>
+                  <br />
+                  커피체리를 바로 수확하지 않고 나무에서 건조해 단맛을 충분하게
+                  입히는 방식입니다.
+                </dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 여기서부터 커피콩 -->
+      <div class="coffeekong">
+        <div>
+          <div class="coffeeNoteBackColor">
+            <h2 class="CuppingNoteStyle center">PAIK’S Coffee Cupping Note</h2>
+            <div class="center">
+              <br class="underScore" />
+            </div>
+            <div>
+              <p class="center brazilColor">
+                브라질 원두 고유의 묵직한 바디감이 느껴지며,
+              </p>
+              <p class="center brazilColor">
+                아몬드의 고소함과 밀크초콜릿의 은은한 단맛이 균형을 이루는
+                매력적인 맛입니다
+              </p>
+              <p class="center brazilColor">
+                커피를 머금었을 때 느껴지는 부드러운 실키함을 느껴보세요!
+              </p>
+
+              <ul class="ulNone" style="height: 1400px">
+                <div id="middleChoco" style="justify-content: center">
+                  <div class="circledivMargin">
+                    <li>
+                      <span class="circle">
+                        <img class="circleImg" src="/images/story_icon01.png" />
+                      </span>
+                      <p class="center circleFont">Chocolate</p>
+                    </li>
+                  </div>
+                  <!--  -->
+                  <div class="circledivMargin">
+                    <li>
+                      <span class="circle">
+                        <img class="circleImg" src="/images/story_icon02.png" />
+                      </span>
+                      <p class="center circleFont">Cacao Bean</p>
+                    </li>
+                  </div>
+                  <!--  -->
+                  <div>
+                    <li>
+                      <span class="circle icon4Span">
+                        <img
+                          class="circleImg icon4"
+                          src="/images/story_icon04.png"
+                        />
+                      </span>
+                      <p class="center circleFont">Almond</p>
+                    </li>
+                  </div>
+                </div>
+                <!--여기서부터 테이블시발 -->
+                <div class="table">
+                  <h3 class="tableMain center">PAIK’S COFFEE TASTE</h3>
+                  <div>
+                    <div class="tablefontBold center noneSpan">
+                      <span>L</span>
+                      <span class="table1Margin">M</span>
+                      <span>H</span>
+                    </div>
+                    <div class="tablefontBold center longTasteFont">
+                      <span>Light</span>
+                      <span class="table1Margin">Medium</span>
+                      <span>High</span>
+                    </div>
+                    <ul class="ulNone" style="margin-top: 0px">
+                      <li>
+                        <div style="display: flex">
+                          <p class="tablePmargin">단맛</p>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- 신맛 -->
+                      <li>
+                        <div style="display: flex">
+                          <p class="tablePmargin">신맛</p>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- 쓴맛 -->
+                      <li>
+                        <div style="display: flex">
+                          <p class="tablePmargin">쓴맛</p>
+                          <div class="spanTabelYellow table1Style"></div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- 바디감 -->
+                      <li>
+                        <div style="display: flex">
+                          <p class="tablePmargin2">바디감</p>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelYellow table1Style">
+                            <span></span>
+                          </div>
+                          <div class="spanTabelgray table1Style">
+                            <span></span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- 여기서부터 ROASTING POINT -->
+                <div class="table2">
+                  <h3 class="tableMain center">ROASTING POINT</h3>
+                  <div class="tableMarfin tablefontBold center noneSpan">
+                    <span>L</span>
+                    <span class="table2Margin">M</span>
+                    <span>D</span>
+                  </div>
+                  <div class="tablefontBold center longTasteFont">
+                    <span>Light</span>
+                    <span class="table2Margin">Medium</span>
+                    <span>Dark</span>
+                  </div>
+                  <ul class="roastingUl roastingUlNone center">
+                    <br class="roastingunderBar" />
+                    <li class="fristMargin">
+                      <p class="roastingFont longTasteFont">Medium</p>
+                      <p class="noneSpan">MD</p>
+                    </li>
+                    <li class="middleMargin">
+                      <p class="roastingFont longTasteFont">High</p>
+                      <p class="noneSpan">HI</p>
+                    </li>
+                    <li class="middleMargin">
+                      <p class="roastingFont longTasteFont">City</p>
+                      <p class="noneSpan">CT</p>
+                    </li>
+                    <li class="middleMargin middleYe">
+                      <p class="roastingFontBold longTasteFont">Full City</p>
+                      <p class="noneSpan roastingFontBold">FC</p>
+                    </li>
+                    <li class="middleMargin middleYe">
+                      <p class="roastingFontBold longTasteFont">French</p>
+                      <p class="noneSpan roastingFontBold">FR</p>
+                    </li>
+                    <li class="lastMargin">
+                      <p class="roastingFont longTasteFont">Italian</p>
+                      <p class="noneSpan">IT</p>
+                    </li>
+                  </ul>
+                  <div>
+                    <br class="yellowScore" />
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 여기부터 시그니처 커피 -->
+      <div>
+        <h2 class="SignatureTop center">PAIK’S Coffee Signature</h2>
+        <div class="center">
+          <br class="underScore" />
+        </div>
+        <div class="signatureUlDiv">
+          <ul class="signatureDiv ulNone center">
+            <li>
+              <div>
+                <img class="signatureImg" src="/images/story_pro01.jpg" />
+              </div>
+              <dl>
+                <dt class="signatureName">아메리카노</dt>
+                <dd class="signaturecoffee">
+                  빽다방의 시그니처 블렌딩으로 깊고 <br />
+                  진한 맛의 아메리카노
+                </dd>
+              </dl>
+            </li>
+
+            <li>
+              <div>
+                <img class="signatureImg" src="/images/story_pro02.jpg" />
+              </div>
+              <dl>
+                <dt class="signatureName">빽’s 카페라떼</dt>
+                <dd class="signaturecoffee">
+                  진한 에스프레소와 우유가 어우러진 <br />
+                  부드러운 빽다방 라떼. HOT의 경우<br />
+                  생크림이 첨가되어 고소하고 <br />
+                  부드러운 맛이 업그레이드 됩니다.
+                </dd>
+              </dl>
+            </li>
+
+            <li>
+              <div>
+                <img class="signatureImg" src="/images/story_pro03.jpg" />
+              </div>
+              <dl>
+                <dt class="signatureName">아샷추</dt>
+                <dd class="signaturecoffee">
+                  복숭아맛 아이스티에 에스프레소샷을 <br />
+                  추가해 달콤함과 쌉쌀함이 공존 <br />하는 매력적인 맛
+                </dd>
+              </dl>
+            </li>
+
+            <li>
+              <div>
+                <img class="signatureImg" src="/images/story_pro04.jpg" />
+              </div>
+              <dl>
+                <dt class="signatureName">원조커피</dt>
+                <dd class="signaturecoffee">
+                  익숙한 듯 색다른 믹스커피 업그레 <br />이드 버전. 빽다방만의
+                  시그니처 커 <br />피메뉴
+                </dd>
+              </dl>
+            </li>
+            <!--  -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
