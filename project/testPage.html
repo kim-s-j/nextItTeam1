@@ -4,24 +4,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>testPage</title>
-    <script
-      type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"
-    ></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"></script>
   </head>
   <body>
     <p>이동함!</p>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <button type="button" onclick="PageBtnClick()"></button>
+    <a href=""></a>
     <script>
-      var places = new kakao.maps.services.Places();
-
-      var callback = function (result, status, pagination) {
-        if (status === kakao.maps.services.Status.OK) {
-          console.log(result);
+      function CreateObj(parent, maxSize, maxPage) {
+        for (let i = 0; i < maxSize * maxPage; i++) {
+          const obj = document.createElement("div");
+          obj.style = "background-color: aqua; border: 1px solid; width: 100%; display: block";
+          obj.innerHTML = "지점명: <span></span><br />주소: <span></span><br />도로명: <span></span><br />상세정보:<a></a>";
+          obj.children[0].textContent = `대전빽다방점${i}`;
+          obj.children[2].textContent = "대전에 어디임";
+          obj.children[4].textContent = "도로명 어디임";
+          obj.children[6].textContent = "http://192.168.0.63:5500/main.html";
+          obj.children[6].href = "http://192.168.0.63:5500/main.html";
+          if (i > maxSize - 1) {
+            obj.style.display = "none";
+          }
+          document.getElementById(parent).append(obj);
         }
-        console.log(`${pagination.prevPage()} 페이지수${pagination.current}`);
-      };
-
-      places.keywordSearch("치킨", callback, { page: 3 });
+      }
+      function CreatePageBtn(parent, maxSize, maxPage, list) {
+        for (let i = 1; i <= maxPage; i++) {
+          const pageBtn = document.createElement("button");
+          pageBtn.type = "button";
+          pageBtn.textContent = `${i}`;
+          pageBtn.onclick = (obj) => {
+            const child = obj.target.parentElement.children;
+            for (let j = 0; j < child.length; j++) {
+              child[j].style.backgroundColor = "#FFFFFF";
+            }
+            obj.target.style.backgroundColor = "#DCDCDC";
+            for (let j = 0; j < maxSize * maxPage; j++) {
+              document.getElementById(list).children[j].style.display = "none";
+            }
+            for (let j = maxSize; j < maxSize * obj.target.textContent; j++) {
+              document.getElementById(list).children[j].style.display = "";
+            }
+          };
+          if (i !== 0) pageBtn.style.backgroundColor = "#FFFFFF";
+          else pageBtn.style.backgroundColor = "#DCDCDC";
+          document.getElementById(parent).append(pageBtn);
+        }
+      }
+      function PageBtnClick(cor) {
+        console.log(cor);
+      }
+      CreateObj("div1", 15, 3);
+      CreatePageBtn("div2", 15, 3, "div1");
     </script>
   </body>
 </html>
