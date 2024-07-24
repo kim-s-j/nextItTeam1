@@ -1,0 +1,23 @@
+schema : coffee
+
+table : 
+double_espresso ,
+americano_hot, 
+americano_iced, 
+original_mixed_coffee_hot, 
+original_mixed_coffee_iced, 
+original_mixed_coffee_zerosugar_hot, 
+original_mixed_coffee_zerosugar_iced, 
+creamy_latte
+
+모든 테이블은 아래와 같은 컬럼을 가진다.
+column : 
+korean_name,
+explanation,
+serving_size,
+caffeine,
+salt,
+saturated_fat,
+kcal,
+sugars,
+protein
