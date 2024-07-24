@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>커피이야기</title>
     <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
       body {
         max-width: 1920px;
-        margin: auto;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
       }
 
       body {
@@ -110,7 +116,7 @@
         margin-left: 0px;
         max-width: 440px;
         margin-bottom: 120px;
-        max-height: 200px;
+        max-height: 100%;
         padding: 20px 0px 25px 0px;
       }
 
@@ -120,7 +126,7 @@
         font-size: 15.5px;
         padding: 20px 0px 25px 0px;
         max-width: 480px;
-        max-height: 100px;
+        max-height: 100%;
         margin-left: 500px;
       }
 
@@ -187,18 +193,19 @@
       .table {
         background-color: #ffffff;
         max-width: 1150px;
-        width: 92%;
-        padding: 50px 100px;
-        margin: 0 auto 80px;
+        max-height: 350px;
+        width: 70%;
+        padding: 5% 10%;
+        margin: 5% auto 8%;
       }
 
       .table2 {
         background-color: #ffffff;
         max-width: 1150px;
         max-height: 350px;
-        width: 92%;
-        padding: 50px 100px;
-        margin: 0 auto 80px;
+        width: 70%;
+        padding: 5% 10%;
+        margin: 5% auto 8%;
       }
 
       .spanTabelYellow {
@@ -211,6 +218,11 @@
         margin-top: 20px;
       }
 
+      .table1Style {
+        width: 15%;
+        display: flex;
+      }
+
       .spanTabelgray {
         width: 150;
         height: 12px;
@@ -221,6 +233,11 @@
         margin-top: 20px;
       }
 
+      .table2Margin {
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+
       .roastingunderBar {
         display: block;
         margin-top: 40px;
@@ -228,6 +245,17 @@
         width: 870px;
         height: 2px;
         background-color: #dedede;
+        content: "";
+      }
+
+      .roastingunderBar::after {
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 80px;
+        margin-left: 500px;
+        width: 190px;
+        height: 5px;
+        background-color: #ffe600;
         content: "";
       }
 
@@ -323,23 +351,34 @@
         width: 100%;
       }
 
-      /* .yellowScore {
-        display: block;
-        margin-top: -153px;
-        margin-left: 650px;
-        width: 190px;
-        height: 5px;
-        background-color: #ffe600;
-        z-index: 8;
-        content: "";
-      } */
+      .circledivMargin {
+        margin-right: 70px;
+      }
 
+      #middleChoco {
+        display: flex;
+        margin-bottom: 5%;
+      }
       .noneSpan {
         display: none;
       }
 
       .signatureDiv {
         display: flex;
+      }
+
+      .table1Margin {
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+
+      .coffeekong {
+        margin-bottom: 120px;
+      }
+
+      .listDivPosition {
+        position: relative;
+        left: 10%;
       }
       @media screen and (min-width: 1020px) {
         .ProcessingBold > div > ul > li {
@@ -403,7 +442,12 @@
 
       @media screen and(max-width:1100px) {
         .table {
-          padding: 20px 30px;
+          padding: 10px 10px;
+          width: 100%;
+        }
+        .table2 {
+          padding: 10px 10px;
+          width: 100%;
         }
       }
 
@@ -413,22 +457,281 @@
         }
       }
 
-      @media screen and(max-width:1000px) {
+      @media screen and (max-width: 1000px) {
         .circleImg {
-          margin-top: 10%;
+          margin-top: 20%;
           margin-left: 20%;
-        }
-
-        #middleChoco {
-          display: block;
         }
       }
 
-      @media screen and(max-width:1200px) {
+      @media screen and (max-width: 1200px) {
         .signatureUlDiv > ul {
-          display: block;
+          display: flex;
+          flex-wrap: wrap;
         }
-        /* 왜안되는지 전혀 모르겠음 슈ㅏㅂㄹ */
+        .signatureUlDiv > ul > li {
+          width: 45%;
+          margin: 2.5%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .signatureUlDiv > ul > li > div > img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1400px) {
+        .table {
+          width: 90%;
+          padding: 6% 4%;
+        }
+
+        .table2 {
+          width: 90%;
+          padding: 6% 4%;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .ulNone > #middleChoco {
+          display: inline-block;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .ulNone > #middleChoco {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        #middleChoco > div:nth-child(3) {
+          width: 100%;
+          text-align: center;
+        }
+        .circleImg {
+          margin-top: 20%;
+          margin-left: 20%;
+        }
+        .icon4 {
+          margin-right: 25%;
+        }
+        .icon4Span {
+          margin-left: -50px;
+        }
+      }
+
+      @media screen and (max-width: 1060px) {
+        .table2 > .roastingunderBar {
+          width: 800px;
+        }
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 490px;
+        }
+        .table2 {
+          padding: 10px;
+        }
+        .table {
+          padding: 10px;
+        }
+      }
+
+      @media screen and (max-width: 990px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 490px;
+        }
+      }
+
+      @media screen and (max-width: 1040px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 500px;
+        }
+      }
+      @media screen and (max-width: 1060px) {
+        .roastingunderBar::after {
+          width: 190px;
+          margin-left: 500px;
+        }
+      }
+
+      @media screen and (max-width: 1020px) {
+        .roastingunderBar::after {
+          width: 140px;
+          margin-left: 370px;
+        }
+        .roastingunderBar {
+          width: 650px;
+          margin-right: 200px;
+        }
+        .lastMargin {
+          margin-left: 90px;
+        }
+        .middleMargin {
+          margin-left: 80px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .brazilColor {
+          margin: 10%;
+        }
+        .CuppingNoteStyle {
+          margin: 10%;
+        }
+      }
+      @media screen and (max-width: 820px) {
+        .middleMargin {
+          margin-left: 50px;
+        }
+        .roastingunderBar::after {
+          width: 130px;
+          margin-left: 350px;
+        }
+        .roastingunderBar {
+          width: 600px;
+          margin-right: 260px;
+        }
+        .lastMargin {
+          margin-left: 70px;
+        }
+        .middleMargin {
+          margin-left: 70px;
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .middleMargin {
+          margin-left: 20px;
+        }
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar::after {
+          width: 50px;
+          margin-left: 190px;
+        }
+        .tableMarfin {
+          margin-left: 120px;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 360px;
+          margin-right: 500px;
+        }
+        .lastMargin {
+          margin-left: 30px;
+        }
+        .middleMargin {
+          margin-left: 30px;
+        }
+        .roastingunderBar::after {
+          width: 80px;
+          margin-left: 200px;
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 310px;
+          margin-right: 550px;
+        }
+        .lastMargin {
+          margin-left: 20px;
+        }
+        .middleMargin {
+          margin-left: 20px;
+        }
+        .roastingunderBar::after {
+          width: 60px;
+          margin-left: 180px;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 250px;
+          margin-right: 600px;
+        }
+        .lastMargin {
+          margin-left: 10px;
+        }
+        .middleMargin {
+          margin-left: 10px;
+        }
+        .roastingunderBar::after {
+          width: 50px;
+          margin-left: 140px;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 200px;
+          margin-right: 660px;
+        }
+        .lastMargin {
+          margin-left: 0px;
+        }
+        .middleMargin {
+          margin-left: 0px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 120px;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 180px;
+          margin-right: 680px;
+        }
+        .lastMargin {
+          margin-left: -5px;
+        }
+        .middleMargin {
+          margin-left: -5px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 100px;
+        }
+      }
+
+      @media screen and (max-width: 260px) {
+        .noneSpan {
+          margin-left: 20px;
+        }
+        .roastingunderBar {
+          width: 180px;
+          margin-right: 680px;
+        }
+        .lastMargin {
+          margin-left: -10px;
+        }
+        .middleMargin {
+          margin-left: -10px;
+        }
+        .roastingunderBar::after {
+          width: 40px;
+          margin-left: 80px;
+        }
       }
     </style>
   </head>
@@ -498,7 +801,7 @@
             <div class="leftImg1">
               <img class="width100" src="/story_img02.jpg" />
             </div>
-            <div style="position: relative; left: 10%">
+            <div class="listDivPosition">
               <h3 class="specialh3">VELOSO COFFEE</h3>
               <dl>
                 <dt>
@@ -545,7 +848,7 @@
             <div class="leftImg1">
               <img class="width100" src="/story_img04.jpg" />
             </div>
-            <div style="position: relative; left: 10%">
+            <div class="listDivPosition">
               <h3 class="specialh3">
                 DOT(Dried On Tree) <br />
                 PROCESSING
@@ -574,7 +877,7 @@
         </ul>
       </div>
       <!-- 여기서부터 커피콩 -->
-      <div style="margin-bottom: 120px">
+      <div class="coffeekong">
         <div>
           <div class="coffeeNoteBackColor">
             <h2 class="CuppingNoteStyle center">PAIK’S Coffee Cupping Note</h2>
@@ -594,8 +897,8 @@
               </p>
 
               <ul class="ulNone" style="height: 1400px">
-                <div id="middleChoco" class="center" style="display: flex">
-                  <div style="margin-right: 70px">
+                <div id="middleChoco" style="justify-content: center">
+                  <div class="circledivMargin">
                     <li>
                       <span class="circle">
                         <img class="circleImg" src="/story_icon01.png" />
@@ -604,7 +907,7 @@
                     </li>
                   </div>
                   <!--  -->
-                  <div style="margin-right: 70px">
+                  <div class="circledivMargin">
                     <li>
                       <span class="circle">
                         <img class="circleImg" src="/story_icon02.png" />
@@ -615,8 +918,8 @@
                   <!--  -->
                   <div>
                     <li>
-                      <span class="circle">
-                        <img class="circleImg" src="/story_icon04.png" />
+                      <span class="circle icon4Span">
+                        <img class="circleImg icon4" src="/story_icon04.png" />
                       </span>
                       <p class="center circleFont">Almond</p>
                     </li>
@@ -628,48 +931,31 @@
                   <div>
                     <div class="tablefontBold center noneSpan">
                       <span>L</span>
-                      <span style="margin-left: 25%; margin-right: 25%">M</span>
+                      <span class="table1Margin">M</span>
                       <span>H</span>
                     </div>
                     <div class="tablefontBold center longTasteFont">
                       <span>Light</span>
-                      <span style="margin-left: 25%; margin-right: 25%"
-                        >Medium</span
-                      >
+                      <span class="table1Margin">Medium</span>
                       <span>High</span>
                     </div>
                     <ul class="ulNone" style="margin-top: 0px">
                       <li>
                         <div style="display: flex">
                           <p class="tablePmargin">단맛</p>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
                         </div>
@@ -678,34 +964,19 @@
                       <li>
                         <div style="display: flex">
                           <p class="tablePmargin">신맛</p>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
                         </div>
@@ -714,32 +985,17 @@
                       <li>
                         <div style="display: flex">
                           <p class="tablePmargin">쓴맛</p>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          ></div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style"></div>
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
                         </div>
@@ -748,34 +1004,19 @@
                       <li>
                         <div style="display: flex">
                           <p class="tablePmargin2">바디감</p>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelYellow"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelYellow table1Style">
                             <span></span>
                           </div>
-                          <div
-                            class="spanTabelgray"
-                            style="width: 15%; display: flex"
-                          >
+                          <div class="spanTabelgray table1Style">
                             <span></span>
                           </div>
                         </div>
@@ -786,37 +1027,41 @@
                 <!-- 여기서부터 ROASTING POINT -->
                 <div class="table2">
                   <h3 class="tableMain center">ROASTING POINT</h3>
-                  <div class="tablefontBold center noneSpan">
+                  <div class="tableMarfin tablefontBold center noneSpan">
                     <span>L</span>
-                    <span style="margin-left: 30%; margin-right: 30%">M</span>
+                    <span class="table2Margin">M</span>
                     <span>D</span>
                   </div>
                   <div class="tablefontBold center longTasteFont">
                     <span>Light</span>
-                    <span style="margin-left: 30%; margin-right: 30%"
-                      >Medium</span
-                    >
+                    <span class="table2Margin">Medium</span>
                     <span>Dark</span>
                   </div>
                   <ul class="roastingUl roastingUlNone center">
                     <br class="roastingunderBar" />
                     <li class="fristMargin">
-                      <p class="roastingFont">Medium</p>
+                      <p class="roastingFont longTasteFont">Medium</p>
+                      <p class="noneSpan">MD</p>
                     </li>
                     <li class="middleMargin">
-                      <p class="roastingFont">High</p>
+                      <p class="roastingFont longTasteFont">High</p>
+                      <p class="noneSpan">HI</p>
                     </li>
                     <li class="middleMargin">
-                      <p class="roastingFont">City</p>
+                      <p class="roastingFont longTasteFont">City</p>
+                      <p class="noneSpan">CT</p>
                     </li>
                     <li class="middleMargin middleYe">
-                      <p class="roastingFontBold">Full City</p>
+                      <p class="roastingFontBold longTasteFont">Full City</p>
+                      <p class="noneSpan roastingFontBold">FC</p>
                     </li>
                     <li class="middleMargin middleYe">
-                      <p class="roastingFontBold">French</p>
+                      <p class="roastingFontBold longTasteFont">French</p>
+                      <p class="noneSpan roastingFontBold">FR</p>
                     </li>
                     <li class="lastMargin">
-                      <p class="roastingFont">Italian</p>
+                      <p class="roastingFont longTasteFont">Italian</p>
+                      <p class="noneSpan">IT</p>
                     </li>
                   </ul>
                   <div>
