@@ -6,57 +6,131 @@
     <title>testPage</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"></script>
   </head>
+
+  <style>
+    #mapSearch {
+      border: 1px solid;
+      margin: 0% 5% 0% 5%;
+      text-align: center;
+    }
+    #mapBtnList {
+      display: flex;
+      margin: 0% 45%;
+    }
+  </style>
   <body>
-    <p>이동함!</p>
-    <div id="div1"></div>
-    <div id="div2"></div>
-    <button type="button" onclick="PageBtnClick()"></button>
-    <a href=""></a>
+    <form id="mapSearch" onsubmit="searchPlaces(); return false;">
+      최대 45개의 검색결과
+      <br />
+      매장명,지역 검색 :
+      <input type="text" value="" id="keyWord" size="40" placeholder="ex.대전 서대전역" />
+      <button type="submit" onclick="Onclick()">검색하기</button>
+      <div id="mapLength"></div>
+    </form>
+    <div id="mapList"></div>
+    <div id="mapBtnList"></div>
+
     <script>
-      function CreateObj(parent, maxSize, maxPage) {
-        for (let i = 0; i < maxSize * maxPage; i++) {
-          const obj = document.createElement("div");
-          obj.style = "background-color: aqua; border: 1px solid; width: 100%; display: block";
-          obj.innerHTML = "지점명: <span></span><br />주소: <span></span><br />도로명: <span></span><br />상세정보:<a></a>";
-          obj.children[0].textContent = `대전빽다방점${i}`;
-          obj.children[2].textContent = "대전에 어디임";
-          obj.children[4].textContent = "도로명 어디임";
-          obj.children[6].textContent = "http://192.168.0.63:5500/main.html";
-          obj.children[6].href = "http://192.168.0.63:5500/main.html";
-          if (i > maxSize - 1) {
-            obj.style.display = "none";
-          }
-          document.getElementById(parent).append(obj);
-        }
+      var places = new kakao.maps.services.Places();
+      let placesKeyWord = document.getElementById("keyWord").value;
+      const maxSize = 5;
+      const maxPage = 9;
+      let mapListLength = 0;
+      const mapList = document.getElementById("mapList");
+      const mapBtnList = document.getElementById("mapBtnList");
+      let firstCheck = true;
+
+      function Onclick() {
+        placesKeyWord = document.getElementById("keyWord").value;
       }
-      function CreatePageBtn(parent, maxSize, maxPage, list) {
-        for (let i = 1; i <= maxPage; i++) {
+
+      function CreatePageBtn(parent, maxSize, list) {
+        let MaxpageNum = list.children.length % maxSize > 0 ? list.children.length / maxSize + 1 : list.children.length / maxSize;
+        for (let i = 1; i <= MaxpageNum; i++) {
           const pageBtn = document.createElement("button");
           pageBtn.type = "button";
           pageBtn.textContent = `${i}`;
+
           pageBtn.onclick = (obj) => {
-            const child = obj.target.parentElement.children;
-            for (let j = 0; j < child.length; j++) {
-              child[j].style.backgroundColor = "#FFFFFF";
+            const objchild = obj.target.parentElement.children;
+            const listchild = list.children;
+            const btnNum = Number(obj.target.textContent);
+            const enableBtnCount = 3;
+            for (let j = 0; j < objchild.length; j++) {
+              objchild[j].style.backgroundColor = "#FFFFFF";
+              objchild[j].style.display = "none";
             }
+            if (0 > btnNum - 2) for (let j = 0; j < enableBtnCount; j++) objchild[j].style.display = "";
+            else if (objchild.length <= btnNum) for (let j = 1; j <= enableBtnCount; j++) objchild[objchild.length - j].style.display = "";
+            else if (0 <= btnNum - 2) for (let j = 0; j < enableBtnCount; j++) objchild[btnNum - j].style.display = "";
             obj.target.style.backgroundColor = "#DCDCDC";
-            for (let j = 0; j < maxSize * maxPage; j++) {
-              document.getElementById(list).children[j].style.display = "none";
+            for (let j = 0; j < listchild.length; j++) {
+              listchild[j].style.display = "none";
             }
-            for (let j = maxSize; j < maxSize * obj.target.textContent; j++) {
-              document.getElementById(list).children[j].style.display = "";
+            for (let j = maxSize * btnNum - maxSize; j < maxSize * btnNum; j++) {
+              if (listchild.length > j) {
+                listchild[j].style.display = "";
+              }
             }
           };
-          if (i !== 0) pageBtn.style.backgroundColor = "#FFFFFF";
+          if (pageBtn.textContent > 3) pageBtn.style.display = "none";
+          if (i !== 1) pageBtn.style.backgroundColor = "#FFFFFF";
           else pageBtn.style.backgroundColor = "#DCDCDC";
-          document.getElementById(parent).append(pageBtn);
+          parent.append(pageBtn);
         }
       }
-      function PageBtnClick(cor) {
-        console.log(cor);
+
+      var callback = function (result, status, pagination) {
+        if (status === kakao.maps.services.Status.OK) {
+          if (firstCheck) {
+            firstCheck = false;
+            pagination.gotoFirst();
+          } else if (!firstCheck) {
+            result.forEach((element) => {
+              const obj = document.createElement("div");
+              obj.style = "background-color: aqua; border: 1px solid; width: 100%; display: block";
+              obj.innerHTML = "지점명: <span></span><br />주소: <span></span><br />도로명: <span></span><br />상세정보:<a></a>";
+              for (const [key, value] of Object.entries(element)) {
+                if (true) {
+                  if (key === "place_name") obj.children[0].textContent = `${value}`;
+                  else if (key === "address_name") obj.children[2].textContent = `${value}`;
+                  else if (key === "road_address_name") obj.children[4].textContent = `${value}`;
+                  else if (key === "place_url") {
+                    obj.children[6].textContent = `${value}`;
+                    obj.children[6].href = `${value}`;
+                  }
+                  mapList.append(obj);
+                }
+              }
+              if (mapListLength > maxSize - 1) {
+                obj.style.display = "none";
+              }
+              mapListLength++;
+            });
+            if (mapListLength == pagination.totalCount) {
+              CreatePageBtn(mapBtnList, maxSize, mapList);
+              document.getElementById("mapLength").textContent = `총 ${pagination.totalCount}개의 매장이 있습니다.`;
+            }
+            pagination.nextPage();
+          }
+        }
+      };
+
+      function searchPlaces() {
+        while (mapList.hasChildNodes()) {
+          mapList.removeChild(mapList.firstChild);
+        }
+        while (mapBtnList.hasChildNodes()) {
+          mapBtnList.removeChild(mapBtnList.firstChild);
+        }
+        mapListLength = 0;
+        firstCheck = true;
+        places.keywordSearch(`${placesKeyWord} 빽다방`, callback, {
+          page: maxPage,
+          size: maxSize,
+        });
+        return 0;
       }
-      CreateObj("div1", 15, 3);
-      CreatePageBtn("div2", 15, 3, "div1");
     </script>
   </body>
 </html>
