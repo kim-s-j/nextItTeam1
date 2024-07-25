@@ -5,82 +5,286 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로컬스토리지에 값넣어보장</title>
     <style>
+      body {
+        margin: 0;
+      }
       ul {
         list-style: none;
       }
       .lineborder {
         border: 1px solid #c7c0c0;
+        width: 100%;
+        height: auto;
         max-width: 350px;
       }
       .imgWidth {
         width: 100%;
+        max-width: 80%;
       }
       .addP {
         text-align: center;
       }
+      .addh3 {
+        top: 0;
+        left: 5%;
+        margin-top: 20px;
+      }
+
+      .h31Font {
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 0px;
+
+        color: #000000;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .div1Font {
+        font-size: 15px;
+        font-weight: 900;
+        color: #071f60;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .br1after {
+        display: block;
+        margin-top: 10px;
+        width: 20px;
+        height: 2px;
+        background-color: #202020;
+
+        content: "";
+        text-align: left;
+        margin-left: 3%;
+      }
+
+      .p2font {
+        font-size: 14px;
+        text-align: left;
+        color: #202020;
+        font-weight: 300;
+        padding-left: 3%;
+      }
+
+      .p3Font {
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 80px;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .pblurred {
+        margin-top: 0;
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .ulli1Font {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 3%;
+      }
+
+      .ulli1Font > li {
+        width: 25%;
+        text-align: left;
+        margin-bottom: 5%;
+        font-size: 12px;
+      }
+
+      .clickElement {
+        display: none;
+        position: absolute;
+        margin: 2% 2% 2% 2%;
+      }
+
+      .divblurred {
+        border: 8px solid #ffffff;
+        position: relative;
+      }
+
+      .addp3 {
+        text-align: center;
+      }
+
+      .imgBg {
+        background-image: url(/images/bg-menu2.jpg);
+        min-height: 499px;
+        width: 100%;
+        background-position: center;
+      }
+      .h1center {
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
+        font-size: 44px;
+        font-weight: 300;
+        margin: 0px;
+        margin-bottom: 20px;
+      }
+
+      .underBar {
+        width: 30px;
+        height: 2px;
+        background-color: #202020;
+        content: "";
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      .mainP {
+        font-size: 20px;
+      }
+      .h2center {
+        display: flex;
+        justify-content: center;
+        padding-top: 90px;
+        font-size: 2.187rem;
+        color: #071f60;
+        margin-bottom: 20px;
+      }
+
+      .underBar2 {
+        width: 50px;
+        height: 2px;
+        background-color: #071f60;
+        content: "";
+      }
+
+      .container {
+        margin: 0% 10% 0% 10%;
+      }
     </style>
   </head>
   <body>
-    <ul>
-      <li>
-        <div class="whitebg button addP lineborder" onclick="mod()">
-          <img class="imgWidth" src="/images/aspreeso-2-450x588.png" />
+    <div class="imgBg">
+      <div>
+        <h1 class="h1center">커피</h1>
+        <div class="center">
+          <br class="underBar" />
         </div>
-      </li>
-    </ul>
+        <p class="center mainP">
+          뉴 크롭 원두를 사용하여 더욱더 신선한 커피 메뉴를 만나보세요.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="h2center">추천메뉴</h2>
+      <div class="center">
+        <br class="underBar2" />
+      </div>
 
+      <ul>
+        <li class="lineborder">
+          <div class="divblurred button addP">
+            <!-- img -->
+            <div
+              class="clickElement addh3 addDiv addbr addp2 addDiv2 addImg"
+            ></div>
+
+            <!-- h3 -->
+            <!-- div -->
+            <!-- br -->
+            <!-- p -->
+            <!-- div class="addp3" -->
+            <!-- p -->
+          </div>
+        </li>
+      </ul>
+    </div>
     <script>
-      //   localStorage.clear();
+      // localStorage.clear();
       //  로컬스트리지에 값 전체삭제
 
+      const img1 = "/images/aspreeso-2-450x588.png";
       const korean_name1 = "더블에스프레소";
+      const english_name1 = "DOUBLE ESPRESSO";
       const explanation1 =
         "브라질 원두 블렌딩으로 다크초콜릿,카라멜,견과류의 고소함을 느낄 수 있는 에스프레소";
-      const serving_size1 = "60ml";
+      const serving_size1 = "※ 1회 제공량 기준 : 60ml";
+      const caffeine1Name = "카페인(mg)";
       const caffeine1 = 237;
+      const salt1Name = "나트륨(mg)";
       const salt1 = 0;
+      const saturated_fat1Name = "포화지방(g)";
       const saturated_fat1 = 0;
+      const kcal1Name = "칼로리(kcal)";
       const kcal1 = 22;
+      const sugars1Name = "당류(g)";
       const sugars1 = 0;
+      const protein1Name = "단백질(g)";
       const protein1 = 1;
 
       const double_espresso = {
+        img1,
         korean_name1,
+        english_name1,
         explanation1,
         serving_size1,
+        caffeine1Name,
         caffeine1,
+        salt1Name,
         salt1,
+        saturated_fat1Name,
         saturated_fat1,
+        kcal1Name,
         kcal1,
+        sugars1Name,
         sugars1,
+        protein1Name,
         protein1,
       };
-      // 여기까지 에스프레소
+
+      // 아메리카노
+      const img2 = "/images/HOT-amricano-450x588.png";
       const korean_name2 = "아메리카노(HOT)";
+      const english_name2 = "AMERICANO";
       const explanation2 =
         "빽다방만의 맛과 향을 더한 100% 아라비카 로스팅 원두로 뽑아내 깊고 진한 맛의 앗!메리카노";
       const serving_size2 = "16oz";
+      const caffeine2Name = "카페인(mg)";
       const caffeine2 = 237;
+      const salt2Name = "나트륨(mg)";
       const salt2 = 4;
+      const saturated_fat2Name = "포화지방(g)";
       const saturated_fat2 = 0;
+      const kcal2Name = "칼로리(kcal)";
       const kcal2 = 14;
+      const sugars2Name = "당류(g)";
       const sugars2 = 0;
+      const protein2Name = "단백질(g)";
       const protein2 = 0;
 
       const americanoHot = {
+        img2,
         korean_name2,
+        english_name2,
         explanation2,
         serving_size2,
+        caffeine2Name,
         caffeine2,
+        salt2Name,
         salt2,
+        saturated_fat2Name,
         saturated_fat2,
+        kcal2Name,
         kcal2,
+        sugars2Name,
         sugars2,
+        protein2Name,
         protein2,
       };
 
-      //   const tabel = { double_espresso, americanoHot };
-      //   localStorage.setItem("coffee", JSON.stringify(tabel));
+      const tabel = { double_espresso, americanoHot };
+      localStorage.setItem("coffee", JSON.stringify(tabel));
+      // 로컬스트리지에 값넣는것
 
       const storeData = localStorage.getItem("coffee");
       const coffeeData = JSON.parse(storeData);
@@ -88,6 +292,21 @@
       const doubleEspresso = coffeeData.double_espresso;
       //   console.log(doubleEspresso.korean_name1);
       //   에스프레쏘 이름은 나옴.
+
+      //img 태그 만들어서 값넣기
+      const espressoImg = doubleEspresso.img1;
+
+      function addImg() {
+        const img1 = document.createElement("img");
+        img1.src = espressoImg;
+        const addImgElements = document.getElementsByClassName("addImg");
+        addImgElements[0].before(img1);
+        img1.classList.add("imgblurred");
+        img1.classList.add("imgWidth");
+      }
+      addImg();
+
+      // p태그 만들어서 값넣기
       const espressoName = doubleEspresso.korean_name1;
 
       function addP() {
@@ -95,23 +314,169 @@
         p1.innerText = espressoName;
         const addPElements = document.getElementsByClassName("addP");
         addPElements[0].appendChild(p1);
+        addPElements[0].appendChild(p1).classList.add("pblurred");
       }
 
       addP();
 
+      // 배경색 바꾸기
+
       const button = document.querySelector(".button");
-      console.log(button);
+      const img = document.querySelector(".imgblurred");
+      const p = document.querySelector(".pblurred");
+      const clickElement = document.querySelector(".clickElement");
+      console.log(clickElement);
+      let color = "white";
+
       button.addEventListener("click", function () {
-        button.style.backgroundColor = "yellow";
-      });
-      const res = button.classList.toggle("whitebg");
-      const mod = () => {
-        if (res) {
-          document.querySelector(".button").style.backgroundColor = "yellow";
+        if (color == "white") {
+          color = "#ffe600";
+          button.style.backgroundColor = "#ffe600";
+          img.style.opacity = "0.5";
+          p.style.opacity = "0.5";
+          clickElement.style.display = "block";
         } else {
-          document.querySelector(".button").style.backgroundColor = "white";
+          color = "white";
+          button.style.backgroundColor = "white";
+          img.style.opacity = "10";
+          p.style.opacity = "10";
+          clickElement.style.display = "none";
         }
-      };
+      });
+
+      // h3태그 만들기
+
+      function addh3() {
+        const h31 = document.createElement("h3");
+        h31.innerText = espressoName;
+        const addh3Elements = document.getElementsByClassName("addh3");
+        addh3Elements[0].appendChild(h31);
+        addh3Elements[0].appendChild(h31).classList.add("h31Font");
+      }
+
+      addh3();
+
+      //div만들기
+      // const doubleEspresso = coffeeData.double_espresso;
+      const doubleEspressoEN = doubleEspresso.english_name1;
+      function addDiv() {
+        const div1 = document.createElement("div");
+        div1.innerText = doubleEspressoEN;
+        const addDivElements = document.getElementsByClassName("addDiv");
+        addDivElements[0].appendChild(div1);
+        addDivElements[0].appendChild(div1).classList.add("div1Font");
+      }
+
+      addDiv();
+
+      //br만들기
+      function addbr() {
+        const br1 = document.createElement("br");
+        const addbrElements = document.getElementsByClassName("addbr");
+        addbrElements[0].appendChild(br1);
+        addbrElements[0].appendChild(br1).classList.add("br1after");
+      }
+      addbr();
+
+      //p태그2 만들기
+      const doubleEspressoEplanation = doubleEspresso.explanation1;
+      function addP2() {
+        const explanationWithLineBreaks = doubleEspressoEplanation
+          .replace(/카/g, "카<br>")
+          .replace(/는/g, "는<br/>");
+        const p2 = document.createElement("p");
+        p2.innerHTML = explanationWithLineBreaks;
+        const addP2Elements = document.getElementsByClassName("addp2");
+        addP2Elements[0].appendChild(p2);
+        addP2Elements[0].appendChild(p2).classList.add("p2font");
+      }
+
+      addP2();
+
+      //div2 만들기
+      function addDiv2() {
+        const div2 = document.createElement("div");
+        const addDiv2Elements = document.getElementsByClassName("addDiv2");
+        addDiv2Elements[0].appendChild(div2);
+        addDiv2Elements[0].appendChild(div2).classList.add("addp3");
+      }
+
+      addDiv2();
+
+      //p태그3 만들기
+      const doubleEspressoServingSize = doubleEspresso.serving_size1;
+      function addP3() {
+        const p3 = document.createElement("p");
+        p3.innerText = doubleEspressoServingSize;
+        const addP3Elements = document.getElementsByClassName("addp3");
+        addP3Elements[0].appendChild(p3);
+        addP3Elements[0].appendChild(p3).classList.add("p3Font");
+      }
+
+      addP3();
+
+      //ul li1 만들기
+      const doubleEspressoCaffeine1 = doubleEspresso.caffeine1;
+      const doubleEspressoSalt1 = doubleEspresso.salt1;
+      const doubleEspressoSatura1 = doubleEspresso.saturated_fat1;
+      const doubleEspressoKcal1 = doubleEspresso.kcal1;
+      const doubleEspressoSugar1 = doubleEspresso.sugars1;
+      const doubleEspressoProtein1 = doubleEspresso.protein1;
+
+      const doubleEspressoCaffeine1Name = doubleEspresso.caffeine1Name;
+      const doubleEspressoSalt1Name = doubleEspresso.salt1Name;
+      const doubleEspressoSatura1Name = doubleEspresso.saturated_fat1Name;
+      const doubleEspressoKcal1Name = doubleEspresso.kcal1Name;
+      const doubleEspressoSugar1Name = doubleEspresso.sugars1Name;
+      const doubleEspressoProtein1Name = doubleEspresso.protein1Name;
+
+      function addUlli1() {
+        const ul1 = document.createElement("ul");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        const li6 = document.createElement("li");
+        const li7 = document.createElement("li");
+        const li8 = document.createElement("li");
+        const li9 = document.createElement("li");
+        const li10 = document.createElement("li");
+        const li11 = document.createElement("li");
+        const li12 = document.createElement("li");
+
+        li1.innerText = doubleEspressoCaffeine1Name;
+        li2.innerText = doubleEspressoCaffeine1;
+        li3.innerText = doubleEspressoKcal1Name;
+        li4.innerText = doubleEspressoKcal1;
+        li5.innerText = doubleEspressoSalt1Name;
+        li6.innerText = doubleEspressoSalt1;
+        li7.innerText = doubleEspressoSugar1Name;
+        li8.innerText = doubleEspressoSugar1;
+        li9.innerText = doubleEspressoSatura1Name;
+        li10.innerText = doubleEspressoSatura1;
+        li11.innerText = doubleEspressoProtein1Name;
+        li12.innerText = doubleEspressoProtein1;
+
+        ul1.appendChild(li1);
+        ul1.appendChild(li2);
+        ul1.appendChild(li3);
+        ul1.appendChild(li4);
+        ul1.appendChild(li5);
+        ul1.appendChild(li6);
+        ul1.appendChild(li7);
+        ul1.appendChild(li8);
+        ul1.appendChild(li9);
+        ul1.appendChild(li10);
+        ul1.appendChild(li11);
+        ul1.appendChild(li12);
+
+        const addUlli1Elements = document.getElementsByClassName("addp3");
+        addUlli1Elements[0].appendChild(ul1);
+        addUlli1Elements[0].appendChild(ul1).classList.add("ulli1Font");
+      }
+
+      addUlli1();
     </script>
   </body>
 </html>
