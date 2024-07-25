@@ -250,7 +250,131 @@ em {
   font-weight: 300;
   color: #606060;
 }
-
+.membership .orderContent .orderInfo .orderUl {
+  margin-top: 60px;
+  text-align: center;
+}
+.membership .orderContent .orderInfo .orderUl li {
+  margin-bottom: 30px;
+}
+.membership .orderContent .orderInfo .orderUl li .functionIcon::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140px;
+  height: 140px;
+  top: 0;
+  left: 50%;
+  margin-left: -70px;
+  background: #fff;
+  border-radius: 100% 100% 100% 100%;
+}
+.membership .orderContent .orderInfo .orderUl li .functionIcon {
+  position: relative;
+  text-align: center;
+}
+.membership .orderContent .orderInfo .orderUl li .functionIcon img {
+  position: relative;
+  width: 140px;
+  z-index: 10;
+}
+.membership .orderContent .orderInfo .orderUl li dl {
+  margin-top: 20px;
+}
+.membership .orderContent .orderInfo .orderUl li dt {
+  font-size: 18px;
+  font-weight: 700;
+}
+.membership .orderContent .orderInfo .orderUl li dd {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+.membership .orderContent .orderInfo .orderUl li dd span.blockText {
+  display: block;
+}
+.membership .orderContent .orderInfo .orderUl li:last-child {
+  margin-bottom: 0;
+}
+.membership .giftContent {
+  width: 92%;
+  max-width: 1150px;
+  margin: 80px auto 140px auto;
+}
+.membership .giftMain {
+  font-size: 30px;
+  font-weight: 400;
+  color: #202020;
+  text-align: center;
+}
+.membership .giftMain::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: 25px auto 30px;
+  background: #202020;
+}
+.membership .giftMain em {
+  font-weight: 700;
+}
+.membership .giftContent .giftText {
+  font-weight: 300;
+  color: #202020;
+  text-align: center;
+}
+.membership .giftContent .giftText em {
+  box-shadow: inset 0 -10px #ffe417;
+  font-weight: 700;
+}
+.membership .giftContent .giftUl {
+  margin-top: 60px;
+  text-align: center;
+}
+.membership .giftContent .giftUl li {
+  margin-bottom: 30px;
+}
+.membership .giftContent .giftUl li .giftIcon {
+  position: relative;
+  text-align: center;
+}
+.membership .giftContent .giftUl li .giftIcon::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140px;
+  height: 140px;
+  top: 0;
+  left: 50%;
+  margin-left: -70px;
+  background: #f8f8f8;
+  border-radius: 100% 100% 100% 100%;
+}
+.membership .giftContent .giftUl li .giftIcon img {
+  position: relative;
+  width: 140px;
+  z-index: 10;
+}
+.membership .giftContent .giftUl li dl {
+  margin-top: 20px;
+}
+.membership .giftContent .giftUl li dt {
+  font-size: 18px;
+  font-weight: 700;
+}
+.membership .giftContent .giftUl li dd {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #606060;
+}
+.membership .giftContent .giftUl li dd span.blockText {
+  display: block;
+}
+.membership .giftContent .giftUl li:last-child {
+  margin-bottom: 0;
+}
 @media screen and (min-width: 670px) {
   .membership .membershipContent .membershipUl {
     font-size: 0;
@@ -276,8 +400,30 @@ em {
     display: table;
     margin: 40px auto 0 auto;
   }
+  .membership .orderContent .orderInfo .orderUl {
+    max-width: 460px;
+    margin: 60px auto 0 auto;
+    font-size: 0;
+  }
+  .membership .orderContent .orderInfo .orderUl li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+  .membership .giftContent .giftText span.blockText {
+    display: block;
+  }
+  .membership .giftContent .giftUl {
+    max-width: 700px;
+    margin: 60px auto 0 auto;
+    font-size: 0;
+  }
+  .membership .giftContent .giftUl li {
+    display: inline-block;
+    width: 33.3333%;
+    vertical-align: top;
+  }
 }
-
 @media screen and (min-width: 1020px) {
   .membership .membershipContent .membershipInfo {
     display: table;
@@ -323,7 +469,7 @@ em {
   }
   .membership .orderContent .orderBox {
     max-width: 1030px;
-    margin: 80px auto 0 auto;
+    margin: 80px 80px 0 80px;
     padding: 60px 70px 60px 70px;
   }
   .membership .orderContent .orderBox ul {
@@ -356,5 +502,70 @@ em {
   }
   .membership .orderContent .orderBox .orderText {
     margin: 80px auto 0 auto;
+  }
+  .membership .orderContent .orderInfo .orderUl {
+    max-width: 1030px;
+    margin: 80px auto 0 auto;
+  }
+  .membership .orderContent .orderInfo .orderUl li {
+    width: 25%;
+    margin-bottom: 0;
+  }
+  .membership .orderContent .orderInfo .orderUl li .functionIcon::after {
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+  }
+  .membership .orderContent .orderInfo .orderUl li .functionIcon img {
+    width: 160px;
+  }
+  .membership .orderContent .orderInfo .orderUl li dt {
+    font-size: 24px;
+  }
+  .membership .orderContent .orderInfo .orderUl li dd {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  .membership .giftContent {
+    margin: 120px auto 120px auto;
+  }
+  .membership .giftMain {
+    font-size: 45px;
+  }
+  .membership .giftMain em {
+    display: block;
+  }
+  .membership .giftContent .giftText {
+    font-size: 24px;
+  }
+  .membership .giftContent .giftUl {
+    max-width: 1150px;
+    margin: 80px auto 0 auto;
+  }
+  .membership .giftContent .giftUl li {
+    width: 20%;
+  }
+  .membership .giftContent .giftUl li .giftIcon img {
+    width: 160px;
+  }
+  .membership .giftContent .giftUl li .giftIcon::after {
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+  }
+  .membership .giftContent .giftUl li dt {
+    font-size: 24px;
+  }
+  .membership .giftContent .giftUl li dd {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .membership .membershipContent .membershipUl li {
+    width: 100%;
+  }
+  .membership .giftContent .giftUl li {
+    width: 100%;
   }
 }
