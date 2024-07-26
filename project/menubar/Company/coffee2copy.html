@@ -103,10 +103,11 @@
         display: none;
         position: absolute;
         margin: 2% 2% 2% 2%;
+        top: 0;
       }
 
       .clickElement2 {
-        display: none;
+        /* display: none; */
         position: absolute;
         margin: 2% 2% 2% 2%;
         top: 0;
@@ -196,10 +197,7 @@
       <div class="center">
         <br class="underBar2" />
       </div>
-
-      <ul class="KingUl">
-        <div class="divblurred button addP clickElement"></div>
-      </ul>
+      <ul class="KingUl"></ul>
     </div>
     <script>
       // localStorage.clear();
@@ -209,7 +207,7 @@
       let korean_name = "더블에스프레소";
       let english_name = "DOUBLE ESPRESSO";
       let explanation =
-        "브라질 원두 블렌딩으로 다크초콜릿,카<br>라멜,견과류의 고소함을 느낄 수 있는<br> 에스프레소";
+        "브라질 원두 블렌딩으로 다크초콜릿,카\u000A라멜,견과류의 고소함을 느낄 수 있는\u000A 에스프레소";
       let serving_size = "※ 1회 제공량 기준 : 60ml";
       let caffeineName = "카페인(mg)";
       let caffeine = 237;
@@ -249,7 +247,7 @@
       korean_name = "아메리카노(HOT)";
       english_name = "AMERICANO";
       explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라<br>비카 로스팅 원두로 뽑아내 깊고 진한<br> 맛의 앗!메리카노";
+        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
       serving_size = "※ 1회 제공량 기준 : 16oz";
       caffeineName = "카페인(mg)";
       caffeine = 237;
@@ -285,11 +283,11 @@
       };
 
       //아메리카노아이스
-      img1 = "/images/HOT-amricano-450x588.png";
+      img1 = "/images/ICED-amricano-450x588.png";
       korean_name = "아메리카노(ICED)";
       english_name = "AMERICANO";
       explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라<br>비카 로스팅 원두로 뽑아내 깊고 진한<br> 맛의 앗!메리카노";
+        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
       serving_size = "※ 1회 제공량 기준 :  24oz";
       caffeineName = "카페인(mg)";
       caffeine = 237;
@@ -328,7 +326,7 @@
       img1 = "/images/HOT-onejo-450x588.png";
       korean_name = "원조커피(HOT)";
       english_name = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결자!";
+      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
       serving_size = "※ 1회 제공량 기준 :  16oz";
       caffeineName = "카페인(mg)";
       caffeine = 406;
@@ -367,7 +365,7 @@
       img1 = "/images/ICED-onejo-450x588.png";
       korean_name = "원조커피(ICED)";
       english_name = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결자!";
+      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
       serving_size = "※ 1회 제공량 기준 :  24oz";
       caffeineName = "카페인(mg)";
       caffeine = 371;
@@ -406,7 +404,7 @@
       img1 = "/images/zerohot.png";
       korean_name = "원조커피 제로슈거(HOT)";
       english_name = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 버전";
+      explanation = "빽다방의 대표메뉴 원조커피 제로슈거\u000A 버전";
       serving_size = "※ 1회 제공량 기준 :  16oz";
       caffeineName = "카페인(mg)";
       caffeine = 489;
@@ -445,7 +443,7 @@
       img1 = "/images/zeroIce.png";
       korean_name = "원조커피 제로슈거(ICED)";
       english_name = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 버전";
+      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 \u000A버전";
       serving_size = "※ 1회 제공량 기준 :  24oz";
       caffeineName = "카페인(mg)";
       caffeine = 452;
@@ -482,7 +480,7 @@
       //크림라떼
       img1 = "/images/creamHOT-450x588.png";
       korean_name = "슈크리미 라떼(HOT)";
-      explanation = "진한 슈크림과 에스프레소의 달달함이 어우러진 음료";
+      explanation = "진한 슈크림과 에스프레소의 달달함이\u000A 어우러진 음료";
       serving_size = "※ 1회 제공량 기준 :  16oz";
       caffeineName = "카페인(mg)";
       caffeine = 237;
@@ -537,29 +535,6 @@
 
       // 배경색 바꾸기
 
-      const button = document.querySelector(".button");
-      const img = document.querySelector(".imgblurred");
-      const p = document.querySelector(".pblurred");
-      const clickElement = document.querySelector(".clickElement");
-      // console.log(clickElement);
-      let color = "white";
-
-      button.addEventListener("click", function () {
-        if (color == "white") {
-          color = "#ffe600";
-          button.style.backgroundColor = "#ffe600";
-          img.style.opacity = "0.5";
-          p.style.opacity = "0.5";
-          clickElement.style.display = "block";
-        } else {
-          color = "white";
-          button.style.backgroundColor = "white";
-          img.style.opacity = "10";
-          p.style.opacity = "10";
-          clickElement.style.display = "none";
-        }
-      });
-
       //for문 이용해서 만들기
 
       // const storeData = localStorage.getItem("coffee");
@@ -576,9 +551,12 @@
         const div = document.createElement("div");
         div.classList.add("divblurred", "button", "addP");
 
+        const div2 = document.createElement("div");
+        div2.classList.add("clickElement2");
+
         const img = document.createElement("img");
         img.src = coffeeData[i].img1;
-        console.log(img.src);
+        // console.log(img.src);
         img.classList.add("imgblurred", "imgWidth");
 
         const h3 = document.createElement("h3");
@@ -646,22 +624,53 @@
         ul.appendChild(li11);
         ul.appendChild(li12);
 
-        div.appendChild(img);
-        div.appendChild(h3);
-        div.appendChild(engDiv);
-        div.appendChild(br);
-        div.appendChild(explanationP);
-        div.appendChild(sizeDiv);
-        sizeDiv.appendChild(sizeP);
-        sizeDiv.appendChild(ul);
-
-        li.appendChild(div);
-        container.appendChild(li);
-
         const p1 = document.createElement("p");
         p1.innerText = coffeeData[i].korean_name;
-        p1.classList.add("pblurred2");
+        p1.classList.add("pblurred");
+
+        div.appendChild(img);
+        div2.appendChild(h3);
+        div2.appendChild(engDiv);
+        div2.appendChild(br);
+        div2.appendChild(explanationP);
+        div2.appendChild(sizeDiv);
+        sizeDiv.appendChild(sizeP);
+        sizeDiv.appendChild(ul);
+        div.appendChild(p1);
+        li.appendChild(div2);
+        li.appendChild(div);
+        container.appendChild(li);
       }
+
+      const button = document.querySelector(".button");
+      const img = document.querySelector(".imgblurred");
+      // const p = document.querySelector(".pblurred");
+      const kkingUL = document.querySelector(".kingUl");
+      const liElements = kkingUL.querySelectorAll("li");
+      console.log(liElements);
+      const clickElement2 = document.querySelector(".KingUl").children;
+      const p = document.querySelector(".KingUl").children;
+
+      // const clickElement2 = document.querySelectorAll(".clickElement2");
+
+      // for (let i = 0; i < clickElement2.length; i++) {
+      //   let color = "white";
+      //   button.addEventListener("click", function () {
+      //     if (color == "white") {
+      //       color = "#ffe600";
+      //       button.style.backgroundColor = "#ffe600";
+      //       img.style.opacity = "0.5";
+      //       p.style.opacity = "0.5";
+      //       clickElement2[i].style.display = "block";
+      //     } else {
+      //       color = "white";
+      //       button.style.backgroundColor = "white";
+      //       img.style.opacity = "10";
+      //       p.style.opacity = "10";
+      //       clickElement2[i].style.display = "none";
+      //     }
+      //   });
+      // }
     </script>
   </body>
 </html>

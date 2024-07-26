@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로컬스토리지에 값넣어보장</title>
+    <title>for문 이용한 것~!!!</title>
     <style>
       body {
         margin: 0;
@@ -13,7 +13,7 @@
       }
       .lineborder {
         border: 1px solid #c7c0c0;
-        width: 100%;
+        width: 25%;
         height: auto;
         max-width: 350px;
       }
@@ -103,6 +103,7 @@
         display: none;
         position: absolute;
         margin: 2% 2% 2% 2%;
+        top: 0;
       }
 
       .clickElement2 {
@@ -175,6 +176,7 @@
 
       .KingUl {
         display: flex;
+        flex-wrap: wrap;
       }
     </style>
   </head>
@@ -195,273 +197,380 @@
       <div class="center">
         <br class="underBar2" />
       </div>
-
       <ul class="KingUl">
-        <li class="lineborder">
-          <div class="divblurred button addP">
-            <!-- img -->
-            <div
-              class="clickElement addh3 addDiv addbr addp2 addDiv2 addImg"
-            ></div>
-            <!-- h3 -->
-            <!-- div -->
-            <!-- br -->
-            <!-- p -->
-            <!-- div class="addp3" -->
-            <!-- p -->
-          </div>
-        </li>
-        <!-- 2개째 -->
-        <li class="lineborder">
-          <div class="divblurred button2 addP4">
-            <!-- img -->
-            <div
-              class="clickElement2 addh32 addDiv3 addbr2 addp5 addDiv4 addImg2"
-            ></div>
-
-            <!-- h3 -->
-            <!-- div -->
-            <!-- br -->
-            <!-- p -->
-            <!-- div class="addp3" -->
-            <!-- p -->
-          </div>
-        </li>
+        <div class="divblurred button addP clickElement"></div>
       </ul>
     </div>
     <script>
-      // localStorage.clear();
-      //  로컬스트리지에 값 전체삭제
-
-      const img1 = "/images/aspreeso-2-450x588.png";
-      const korean_name1 = "더블에스프레소";
-      const english_name1 = "DOUBLE ESPRESSO";
-      const explanation1 =
-        "브라질 원두 블렌딩으로 다크초콜릿,카라멜,견과류의 고소함을 느낄 수 있는 에스프레소";
-      const serving_size1 = "※ 1회 제공량 기준 : 60ml";
-      const caffeine1Name = "카페인(mg)";
-      const caffeine1 = 237;
-      const salt1Name = "나트륨(mg)";
-      const salt1 = 0;
-      const saturated_fat1Name = "포화지방(g)";
-      const saturated_fat1 = 0;
-      const kcal1Name = "칼로리(kcal)";
-      const kcal1 = 22;
-      const sugars1Name = "당류(g)";
-      const sugars1 = 0;
-      const protein1Name = "단백질(g)";
-      const protein1 = 1;
+      let img1 = "/images/aspreeso-2-450x588.png";
+      let korean_name = "더블에스프레소";
+      let english_name = "DOUBLE ESPRESSO";
+      let explanation =
+        "브라질 원두 블렌딩으로 다크초콜릿,카\u000A라멜,견과류의 고소함을 느낄 수 있는\u000A 에스프레소";
+      let serving_size = "※ 1회 제공량 기준 : 60ml";
+      let caffeineName = "카페인(mg)";
+      let caffeine = 237;
+      let saltName = "나트륨(mg)";
+      let salt = 0;
+      let saturated_fatName = "포화지방(g)";
+      let saturated_fat = 0;
+      let kcalName = "칼로리(kcal)";
+      let kcal = 22;
+      let sugarsName = "당류(g)";
+      let sugars = 0;
+      let proteinName = "단백질(g)";
+      let protein = 1;
 
       const double_espresso = {
         img1,
-        korean_name1,
-        english_name1,
-        explanation1,
-        serving_size1,
-        caffeine1Name,
-        caffeine1,
-        salt1Name,
-        salt1,
-        saturated_fat1Name,
-        saturated_fat1,
-        kcal1Name,
-        kcal1,
-        sugars1Name,
-        sugars1,
-        protein1Name,
-        protein1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
       };
 
       // 아메리카노
-      const img2 = "/images/HOT-amricano-450x588.png";
-      const korean_name2 = "아메리카노(HOT)";
-      const english_name2 = "AMERICANO";
-      const explanation2 =
-        "빽다방만의 맛과 향을 더한 100% 아라비카 로스팅 원두로 뽑아내 깊고 진한 맛의 앗!메리카노";
-      const serving_size2 = "16oz";
-      const caffeine2Name = "카페인(mg)";
-      const caffeine2 = 237;
-      const salt2Name = "나트륨(mg)";
-      const salt2 = 4;
-      const saturated_fat2Name = "포화지방(g)";
-      const saturated_fat2 = 0;
-      const kcal2Name = "칼로리(kcal)";
-      const kcal2 = 14;
-      const sugars2Name = "당류(g)";
-      const sugars2 = 0;
-      const protein2Name = "단백질(g)";
-      const protein2 = 0;
+      img1 = "/images/HOT-amricano-450x588.png";
+      korean_name = "아메리카노(HOT)";
+      english_name = "AMERICANO";
+      explanation =
+        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
+      serving_size = "※ 1회 제공량 기준 : 16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 237;
+      saltName = "나트륨(mg)";
+      salt = 4;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 0;
+      kcalName = "칼로리(kcal)";
+      kcal = 14;
+      sugarsName = "당류(g)";
+      sugars = 0;
+      proteinName = "단백질(g)";
+      protein = 0;
 
       const americanoHot = {
-        img2,
-        korean_name2,
-        english_name2,
-        explanation2,
-        serving_size2,
-        caffeine2Name,
-        caffeine2,
-        salt2Name,
-        salt2,
-        saturated_fat2Name,
-        saturated_fat2,
-        kcal2Name,
-        kcal2,
-        sugars2Name,
-        sugars2,
-        protein2Name,
-        protein2,
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
       };
 
-      const tabel = { double_espresso, americanoHot };
+      //아메리카노아이스
+      img1 = "/images/ICED-amricano-450x588.png";
+      korean_name = "아메리카노(ICED)";
+      english_name = "AMERICANO";
+      explanation =
+        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 237;
+      saltName = "나트륨(mg)";
+      salt = 4;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 0;
+      kcalName = "칼로리(kcal)";
+      kcal = 13;
+      sugarsName = "당류(g)";
+      sugars = 0;
+      proteinName = "단백질(g)";
+      protein = 0;
+
+      const americanoIce = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      //핫원조
+      img1 = "/images/HOT-onejo-450x588.png";
+      korean_name = "원조커피(HOT)";
+      english_name = "ORIGINAL MIXED COFFEE";
+      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 406;
+      saltName = "나트륨(mg)";
+      salt = 24;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 7;
+      kcalName = "칼로리(kcal)";
+      kcal = 471;
+      sugarsName = "당류(g)";
+      sugars = 57;
+      proteinName = "단백질(g)";
+      protein = 3;
+
+      const onejoHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      //원조아이스
+      img1 = "/images/ICED-onejo-450x588.png";
+      korean_name = "원조커피(ICED)";
+      english_name = "ORIGINAL MIXED COFFEE";
+      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 371;
+      saltName = "나트륨(mg)";
+      salt = 22;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 12;
+      kcalName = "칼로리(kcal)";
+      kcal = 425;
+      sugarsName = "당류(g)";
+      sugars = 48;
+      proteinName = "단백질(g)";
+      protein = 3;
+
+      const onejoIce = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      //핫원조zero
+      img1 = "/images/zerohot.png";
+      korean_name = "원조커피 제로슈거(HOT)";
+      english_name = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
+      explanation = "빽다방의 대표메뉴 원조커피 제로슈거\u000A 버전";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 489;
+      saltName = "나트륨(mg)";
+      salt = 87;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 18;
+      kcalName = "칼로리(kcal)";
+      kcal = 372;
+      sugarsName = "당류(g)";
+      sugars = 0;
+      proteinName = "단백질(g)";
+      protein = 4;
+
+      const ZeroHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      //Zero아이스
+      img1 = "/images/zeroIce.png";
+      korean_name = "원조커피 제로슈거(ICED)";
+      english_name = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
+      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 \u000A버전";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 452;
+      saltName = "나트륨(mg)";
+      salt = 74;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 16;
+      kcalName = "칼로리(kcal)";
+      kcal = 327;
+      sugarsName = "당류(g)";
+      sugars = 0;
+      proteinName = "단백질(g)";
+      protein = 4;
+
+      const zeroIce = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+      //크림라떼
+      img1 = "/images/creamHOT-450x588.png";
+      korean_name = "슈크리미 라떼(HOT)";
+      explanation = "진한 슈크림과 에스프레소의 달달함이\u000A 어우러진 음료";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 237;
+      saltName = "나트륨(mg)";
+      salt = 173;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 19;
+      kcalName = "칼로리(kcal)";
+      kcal = 479;
+      sugarsName = "당류(g)";
+      sugars = 28;
+      proteinName = "단백질(g)";
+      protein = 11;
+
+      const creamHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      const tabel = [
+        double_espresso,
+        americanoHot,
+        americanoIce,
+        onejoHot,
+        onejoIce,
+        ZeroHot,
+        zeroIce,
+        creamHot,
+      ];
       localStorage.setItem("coffee", JSON.stringify(tabel));
       // 로컬스트리지에 값넣는것
 
       const storeData = localStorage.getItem("coffee");
       const coffeeData = JSON.parse(storeData);
 
-      const doubleEspresso = coffeeData.double_espresso;
-      //   console.log(doubleEspresso.korean_name1);
-      //   에스프레쏘 이름은 나옴.
+      const container = document.querySelector(".KingUl");
 
-      //img 태그 만들어서 값넣기
-      const espressoImg = doubleEspresso.img1;
+      for (let i = 0; i < coffeeData.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("lineborder");
 
-      function addImg() {
-        const img1 = document.createElement("img");
-        img1.src = espressoImg;
-        const addImgElements = document.getElementsByClassName("addImg");
-        addImgElements[0].before(img1);
-        img1.classList.add("imgblurred");
-        img1.classList.add("imgWidth");
-      }
-      addImg();
+        const div = document.createElement("div");
+        div.classList.add("divblurred", "button", "addP");
 
-      // p태그 만들어서 값넣기
-      const espressoName = doubleEspresso.korean_name1;
-
-      function addP() {
-        const p1 = document.createElement("p");
-        p1.innerText = espressoName;
-        const addPElements = document.getElementsByClassName("addP");
-        addPElements[0].appendChild(p1);
-        addPElements[0].appendChild(p1).classList.add("pblurred");
-      }
-
-      addP();
-
-      // 배경색 바꾸기
-
-      const button = document.querySelector(".button");
-      const img = document.querySelector(".imgblurred");
-      const p = document.querySelector(".pblurred");
-      const clickElement = document.querySelector(".clickElement");
-      console.log(clickElement);
-      let color = "white";
-
-      button.addEventListener("click", function () {
-        if (color == "white") {
-          color = "#ffe600";
-          button.style.backgroundColor = "#ffe600";
-          img.style.opacity = "0.5";
-          p.style.opacity = "0.5";
-          clickElement.style.display = "block";
-        } else {
-          color = "white";
-          button.style.backgroundColor = "white";
-          img.style.opacity = "10";
-          p.style.opacity = "10";
-          clickElement.style.display = "none";
-        }
-      });
-
-      // h3태그 만들기
-
-      function addh3() {
-        const h31 = document.createElement("h3");
-        h31.innerText = espressoName;
-        const addh3Elements = document.getElementsByClassName("addh3");
-        addh3Elements[0].appendChild(h31);
-        addh3Elements[0].appendChild(h31).classList.add("h31Font");
-      }
-
-      addh3();
-
-      //div만들기
-      // const doubleEspresso = coffeeData.double_espresso;
-      const doubleEspressoEN = doubleEspresso.english_name1;
-      function addDiv() {
-        const div1 = document.createElement("div");
-        div1.innerText = doubleEspressoEN;
-        const addDivElements = document.getElementsByClassName("addDiv");
-        addDivElements[0].appendChild(div1);
-        addDivElements[0].appendChild(div1).classList.add("div1Font");
-      }
-
-      addDiv();
-
-      //br만들기
-      function addbr() {
-        const br1 = document.createElement("br");
-        const addbrElements = document.getElementsByClassName("addbr");
-        addbrElements[0].appendChild(br1);
-        addbrElements[0].appendChild(br1).classList.add("br1after");
-      }
-      addbr();
-
-      //p태그2 만들기
-      const doubleEspressoEplanation = doubleEspresso.explanation1;
-      function addP2() {
-        const explanationWithLineBreaks = doubleEspressoEplanation
-          .replace(/카/g, "카<br>")
-          .replace(/는/g, "는<br/>");
-        const p2 = document.createElement("p");
-        p2.innerHTML = explanationWithLineBreaks;
-        const addP2Elements = document.getElementsByClassName("addp2");
-        addP2Elements[0].appendChild(p2);
-        addP2Elements[0].appendChild(p2).classList.add("p2font");
-      }
-
-      addP2();
-
-      //div2 만들기
-      function addDiv2() {
         const div2 = document.createElement("div");
-        const addDiv2Elements = document.getElementsByClassName("addDiv2");
-        addDiv2Elements[0].appendChild(div2);
-        addDiv2Elements[0].appendChild(div2).classList.add("addp3");
-      }
+        div2.classList.add("clickElement2");
 
-      addDiv2();
+        const img = document.createElement("img");
+        img.src = coffeeData[i].img1;
+        img.classList.add("imgblurred", "imgWidth");
 
-      //p태그3 만들기
-      const doubleEspressoServingSize = doubleEspresso.serving_size1;
-      function addP3() {
-        const p3 = document.createElement("p");
-        p3.innerText = doubleEspressoServingSize;
-        const addP3Elements = document.getElementsByClassName("addp3");
-        addP3Elements[0].appendChild(p3);
-        addP3Elements[0].appendChild(p3).classList.add("p3Font");
-      }
+        const h3 = document.createElement("h3");
+        h3.innerText = coffeeData[i].korean_name;
+        h3.classList.add("h31Font");
 
-      addP3();
+        const engDiv = document.createElement("div");
+        engDiv.innerText = coffeeData[i].english_name;
+        engDiv.classList.add("div1Font");
 
-      //ul li1 만들기
-      const doubleEspressoCaffeine1 = doubleEspresso.caffeine1;
-      const doubleEspressoSalt1 = doubleEspresso.salt1;
-      const doubleEspressoSatura1 = doubleEspresso.saturated_fat1;
-      const doubleEspressoKcal1 = doubleEspresso.kcal1;
-      const doubleEspressoSugar1 = doubleEspresso.sugars1;
-      const doubleEspressoProtein1 = doubleEspresso.protein1;
+        const br = document.createElement("br");
+        br.classList.add("br1after");
 
-      const doubleEspressoCaffeine1Name = doubleEspresso.caffeine1Name;
-      const doubleEspressoSalt1Name = doubleEspresso.salt1Name;
-      const doubleEspressoSatura1Name = doubleEspresso.saturated_fat1Name;
-      const doubleEspressoKcal1Name = doubleEspresso.kcal1Name;
-      const doubleEspressoSugar1Name = doubleEspresso.sugars1Name;
-      const doubleEspressoProtein1Name = doubleEspresso.protein1Name;
+        const explanationP = document.createElement("p");
+        explanationP.innerText = coffeeData[i].explanation;
+        explanationP.classList.add("p2font");
 
-      function addUlli1() {
-        const ul1 = document.createElement("ul");
+        const sizeDiv = document.createElement("div");
+        sizeDiv.classList.add("addp3");
+
+        const sizeP = document.createElement("p");
+        sizeP.innerText = coffeeData[i].serving_size;
+        sizeP.classList.add("p3Font");
+
+        const ul = document.createElement("ul");
+        ul.classList.add("ulli1Font");
+
         const li1 = document.createElement("li");
         const li2 = document.createElement("li");
         const li3 = document.createElement("li");
@@ -475,229 +584,59 @@
         const li11 = document.createElement("li");
         const li12 = document.createElement("li");
 
-        li1.innerText = doubleEspressoCaffeine1Name;
-        li2.innerText = doubleEspressoCaffeine1;
-        li3.innerText = doubleEspressoKcal1Name;
-        li4.innerText = doubleEspressoKcal1;
-        li5.innerText = doubleEspressoSalt1Name;
-        li6.innerText = doubleEspressoSalt1;
-        li7.innerText = doubleEspressoSugar1Name;
-        li8.innerText = doubleEspressoSugar1;
-        li9.innerText = doubleEspressoSatura1Name;
-        li10.innerText = doubleEspressoSatura1;
-        li11.innerText = doubleEspressoProtein1Name;
-        li12.innerText = doubleEspressoProtein1;
+        li1.innerText = coffeeData[i].caffeineName;
+        li2.innerText = coffeeData[i].caffeine;
+        li3.innerText = coffeeData[i].kcalName;
+        li4.innerText = coffeeData[i].kcal;
+        li5.innerText = coffeeData[i].saltName;
+        li6.innerText = coffeeData[i].salt;
+        li7.innerText = coffeeData[i].sugarsName;
+        li8.innerText = coffeeData[i].sugars;
+        li9.innerText = coffeeData[i].saturated_fatName;
+        li10.innerText = coffeeData[i].saturated_fat;
+        li11.innerText = coffeeData[i].proteinName;
+        li12.innerText = coffeeData[i].protein;
 
-        ul1.appendChild(li1);
-        ul1.appendChild(li2);
-        ul1.appendChild(li3);
-        ul1.appendChild(li4);
-        ul1.appendChild(li5);
-        ul1.appendChild(li6);
-        ul1.appendChild(li7);
-        ul1.appendChild(li8);
-        ul1.appendChild(li9);
-        ul1.appendChild(li10);
-        ul1.appendChild(li11);
-        ul1.appendChild(li12);
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        ul.appendChild(li6);
+        ul.appendChild(li7);
+        ul.appendChild(li8);
+        ul.appendChild(li9);
+        ul.appendChild(li10);
+        ul.appendChild(li11);
+        ul.appendChild(li12);
 
-        const addUlli1Elements = document.getElementsByClassName("addp3");
-        addUlli1Elements[0].appendChild(ul1);
-        addUlli1Elements[0].appendChild(ul1).classList.add("ulli1Font");
+        const p1 = document.createElement("p");
+        p1.innerText = coffeeData[i].korean_name;
+        p1.classList.add("pblurred2");
+
+        div.appendChild(img);
+        div2.appendChild(h3);
+        div2.appendChild(engDiv);
+        div2.appendChild(br);
+        div2.appendChild(explanationP);
+        div2.appendChild(sizeDiv);
+        sizeDiv.appendChild(sizeP);
+        sizeDiv.appendChild(ul);
+        div.appendChild(p1);
+        li.appendChild(div2);
+        li.appendChild(div);
+        container.appendChild(li);
+
+        // 배경색 바꾸기 및 이벤트 리스너 추가
+        div.addEventListener("click", function () {
+          const isWhite =
+            div.style.backgroundColor === "white" || !div.style.backgroundColor;
+          div.style.backgroundColor = isWhite ? "#ffe600" : "white";
+          img.style.opacity = isWhite ? "0.5" : "1";
+          p1.style.opacity = isWhite ? "0.5" : "1";
+          div2.style.display = isWhite ? "block" : "none";
+        });
       }
-
-      addUlli1();
-
-      //2개째 만들기
-
-      const hotAmricano = coffeeData.americanoHot;
-
-      //img2 만들기
-      const americanoHotImg = hotAmricano.img2;
-
-      function addImg2() {
-        const img2 = document.createElement("img");
-        img2.src = americanoHotImg;
-        addImgElements = document.getElementsByClassName("addImg2");
-        addImgElements[0].before(img2);
-        img2.classList.add("imgblurred2");
-        img2.classList.add("imgWidth");
-      }
-      addImg2();
-
-      // p태그 만들어서 값넣기
-      const hotAmricanoName = hotAmricano.korean_name2;
-
-      function addP4() {
-        const p4 = document.createElement("p");
-        p4.innerText = hotAmricanoName;
-        const addPElements = document.getElementsByClassName("addP4");
-        addPElements[0].appendChild(p4);
-        addPElements[0].appendChild(p4).classList.add("pblurred2");
-      }
-
-      addP4();
-
-      // 배경색 바꾸기
-
-      const button2 = document.querySelector(".button2");
-      const hotamimg = document.querySelector(".imgblurred2");
-      const hotamp = document.querySelector(".pblurred2");
-      const clickElement2 = document.querySelector(".clickElement2");
-      console.log(clickElement2);
-      let color2 = "white";
-
-      button2.addEventListener("click", function () {
-        if (color2 == "white") {
-          color2 = "#ffe600";
-          button2.style.backgroundColor = "#ffe600";
-          hotamimg.style.opacity = "0.5";
-          hotamp.style.opacity = "0.5";
-          clickElement2.style.display = "block";
-        } else {
-          color2 = "white";
-          button2.style.backgroundColor = "white";
-          hotamimg.style.opacity = "10";
-          hotamp.style.opacity = "10";
-          clickElement2.style.display = "none";
-        }
-      });
-
-      // h3태그 만들기
-
-      function addh32() {
-        const h32 = document.createElement("h3");
-        h32.innerText = hotAmricanoName;
-        const addh32Elements = document.getElementsByClassName("addh32");
-        addh32Elements[0].appendChild(h32);
-        addh32Elements[0].appendChild(h32).classList.add("h31Font");
-      }
-
-      addh32();
-
-      //div3만들기
-      const hotAmricanoEN = hotAmricano.english_name2;
-
-      function addDiv3() {
-        const div3 = document.createElement("div");
-        div3.innerText = hotAmricanoEN;
-        const addDiv3Elements = document.getElementsByClassName("addDiv3");
-        addDiv3Elements[0].appendChild(div3);
-        addDiv3Elements[0].appendChild(div3).classList.add("div1Font");
-      }
-
-      addDiv3();
-
-      // br2만들기
-      function addbr2() {
-        const br2 = document.createElement("br");
-        const addbr2Elements = document.getElementsByClassName("addbr2");
-        addbr2Elements[0].appendChild(br2);
-        addbr2Elements[0].appendChild(br2).classList.add("br1after");
-      }
-      addbr2();
-
-      //p태그5 만들기
-
-      // const doubleEspressoEplanation = doubleEspresso.explanation1;
-      const hotAmricanoEplanation = hotAmricano.explanation2;
-      function addP5() {
-        const explanationWithLineBreaks2 = hotAmricanoEplanation
-          // .replace(/%/g, "%<br>")
-          .replace(/한/g, "한<br/>");
-        const p5 = document.createElement("p");
-        p5.innerHTML = explanationWithLineBreaks2;
-        const addP5Elements = document.getElementsByClassName("addp5");
-        addP5Elements[0].appendChild(p5);
-        addP5Elements[0].appendChild(p5).classList.add("p2font");
-      }
-
-      addP5();
-
-      // div4 만들기
-      function addDiv4() {
-        const div4 = document.createElement("div");
-        const addDiv4Elements = document.getElementsByClassName("addDiv4");
-        addDiv4Elements[0].appendChild(div4);
-        addDiv4Elements[0].appendChild(div4).classList.add("addp6");
-      }
-
-      addDiv4();
-
-      //p태그3 만들기
-      const hotAmricanoServingSize = hotAmricano.serving_size2;
-      function addP6() {
-        const p6 = document.createElement("p");
-        p6.innerText = hotAmricanoServingSize;
-        const addP6Elements = document.getElementsByClassName("addp6");
-        addP6Elements[0].appendChild(p6);
-        addP6Elements[0].appendChild(p6).classList.add("p3Font");
-      }
-
-      addP6();
-
-      //ul li2 만들기
-      const hotAmricanoCaffeine2 = hotAmricano.caffeine2;
-      const hotAmricanoSalt2 = hotAmricano.salt2;
-      const hotAmricanoSatura2 = hotAmricano.saturated_fat2;
-      const hotAmricanoKcal2 = hotAmricano.kcal2;
-      const hotAmricanoSugar2 = hotAmricano.sugars2;
-      const hotAmricanoProtein2 = hotAmricano.protein2;
-
-      const hotAmricanoCaffeine2Name = hotAmricano.caffeine2Name;
-      const hotAmricanoSalt2Name = hotAmricano.salt2Name;
-      const hotAmricanoSatura2Name = hotAmricano.saturated_fat2Name;
-      const hotAmricanoKcal2Name = hotAmricano.kcal2Name;
-      const hotAmricanoSugar2Name = hotAmricano.sugars2Name;
-      const hotAmricanoProtein2Name = hotAmricano.protein2Name;
-
-      function addUlli2() {
-        const ul1 = document.createElement("ul");
-        const li1 = document.createElement("li");
-        const li2 = document.createElement("li");
-        const li3 = document.createElement("li");
-        const li4 = document.createElement("li");
-        const li5 = document.createElement("li");
-        const li6 = document.createElement("li");
-        const li7 = document.createElement("li");
-        const li8 = document.createElement("li");
-        const li9 = document.createElement("li");
-        const li10 = document.createElement("li");
-        const li11 = document.createElement("li");
-        const li12 = document.createElement("li");
-
-        li1.innerText = hotAmricanoCaffeine2Name;
-        li2.innerText = hotAmricanoCaffeine2;
-        li3.innerText = hotAmricanoKcal2Name;
-        li4.innerText = hotAmricanoKcal2;
-        li5.innerText = hotAmricanoSalt2Name;
-        li6.innerText = hotAmricanoSalt2;
-        li7.innerText = hotAmricanoSugar2Name;
-        li8.innerText = hotAmricanoSugar2;
-        li9.innerText = hotAmricanoSatura2Name;
-        li10.innerText = hotAmricanoSatura2;
-        li11.innerText = hotAmricanoProtein2Name;
-        li12.innerText = hotAmricanoProtein2;
-
-        ul1.appendChild(li1);
-        ul1.appendChild(li2);
-        ul1.appendChild(li3);
-        ul1.appendChild(li4);
-        ul1.appendChild(li5);
-        ul1.appendChild(li6);
-        ul1.appendChild(li7);
-        ul1.appendChild(li8);
-        ul1.appendChild(li9);
-        ul1.appendChild(li10);
-        ul1.appendChild(li11);
-        ul1.appendChild(li12);
-
-        const addUlli2Elements = document.getElementsByClassName("addp6");
-        addUlli2Elements[0].appendChild(ul1);
-        addUlli2Elements[0].appendChild(ul1).classList.add("ulli1Font");
-      }
-
-      addUlli2();
     </script>
   </body>
 </html>
