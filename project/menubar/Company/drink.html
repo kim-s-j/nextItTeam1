@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문 이용한 것~!!!</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .lineborder {
+        border: 1px solid #c7c0c0;
+        width: 25%;
+        height: auto;
+        max-width: 350px;
+      }
+      .imgWidth {
+        width: 100%;
+        max-width: 80%;
+      }
+      .addP {
+        text-align: center;
+      }
+
+      .addP4 {
+        text-align: center;
+      }
+      .addh3 {
+        top: 0;
+        left: 5%;
+        margin-top: 20px;
+      }
+
+      .h31Font {
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 0px;
+
+        color: #000000;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .div1Font {
+        font-size: 15px;
+        font-weight: 900;
+        color: #071f60;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .br1after {
+        display: block;
+        margin-top: 10px;
+        width: 20px;
+        height: 2px;
+        background-color: #202020;
+
+        content: "";
+        text-align: left;
+        margin-left: 3%;
+      }
+
+      .p2font {
+        font-size: 14px;
+        text-align: left;
+        color: #202020;
+        font-weight: 300;
+        padding-left: 3%;
+      }
+
+      .p3Font {
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 80px;
+        text-align: left;
+        padding-left: 3%;
+      }
+
+      .pblurred {
+        margin-top: 0;
+        font-size: 16px;
+        padding: 0 10px;
+      }
+
+      .ulli1Font {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 3%;
+      }
+
+      .ulli1Font > li {
+        width: 10%;
+        text-align: left;
+        margin-bottom: 5%;
+        font-size: 12px;
+      }
+
+      .clickElement {
+        display: none;
+        position: absolute;
+        margin: 2% 2% 2% 2%;
+      }
+
+      .clickElement2 {
+        display: none;
+        position: absolute;
+        margin: 2% 2% 2% 2%;
+        top: 0;
+      }
+
+      .divblurred {
+        border: 8px solid #ffffff;
+        position: relative;
+      }
+
+      .addp3 {
+        text-align: center;
+      }
+
+      .imgBg {
+        background-image: url(/images/bg-menu3.jpg);
+        min-height: 499px;
+        width: 100%;
+        background-position: center;
+      }
+      .h1center {
+        display: flex;
+        justify-content: center;
+        padding-top: 150px;
+        font-size: 44px;
+        font-weight: 300;
+        margin: 0px;
+        margin-bottom: 20px;
+      }
+
+      .underBar {
+        width: 30px;
+        height: 2px;
+        background-color: #202020;
+        content: "";
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+
+      .mainP {
+        font-size: 20px;
+      }
+      .h2center {
+        display: flex;
+        justify-content: center;
+        padding-top: 90px;
+        font-size: 2.187rem;
+        color: #071f60;
+        margin-bottom: 20px;
+      }
+
+      .underBar2 {
+        width: 50px;
+        height: 2px;
+        background-color: #071f60;
+        content: "";
+      }
+
+      .container {
+        margin: 0% 10% 0% 10%;
+      }
+
+      .KingUl {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @media screen and (min-width: 670px) {
+        .container > ul > li {
+          width: 22%;
+        }
+      }
+      @media screen and (max-width: 1300px) {
+        .container > ul > li {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="imgBg">
+      <div>
+        <h1 class="h1center">음료</h1>
+        <div class="center">
+          <br class="underBar" />
+        </div>
+        <p class="center mainP">
+          퀄리티 높은 식자재를 사용하여 맛있는 음료를 제공합니다.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="h2center">추천메뉴</h2>
+      <div class="center">
+        <br class="underBar2" />
+      </div>
+
+      <ul class="KingUl">
+        <div class="divblurred button addP clickElement"></div>
+      </ul>
+    </div>
+    <script>
+      // localStorage.clear();
+      //  로컬스토리지에 값 전체삭제
+
+      // 초코라떼(HOT)
+      let img1 = "/images/HOT-완전초코-450x588.png";
+      let korean_name = "초코라떼(HOT)";
+      let english_name = "CHOCO LATTE";
+      let explanation =
+        "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
+      let serving_size = "※ 1회 제공량 기준 : 16oz";
+      let caffeineName = "카페인(mg)";
+      let caffeine = 15;
+      let saltName = "나트륨(mg)";
+      let salt = 108;
+      let saturated_fatName = "포화지방(g)";
+      let saturated_fat = 6;
+      let kcalName = "칼로리(kcal)";
+      let kcal = 342;
+      let sugarsName = "당류(g)";
+      let sugars = 45;
+      let proteinName = "단백질(g)";
+      let protein = 9;
+
+      const chocoLatteHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 초코라떼(ICED)
+      img1 = "/images/ICED-완전초코-450x588.png";
+      korean_name = "초코라떼(ICED)";
+      english_name = "CHOCO LATTE";
+      explanation = "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
+      serving_size = "※ 1회 제공량 기준 : 24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 16;
+      saltName = "나트륨(mg)";
+      salt = 126;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 7;
+      kcalName = "칼로리(kcal)";
+      kcal = 387;
+      sugarsName = "당류(g)";
+      sugars = 56;
+      proteinName = "단백질(g)";
+      protein = 10;
+
+      const chocoLatteIced = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 녹차라떼(HOT)
+      img1 = "/images/HOT-녹차라떼-1-450x588.png";
+      korean_name = "녹차라떼(HOT)";
+      english_name = "GREEN TEA LATTE";
+      explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 208;
+      saltName = "나트륨(mg)";
+      salt = 156;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 7;
+      kcalName = "칼로리(kcal)";
+      kcal = 481;
+      sugarsName = "당류(g)";
+      sugars = 63;
+      proteinName = "단백질(g)";
+      protein = 12;
+
+      const greenteaLatteHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 녹차라떼(ICED)
+      img1 = "/images/ICED-녹차라떼-2-450x588.png";
+      korean_name = "녹차라떼(ICED)";
+      english_name = "GREEN TEA LATTE";
+      explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 152;
+      saltName = "나트륨(mg)";
+      salt = 116;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 6;
+      kcalName = "칼로리(kcal)";
+      kcal = 361;
+      sugarsName = "당류(g)";
+      sugars = 49;
+      proteinName = "단백질(g)";
+      protein = 9;
+
+      const greenteaLatteIced = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 민트초코라떼(HOT)
+      img1 = "/images/HOT-민트초코라떼-450x588.png";
+      korean_name = "민트초코라떼(HOT)";
+      english_name = "MINT CHOCO LATTE";
+      explanation =
+        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 30;
+      saltName = "나트륨(mg)";
+      salt = 187;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 11;
+      kcalName = "칼로리(kcal)";
+      kcal = 413;
+      sugarsName = "당류(g)";
+      sugars = 58;
+      proteinName = "단백질(g)";
+      protein = 11;
+
+      const mintchocoLatteHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 민트초코라떼(ICED)
+      img1 = "/images/ICED-민트초코라떼-450x588.png";
+      korean_name = "민트초코라떼(ICED)";
+      english_name = "MINT CHOCO LATTE";
+      explanation =
+        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 38;
+      saltName = "나트륨(mg)";
+      salt = 210;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 11;
+      kcalName = "칼로리(kcal)";
+      kcal = 498;
+      sugarsName = "당류(g)";
+      sugars = 43;
+      proteinName = "단백질(g)";
+      protein = 13;
+
+      const mintchocoLatteIced = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 토피넛라떼(HOT)
+      img1 = "/images/HOT-토피넛라떼-450x588.png";
+      korean_name = "토피넛라떼(HOT)";
+      english_name = "TOFFEE NUT LATTE";
+      explanation =
+        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      serving_size = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 51;
+      saltName = "나트륨(mg)";
+      salt = 174;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 13;
+      kcalName = "칼로리(kcal)";
+      kcal = 411;
+      sugarsName = "당류(g)";
+      sugars = 19;
+      proteinName = "단백질(g)";
+      protein = 8;
+
+      const toffeenutLatteHot = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+      // 토피넛라떼(ICED)
+      img1 = "/images/ICED-토피넛라떼-450x588.png";
+      korean_name = "토피넛라떼(ICED)";
+      english_name = "TOFFEE NUT LATTE";
+      explanation =
+        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      serving_size = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 51;
+      saltName = "나트륨(mg)";
+      salt = 197;
+      saturated_fatName = "포화지방(g)";
+      saturated_fat = 14;
+      kcalName = "칼로리(kcal)";
+      kcal = 469;
+      sugarsName = "당류(g)";
+      sugars = 16;
+      proteinName = "단백질(g)";
+      protein = 8;
+
+      const toffeenutLatteIced = {
+        img1,
+        korean_name,
+        english_name,
+        explanation,
+        serving_size,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturated_fatName,
+        saturated_fat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      const tabel = [
+        chocoLatteHot,
+        chocoLatteIced,
+        greenteaLatteHot,
+        greenteaLatteIced,
+        mintchocoLatteHot,
+        mintchocoLatteIced,
+        toffeenutLatteHot,
+        toffeenutLatteIced,
+      ];
+      localStorage.setItem("drink", JSON.stringify(tabel));
+      // 로컬스트리지에 값넣는것
+
+      const storeData = localStorage.getItem("drink");
+      const drinkData = JSON.parse(storeData);
+
+      const chocoLatte = drinkData.chocoLatteHot;
+
+      // 배경색 바꾸기
+
+      const button = document.querySelector(".button");
+      const img = document.querySelector(".imgblurred");
+      const p = document.querySelector(".pblurred");
+      const clickElement = document.querySelector(".clickElement");
+      console.log(clickElement);
+      let color = "white";
+
+      button.addEventListener("click", function () {
+        if (color == "white") {
+          color = "#ffe600";
+          button.style.backgroundColor = "#ffe600";
+          img.style.opacity = "0.5";
+          p.style.opacity = "0.5";
+          clickElement.style.display = "block";
+        } else {
+          color = "white";
+          button.style.backgroundColor = "white";
+          img.style.opacity = "10";
+          p.style.opacity = "10";
+          clickElement.style.display = "none";
+        }
+      });
+
+      //for문 이용해서 만들기
+
+      // const storeData = localStorage.getItem("coffee");
+      // const coffeeData = JSON.parse(storeData);
+
+      // console.log(coffeeData);
+
+      const container = document.querySelector(".KingUl");
+
+      for (let i = 0; i < drinkData.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("lineborder");
+
+        const div = document.createElement("div");
+        div.classList.add("divblurred", "button", "addP");
+
+        const img = document.createElement("img");
+        img.src = drinkData[i].img1;
+        console.log(img.src);
+        img.classList.add("imgblurred", "imgWidth");
+
+        const h3 = document.createElement("h3");
+        // h3.innerText = coffee.korean_name;
+        h3.innerText = drinkData[i].korean_name;
+        h3.classList.add("h31Font");
+
+        const engDiv = document.createElement("div");
+        engDiv.innerText = drinkData[i].english_name;
+        engDiv.classList.add("div1Font");
+
+        const br = document.createElement("br");
+        br.classList.add("br1after");
+
+        const explanationP = document.createElement("p");
+        explanationP.innerText = drinkData[i].explanation;
+        explanationP.classList.add("p2font");
+
+        const sizeDiv = document.createElement("div");
+        sizeDiv.classList.add("addp3");
+
+        const sizeP = document.createElement("p");
+        sizeP.innerText = drinkData[i].serving_size;
+        sizeP.classList.add("p3Font");
+
+        const ul = document.createElement("ul");
+        ul.classList.add("ulli1Font");
+
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        const li6 = document.createElement("li");
+        const li7 = document.createElement("li");
+        const li8 = document.createElement("li");
+        const li9 = document.createElement("li");
+        const li10 = document.createElement("li");
+        const li11 = document.createElement("li");
+        const li12 = document.createElement("li");
+
+        li1.innerText = drinkData[i].caffeineName;
+        li2.innerText = drinkData[i].caffeine;
+        li3.innerText = drinkData[i].kcalName;
+        li4.innerText = drinkData[i].kcal;
+        li5.innerText = drinkData[i].saltName;
+        li6.innerText = drinkData[i].salt;
+        li7.innerText = drinkData[i].sugarsName;
+        li8.innerText = drinkData[i].sugars;
+        li9.innerText = drinkData[i].saturated_fatName;
+        li10.innerText = drinkData[i].saturated_fat;
+        li11.innerText = drinkData[i].proteinName;
+        li12.innerText = drinkData[i].protein;
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        ul.appendChild(li6);
+        ul.appendChild(li7);
+        ul.appendChild(li8);
+        ul.appendChild(li9);
+        ul.appendChild(li10);
+        ul.appendChild(li11);
+        ul.appendChild(li12);
+
+        div.appendChild(img);
+        div.appendChild(h3);
+        div.appendChild(engDiv);
+        div.appendChild(br);
+        div.appendChild(explanationP);
+        div.appendChild(sizeDiv);
+        sizeDiv.appendChild(sizeP);
+        sizeDiv.appendChild(ul);
+
+        li.appendChild(div);
+        container.appendChild(li);
+
+        const p1 = document.createElement("p");
+        p1.innerText = drinkData[i].korean_name;
+        p1.classList.add("pblurred2");
+      }
+    </script>
+  </body>
+</html>
