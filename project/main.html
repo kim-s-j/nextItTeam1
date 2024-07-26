@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Montserrat", "Noto Sans KR", AppleGothic, sans-serif;
+      }
+      .slideBox {
+        width: 100%;
+      }
+      .slideBox .slideList {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0;
+        overflow: hidden;
+      }
+      .slideBox .slideList .slideItem {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        transition: all 1s;
+      }
+      .slideBox .slideList .slideItem > img {
+        display: block;
+        width: auto;
+        position: relative;
+        width: 100%;
+      }
+
+      #slide01:checked ~ .slideList .slideItem {
+        left: 0;
+      }
+      #slide02:checked ~ .slideList .slideItem {
+        left: -100%;
+      }
+      #slide03:checked ~ .slideList .slideItem {
+        left: -200%;
+      }
+      #slide04:checked ~ .slideList .slideItem {
+        left: -300%;
+      }
+
+      .slideBox .inputRadio {
+        position: relative;
+        bottom: 20px;
+        left: -350%;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .flax .goPage1 {
+        width: 50%;
+        height: 240px;
+      }
+      .flax .goPage2 {
+        width: 50%;
+        height: auto;
+      }
+      .flax .goPage3 {
+        width: 100%;
+        height: auto;
+      }
+      .flax .goPage4 {
+        width: 60%;
+        height: auto;
+      }
+      .flax .goPage5 {
+        width: 40%;
+        height: auto;
+      }
+      .flax .goPage6 {
+        width: 100%;
+        height: auto;
+      }
+      .goPageImg {
+        width: 100%;
+        height: 100%;
+      }
+      .flax {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      section {
+        width: 100%;
+        height: auto;
+      }
+      .flax .goPage1 {
+        height: 240px;
+        background: url("/images/coffee_story.jpg") no-repeat;
+        background-size: cover;
+        background-position: 60%;
+        text-decoration-line: none;
+      }
+      .flax .goPage2 {
+        width: 50%;
+        height: 240px;
+        background: url("/images/paik's_coffee.jpg") no-repeat;
+        background-color: #243f84;
+        background-size: 50%;
+        background-position: 80% 80%;
+        text-decoration-line: none;
+      }
+      .flax .goPage7 {
+        width: 50%;
+        padding: 1%;
+        background-color: antiquewhite;
+        border: 3px solid;
+        margin: 1%;
+      }
+      .flax .goPage7 input {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 3%;
+      }
+      .flax .goPage7 dd {
+        margin-bottom: 10%;
+      }
+      .flax .goPage3,
+      .flax .goPage4,
+      .flax .goPage5,
+      .flax .goPage6 {
+        position: relative;
+        color: inherit;
+        text-decoration-line: none;
+      }
+      .flax .goPage1 dl {
+        padding-top: 30px;
+        margin: auto !important;
+        width: 92%;
+      }
+      .flax .goPage2 dl {
+        padding-top: 30px;
+        margin: auto !important;
+        width: 92%;
+      }
+      .flax .goPage3 dl,
+      .flax .goPage4 dl,
+      .flax .goPage5 dl,
+      .flax .goPage6 dl {
+        position: absolute;
+        width: 92%;
+        top: 30px;
+        left: 4%;
+      }
+      .flax .goPage3 dl {
+        color: #6b4d30;
+      }
+      .flax .goPage4 dl {
+        color: #071f60;
+      }
+      .flax .goPage5 dl {
+        color: #f1ae1d;
+      }
+      .flax .goPage6 dl {
+        color: white;
+      }
+      .flax .goPage1 .content1 {
+        margin: 5px 0px 10px 0px;
+        color: #071f60;
+      }
+      .flax .goPage1 .content2 {
+        color: black;
+      }
+      .flax .goPage2 .content3 {
+        color: white;
+      }
+      .flax .goPage2 .content4 {
+        width: 100%;
+        color: white;
+        margin: 5px 0px 10px 0px;
+      }
+      .contentSet {
+        font-weight: 900;
+        font-size: 40px;
+        width: 100%;
+      }
+      @media screen and (max-width: 1200px) {
+        .flax .goPage1 .content2,
+        .flax .goPage2 .content4,
+        .flax .goPage3 .content6,
+        .flax .goPage4 .content8,
+        .flax .goPage5 .content10,
+        .flax .goPage6 .content12 {
+          font-size: 0px;
+        }
+        .flax .goPage3 .content5,
+        .flax .goPage4 .content7,
+        .flax .goPage5 .content9,
+        .flax .goPage6 .content11 {
+          font-size: 25px;
+        }
+        .flax .goPage6 {
+          width: 50%;
+        }
+        .flax .goPage7 {
+          width: 48%;
+        }
+      }
+      @media screen and (max-width: 1020px) {
+        .flax .goPage1,
+        .flax .goPage2,
+        .flax .goPage3,
+        .flax .goPage4,
+        .flax .goPage5,
+        .flax .goPage6,
+        .flax .goPage7 {
+          width: 100%;
+        }
+        .flax .goPage3 > img {
+          content: url("/images/fresh_coffee_2.jpg");
+        }
+        .flax .goPage4 > img {
+          content: url("/images/various_beverage2.jpg");
+        }
+        .flax .goPage5 > img {
+          content: url("/images/sweet_parik's_ccino2.jpg");
+        }
+        .flax .goPage6 > img {
+          content: url("/images/tasty_ice_cream_dessert2.jpg");
+        }
+        .flax .goPage3 .content5,
+        .flax .goPage4 .content7,
+        .flax .goPage5 .content9,
+        .flax .goPage6 .content11 {
+          font-size: 20px;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+        .flax .goPage1,
+        .flax .goPage2 {
+          height: 320px;
+        }
+        .flax .goPage3 dl {
+          width: 1200px;
+          top: 60px;
+          left: 50%;
+          /* left: 50%; */
+          margin-left: -600px;
+        }
+        .flax .goPage4 dl {
+          width: 1200px;
+          top: 60px;
+          left: 83.3%;
+          margin-left: -600px;
+        }
+        .flax .goPage6 dl {
+          width: 1200px;
+          top: 60px;
+          left: 71.3%;
+          margin-left: -600px;
+        }
+        .flax .goPage1 dl {
+          margin-left: calc(100% - 600px) !important;
+        }
+        .flax .goPage1 .content2,
+        .flax .goPage2 .content4,
+        .flax .goPage3 .content6,
+        .flax .goPage4 .content8,
+        .flax .goPage5 .content10,
+        .flax .goPage6 .content12 {
+          margin: 10px 0 0;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 1.4em;
+        }
+        .flax .goPage6 {
+          width: 70%;
+        }
+        .flax .goPage7 {
+          width: 28%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideBox">
+      <div class="slideList">
+        <li class="slideItem" id="li1">
+          <img src="/images/shinchan_collaboration.jpg" />
+        </li>
+        <li class="slideItem" id="li2">
+          <img src="/images/3_types_of_cream.jpg" />
+        </li>
+        <li class="slideItem" id="li3">
+          <img src="/images/blue_candy_world.jpg" />
+        </li>
+        <li class="slideItem" id="li4">
+          <img src="/images/membership_activation.jpg" />
+        </li>
+        <input id="slide01" class="inputRadio" type="radio" name="slide" value="1" onclick="slideClick(0,0)" checked />
+        <input id="slide02" class="inputRadio" type="radio" name="slide" value="2" onclick="slideClick(1,-100)" />
+        <input id="slide03" class="inputRadio" type="radio" name="slide" value="3" onclick="slideClick(2,-200)" />
+        <input id="slide04" class="inputRadio" type="radio" name="slide" value="4" onclick="slideClick(3,-300)" />
+      </div>
+    </div>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage1">
+        <dl>
+          <dt class="content1 contentSet">
+            PAIK'S COFFEE<br />
+            STORY
+          </dt>
+          <dd class="content2">균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</dd>
+        </dl>
+      </a>
+      <a href="/testPage.html" class="goPage2">
+        <dl>
+          <dt class="content3 contentSet">
+            PAIK'S BRAND<br />
+            STORY
+          </dt>
+          <dd class="content4">합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
+        </dl>
+      </a>
+    </section>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage3">
+        <dl>
+          <dt class="content5 contentSet">FRESH<br />COFFEE</dt>
+          <dd class="content6">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
+        </dl>
+        <img src="/images/fresh_coffee.jpg" class="goPageImg" />
+      </a>
+    </section>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage4">
+        <dl>
+          <dt class="content7 contentSet">VARIOUS<br />BEVERAGE</dt>
+          <dd class="content8">에이드, 티, 주스 등 취향대로<br />골라 먹는 즐거움!</dd>
+        </dl>
+        <img src="/images/various_beverage.jpg" class="goPageImg" />
+      </a>
+      <a href="/testPage.html" class="goPage5">
+        <dl>
+          <dt class="content9 contentSet">SWEET<br />PAIK'S CCINO</dt>
+          <dd class="content10">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
+        </dl>
+        <img src="/images/sweet_parik's_ccino.jpg" class="goPageImg" />
+      </a>
+    </section>
+    <section class="flax">
+      <a href="/testPage.html" class="goPage6">
+        <dl>
+          <dt class="content11 contentSet">TASTY<br />ICE CREAM<br />DESSERT</dt>
+          <dd class="content12">달콤한 아이스크림부터<br />든든한 브레드까지!</dd>
+        </dl>
+        <img src="/images/tasty_ice_cream_dessert.jpg" class="goPageImg" />
+      </a>
+      <div class="goPage7">
+        <dl>
+          <dt class="contentSet">STORE</dt>
+          <dd>원하시는 지역의 매장을 검색해보세요!</dd>
+          <input type="text" id="keyWord" />
+        </dl>
+      </div>
+    </section>
+
+    <script>
+      let x_pos = -100;
+      let i = 1;
+      function moveSlide() {
+        for (let j = 1; j < 5; j++) {
+          document.getElementById(`li${j}`).style.left = `${x_pos}%`;
+        }
+        x_pos -= 100;
+        x_pos = x_pos == -400 ? 0 : x_pos;
+        i++;
+        i = i == 5 ? 1 : i;
+        $(`input:radio[name='slide'][value='${i}']`).prop("checked", true);
+      }
+      let interval = setInterval("moveSlide()", 2000);
+      function slideClick(objVal, pos) {
+        i = objVal;
+        x_pos = pos;
+        moveSlide();
+        clearInterval(interval);
+        interval = setInterval("moveSlide()", 2000);
+      }
+
+      document.getElementById("keyWord").addEventListener("keydown", (key) => {
+        if (key.keyCode === 13) {
+          localStorage.setItem("keyWordData", JSON.stringify(document.getElementById("keyWord").value));
+          window.location.href = "http://192.168.0.63:5500/storeSearch.html";
+        }
+      });
+    </script>
+  </body>
+</html>

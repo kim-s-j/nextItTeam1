@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminPage</title>
+    <style></style>
+  </head>
+  <body>
+    <input type="text" name="" id="inp" />
+
+    <script>
+      const arrInArr1 = [];
+      const arrInArr2 = [];
+      let z = 0;
+      document.getElementById("inp").addEventListener("keydown", (key) => {
+        if (key.keyCode === 13) {
+          arrInArr1[z] = `key값임 ${document.getElementById("inp").value}`;
+          arrInArr2[z] = `value값임 ${document.getElementById("inp").value}`;
+          console.log(document.getElementById("inp").value, `${z + 1}번입력함!`);
+          z++;
+        }
+        if (z == 18) {
+          inputCnt();
+        }
+      });
+      function inputCnt() {
+        z = 0;
+        const arr = new Object();
+        arr[`${arrInArr1[0]}`] = new Object();
+        for (let i = 1; i < arrInArr1.length; i++) {
+          arr[`${arrInArr1[0]}`][`${arrInArr1[i]}`] = `${arrInArr2[i]}`;
+        }
+
+        localStorage.setItem("drink", JSON.stringify(arr));
+
+        const storeData = localStorage.getItem("drink");
+        const drinkData = JSON.parse(storeData);
+      }
+    </script>
+  </body>
+</html>
