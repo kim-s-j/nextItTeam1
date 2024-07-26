@@ -3,38 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>testPage</title>
+    <title>storeSearch</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2b1d221a9ab0ae17753f1dbe531ba206&libraries=services"></script>
   </head>
 
   <style>
+    html,
+    body {
+      margin: 0%;
+    }
+    .flex {
+      display: flex;
+    }
     #mapSearch {
       border: 1px solid;
-      margin: 0% 5% 0% 5%;
+      margin: 1% 5% 3% 5%;
       text-align: center;
     }
     #mapBtnList {
-      display: flex;
-      margin: 0% 45%;
+      margin: 1% 45%;
+    }
+    #frame1 {
+      width: 20%;
+      margin-left: 1%;
+      text-indent: 10%;
+      padding-top: 1.5%;
+      padding-bottom: 1.5%;
+    }
+    #frame2 {
+      width: 80%;
+      position: relative;
+      border: 1px solid;
+      margin-right: 1%;
+    }
+    #frame3 {
+      width: 96%;
+      height: 500px;
+      margin: 0% 2% 0% 2%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 1px solid;
+    }
+    #keyWord {
+      width: 100%;
+      height: 100%;
+      border: 0px;
+      padding: 0px;
+    }
+    #searchBtn {
+      border: none;
+      background: none;
+      position: absolute;
+      top: 25%;
+      right: 1%;
+    }
+    #searchBtn img {
+      width: 23px;
+      height: 23px;
     }
   </style>
   <body>
     <form id="mapSearch" onsubmit="searchPlaces(); return false;">
       최대 45개의 검색결과
-      <br />
-      매장명,지역 검색 :
-      <input type="text" value="" id="keyWord" size="40" placeholder="ex.대전 서대전역" />
-      <button type="submit" onclick="Onclick()">검색하기</button>
+      <div class="flex">
+        <div id="frame1">매장명,지역 검색 :</div>
+        <div id="frame2">
+          <input type="text" value="" id="keyWord" size="40" placeholder="ex.대전 서대전역" />
+          <button type="submit" onclick="Onclick()" id="searchBtn"><img src="/images/search_ico.png" alt="" /></button>
+        </div>
+      </div>
       <div id="mapLength"></div>
     </form>
-    <div id="mapList"></div>
-    <div id="mapBtnList"></div>
+    <div id="frame3">
+      <div id="mapList"></div>
+    </div>
+    <div id="mapBtnList" class="flex"></div>
 
     <script>
       var places = new kakao.maps.services.Places();
-      let placesKeyWord = document.getElementById("keyWord").value;
-      const maxSize = 5;
-      const maxPage = 9;
+      let placesKeyWord = localStorage.getItem("keyWordData");
+      const maxSize = 10;
+      const maxPage = 5;
       let mapListLength = 0;
       const mapList = document.getElementById("mapList");
       const mapBtnList = document.getElementById("mapBtnList");
@@ -131,6 +180,7 @@
         });
         return 0;
       }
+      searchPlaces();
     </script>
   </body>
 </html>

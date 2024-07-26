@@ -7,10 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <style>
       * {
         margin: 0;
@@ -115,6 +112,21 @@
         background-position: 80% 80%;
         text-decoration-line: none;
       }
+      .flax .goPage7 {
+        width: 50%;
+        padding: 1%;
+        background-color: antiquewhite;
+        border: 3px solid;
+        margin: 1%;
+      }
+      .flax .goPage7 input {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 3%;
+      }
+      .flax .goPage7 dd {
+        margin-bottom: 10%;
+      }
       .flax .goPage3,
       .flax .goPage4,
       .flax .goPage5,
@@ -189,13 +201,21 @@
         .flax .goPage6 .content11 {
           font-size: 25px;
         }
+        .flax .goPage6 {
+          width: 50%;
+        }
+        .flax .goPage7 {
+          width: 48%;
+        }
       }
       @media screen and (max-width: 1020px) {
         .flax .goPage1,
         .flax .goPage2,
         .flax .goPage3,
         .flax .goPage4,
-        .flax .goPage5 {
+        .flax .goPage5,
+        .flax .goPage6,
+        .flax .goPage7 {
           width: 100%;
         }
         .flax .goPage3 > img {
@@ -222,8 +242,7 @@
         .flax .goPage2 {
           height: 320px;
         }
-        .flax .goPage3 dl,
-        .flax .goPage6 dl {
+        .flax .goPage3 dl {
           width: 1200px;
           top: 60px;
           left: 50%;
@@ -234,6 +253,12 @@
           width: 1200px;
           top: 60px;
           left: 83.3%;
+          margin-left: -600px;
+        }
+        .flax .goPage6 dl {
+          width: 1200px;
+          top: 60px;
+          left: 71.3%;
           margin-left: -600px;
         }
         .flax .goPage1 dl {
@@ -249,6 +274,12 @@
           font-size: 18px;
           font-weight: 600;
           line-height: 1.4em;
+        }
+        .flax .goPage6 {
+          width: 70%;
+        }
+        .flax .goPage7 {
+          width: 28%;
         }
       }
     </style>
@@ -268,39 +299,10 @@
         <li class="slideItem" id="li4">
           <img src="/images/membership_activation.jpg" />
         </li>
-        <input
-          id="slide01"
-          class="inputRadio"
-          type="radio"
-          name="slide"
-          value="1"
-          onclick="slideClick(0,0)"
-          checked
-        />
-        <input
-          id="slide02"
-          class="inputRadio"
-          type="radio"
-          name="slide"
-          value="2"
-          onclick="slideClick(1,-100)"
-        />
-        <input
-          id="slide03"
-          class="inputRadio"
-          type="radio"
-          name="slide"
-          value="3"
-          onclick="slideClick(2,-200)"
-        />
-        <input
-          id="slide04"
-          class="inputRadio"
-          type="radio"
-          name="slide"
-          value="4"
-          onclick="slideClick(3,-300)"
-        />
+        <input id="slide01" class="inputRadio" type="radio" name="slide" value="1" onclick="slideClick(0,0)" checked />
+        <input id="slide02" class="inputRadio" type="radio" name="slide" value="2" onclick="slideClick(1,-100)" />
+        <input id="slide03" class="inputRadio" type="radio" name="slide" value="3" onclick="slideClick(2,-200)" />
+        <input id="slide04" class="inputRadio" type="radio" name="slide" value="4" onclick="slideClick(3,-300)" />
       </div>
     </div>
     <section class="flax">
@@ -310,9 +312,7 @@
             PAIK'S COFFEE<br />
             STORY
           </dt>
-          <dd class="content2">
-            균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.
-          </dd>
+          <dd class="content2">균형잡힌 바디감으로 긴 여운을 남기는 빽다방 커피를 만나보세요.</dd>
         </dl>
       </a>
       <a href="/testPage.html" class="goPage2">
@@ -321,9 +321,7 @@
             PAIK'S BRAND<br />
             STORY
           </dt>
-          <dd class="content4">
-            합리적인 가격으로 만나는 맛있고 든든한 빽다방
-          </dd>
+          <dd class="content4">합리적인 가격으로 만나는 맛있고 든든한 빽다방</dd>
         </dl>
       </a>
     </section>
@@ -331,9 +329,7 @@
       <a href="/testPage.html" class="goPage3">
         <dl>
           <dt class="content5 contentSet">FRESH<br />COFFEE</dt>
-          <dd class="content6">
-            신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!
-          </dd>
+          <dd class="content6">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
         </dl>
         <img src="/images/fresh_coffee.jpg" class="goPageImg" />
       </a>
@@ -342,18 +338,14 @@
       <a href="/testPage.html" class="goPage4">
         <dl>
           <dt class="content7 contentSet">VARIOUS<br />BEVERAGE</dt>
-          <dd class="content8">
-            에이드, 티, 주스 등 취향대로<br />골라 먹는 즐거움!
-          </dd>
+          <dd class="content8">에이드, 티, 주스 등 취향대로<br />골라 먹는 즐거움!</dd>
         </dl>
         <img src="/images/various_beverage.jpg" class="goPageImg" />
       </a>
       <a href="/testPage.html" class="goPage5">
         <dl>
           <dt class="content9 contentSet">SWEET<br />PAIK'S CCINO</dt>
-          <dd class="content10">
-            신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!
-          </dd>
+          <dd class="content10">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
         </dl>
         <img src="/images/sweet_parik's_ccino.jpg" class="goPageImg" />
       </a>
@@ -361,15 +353,18 @@
     <section class="flax">
       <a href="/testPage.html" class="goPage6">
         <dl>
-          <dt class="content11 contentSet">
-            TASTY<br />ICE CREAM<br />DESSERT
-          </dt>
-          <dd class="content12">
-            달콤한 아이스크림부터<br />든든한 브레드까지!
-          </dd>
+          <dt class="content11 contentSet">TASTY<br />ICE CREAM<br />DESSERT</dt>
+          <dd class="content12">달콤한 아이스크림부터<br />든든한 브레드까지!</dd>
         </dl>
         <img src="/images/tasty_ice_cream_dessert.jpg" class="goPageImg" />
       </a>
+      <div class="goPage7">
+        <dl>
+          <dt class="contentSet">STORE</dt>
+          <dd>원하시는 지역의 매장을 검색해보세요!</dd>
+          <input type="text" id="keyWord" />
+        </dl>
+      </div>
     </section>
 
     <script>
@@ -393,6 +388,13 @@
         clearInterval(interval);
         interval = setInterval("moveSlide()", 2000);
       }
+
+      document.getElementById("keyWord").addEventListener("keydown", (key) => {
+        if (key.keyCode === 13) {
+          localStorage.setItem("keyWordData", JSON.stringify(document.getElementById("keyWord").value));
+          window.location.href = "http://192.168.0.63:5500/storeSearch.html";
+        }
+      });
     </script>
   </body>
 </html>
