@@ -24,6 +24,10 @@
       .addP {
         text-align: center;
       }
+
+      .addP4 {
+        text-align: center;
+      }
       .addh3 {
         top: 0;
         left: 5%;
@@ -101,6 +105,13 @@
         margin: 2% 2% 2% 2%;
       }
 
+      .clickElement2 {
+        display: none;
+        position: absolute;
+        margin: 2% 2% 2% 2%;
+        top: 0;
+      }
+
       .divblurred {
         border: 8px solid #ffffff;
         position: relative;
@@ -161,6 +172,10 @@
       .container {
         margin: 0% 10% 0% 10%;
       }
+
+      .KingUl {
+        display: flex;
+      }
     </style>
   </head>
   <body>
@@ -181,12 +196,27 @@
         <br class="underBar2" />
       </div>
 
-      <ul>
+      <ul class="KingUl">
         <li class="lineborder">
           <div class="divblurred button addP">
             <!-- img -->
             <div
               class="clickElement addh3 addDiv addbr addp2 addDiv2 addImg"
+            ></div>
+            <!-- h3 -->
+            <!-- div -->
+            <!-- br -->
+            <!-- p -->
+            <!-- div class="addp3" -->
+            <!-- p -->
+          </div>
+        </li>
+        <!-- 2개째 -->
+        <li class="lineborder">
+          <div class="divblurred button2 addP4">
+            <!-- img -->
+            <div
+              class="clickElement2 addh32 addDiv3 addbr2 addp5 addDiv4 addImg2"
             ></div>
 
             <!-- h3 -->
@@ -477,6 +507,197 @@
       }
 
       addUlli1();
+
+      //2개째 만들기
+
+      const hotAmricano = coffeeData.americanoHot;
+
+      //img2 만들기
+      const americanoHotImg = hotAmricano.img2;
+
+      function addImg2() {
+        const img2 = document.createElement("img");
+        img2.src = americanoHotImg;
+        addImgElements = document.getElementsByClassName("addImg2");
+        addImgElements[0].before(img2);
+        img2.classList.add("imgblurred2");
+        img2.classList.add("imgWidth");
+      }
+      addImg2();
+
+      // p태그 만들어서 값넣기
+      const hotAmricanoName = hotAmricano.korean_name2;
+
+      function addP4() {
+        const p4 = document.createElement("p");
+        p4.innerText = hotAmricanoName;
+        const addPElements = document.getElementsByClassName("addP4");
+        addPElements[0].appendChild(p4);
+        addPElements[0].appendChild(p4).classList.add("pblurred2");
+      }
+
+      addP4();
+
+      // 배경색 바꾸기
+
+      const button2 = document.querySelector(".button2");
+      const hotamimg = document.querySelector(".imgblurred2");
+      const hotamp = document.querySelector(".pblurred2");
+      const clickElement2 = document.querySelector(".clickElement2");
+      console.log(clickElement2);
+      let color2 = "white";
+
+      button2.addEventListener("click", function () {
+        if (color2 == "white") {
+          color2 = "#ffe600";
+          button2.style.backgroundColor = "#ffe600";
+          hotamimg.style.opacity = "0.5";
+          hotamp.style.opacity = "0.5";
+          clickElement2.style.display = "block";
+        } else {
+          color2 = "white";
+          button2.style.backgroundColor = "white";
+          hotamimg.style.opacity = "10";
+          hotamp.style.opacity = "10";
+          clickElement2.style.display = "none";
+        }
+      });
+
+      // h3태그 만들기
+
+      function addh32() {
+        const h32 = document.createElement("h3");
+        h32.innerText = hotAmricanoName;
+        const addh32Elements = document.getElementsByClassName("addh32");
+        addh32Elements[0].appendChild(h32);
+        addh32Elements[0].appendChild(h32).classList.add("h31Font");
+      }
+
+      addh32();
+
+      //div3만들기
+      const hotAmricanoEN = hotAmricano.english_name2;
+
+      function addDiv3() {
+        const div3 = document.createElement("div");
+        div3.innerText = hotAmricanoEN;
+        const addDiv3Elements = document.getElementsByClassName("addDiv3");
+        addDiv3Elements[0].appendChild(div3);
+        addDiv3Elements[0].appendChild(div3).classList.add("div1Font");
+      }
+
+      addDiv3();
+
+      // br2만들기
+      function addbr2() {
+        const br2 = document.createElement("br");
+        const addbr2Elements = document.getElementsByClassName("addbr2");
+        addbr2Elements[0].appendChild(br2);
+        addbr2Elements[0].appendChild(br2).classList.add("br1after");
+      }
+      addbr2();
+
+      //p태그5 만들기
+
+      // const doubleEspressoEplanation = doubleEspresso.explanation1;
+      const hotAmricanoEplanation = hotAmricano.explanation2;
+      function addP5() {
+        const explanationWithLineBreaks2 = hotAmricanoEplanation
+          // .replace(/%/g, "%<br>")
+          .replace(/한/g, "한<br/>");
+        const p5 = document.createElement("p");
+        p5.innerHTML = explanationWithLineBreaks2;
+        const addP5Elements = document.getElementsByClassName("addp5");
+        addP5Elements[0].appendChild(p5);
+        addP5Elements[0].appendChild(p5).classList.add("p2font");
+      }
+
+      addP5();
+
+      // div4 만들기
+      function addDiv4() {
+        const div4 = document.createElement("div");
+        const addDiv4Elements = document.getElementsByClassName("addDiv4");
+        addDiv4Elements[0].appendChild(div4);
+        addDiv4Elements[0].appendChild(div4).classList.add("addp6");
+      }
+
+      addDiv4();
+
+      //p태그3 만들기
+      const hotAmricanoServingSize = hotAmricano.serving_size2;
+      function addP6() {
+        const p6 = document.createElement("p");
+        p6.innerText = hotAmricanoServingSize;
+        const addP6Elements = document.getElementsByClassName("addp6");
+        addP6Elements[0].appendChild(p6);
+        addP6Elements[0].appendChild(p6).classList.add("p3Font");
+      }
+
+      addP6();
+
+      //ul li2 만들기
+      const hotAmricanoCaffeine2 = hotAmricano.caffeine2;
+      const hotAmricanoSalt2 = hotAmricano.salt2;
+      const hotAmricanoSatura2 = hotAmricano.saturated_fat2;
+      const hotAmricanoKcal2 = hotAmricano.kcal2;
+      const hotAmricanoSugar2 = hotAmricano.sugars2;
+      const hotAmricanoProtein2 = hotAmricano.protein2;
+
+      const hotAmricanoCaffeine2Name = hotAmricano.caffeine2Name;
+      const hotAmricanoSalt2Name = hotAmricano.salt2Name;
+      const hotAmricanoSatura2Name = hotAmricano.saturated_fat2Name;
+      const hotAmricanoKcal2Name = hotAmricano.kcal2Name;
+      const hotAmricanoSugar2Name = hotAmricano.sugars2Name;
+      const hotAmricanoProtein2Name = hotAmricano.protein2Name;
+
+      function addUlli2() {
+        const ul1 = document.createElement("ul");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        const li6 = document.createElement("li");
+        const li7 = document.createElement("li");
+        const li8 = document.createElement("li");
+        const li9 = document.createElement("li");
+        const li10 = document.createElement("li");
+        const li11 = document.createElement("li");
+        const li12 = document.createElement("li");
+
+        li1.innerText = hotAmricanoCaffeine2Name;
+        li2.innerText = hotAmricanoCaffeine2;
+        li3.innerText = hotAmricanoKcal2Name;
+        li4.innerText = hotAmricanoKcal2;
+        li5.innerText = hotAmricanoSalt2Name;
+        li6.innerText = hotAmricanoSalt2;
+        li7.innerText = hotAmricanoSugar2Name;
+        li8.innerText = hotAmricanoSugar2;
+        li9.innerText = hotAmricanoSatura2Name;
+        li10.innerText = hotAmricanoSatura2;
+        li11.innerText = hotAmricanoProtein2Name;
+        li12.innerText = hotAmricanoProtein2;
+
+        ul1.appendChild(li1);
+        ul1.appendChild(li2);
+        ul1.appendChild(li3);
+        ul1.appendChild(li4);
+        ul1.appendChild(li5);
+        ul1.appendChild(li6);
+        ul1.appendChild(li7);
+        ul1.appendChild(li8);
+        ul1.appendChild(li9);
+        ul1.appendChild(li10);
+        ul1.appendChild(li11);
+        ul1.appendChild(li12);
+
+        const addUlli2Elements = document.getElementsByClassName("addp6");
+        addUlli2Elements[0].appendChild(ul1);
+        addUlli2Elements[0].appendChild(ul1).classList.add("ulli1Font");
+      }
+
+      addUlli2();
     </script>
   </body>
 </html>
