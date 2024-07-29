@@ -3,192 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>for문 이용한 것~!!!</title>
-    <style>
-      body {
-        margin: 0;
-      }
-      ul {
-        list-style: none;
-      }
-      .lineborder {
-        border: 1px solid #c7c0c0;
-        width: 25%;
-        height: auto;
-        max-width: 350px;
-      }
-      .imgWidth {
-        width: 100%;
-        max-width: 80%;
-      }
-      .addP {
-        text-align: center;
-      }
-
-      .addP4 {
-        text-align: center;
-      }
-      .addh3 {
-        top: 0;
-        left: 5%;
-        margin-top: 20px;
-      }
-
-      .h31Font {
-        font-size: 24px;
-        font-weight: 900;
-        margin-bottom: 0px;
-
-        color: #000000;
-        text-align: left;
-        padding-left: 3%;
-      }
-
-      .div1Font {
-        font-size: 15px;
-        font-weight: 900;
-        color: #071f60;
-        text-align: left;
-        padding-left: 3%;
-      }
-
-      .br1after {
-        display: block;
-        margin-top: 10px;
-        width: 20px;
-        height: 2px;
-        background-color: #202020;
-
-        content: "";
-        text-align: left;
-        margin-left: 3%;
-      }
-
-      .p2font {
-        font-size: 14px;
-        text-align: left;
-        color: #202020;
-        font-weight: 300;
-        padding-left: 3%;
-      }
-
-      .p3Font {
-        font-size: 13px;
-        font-weight: 400;
-        margin-top: 80px;
-        text-align: left;
-        padding-left: 3%;
-      }
-
-      .pblurred {
-        margin-top: 0;
-        font-size: 16px;
-        padding: 0 10px;
-      }
-
-      .ulli1Font {
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 3%;
-      }
-
-      .ulli1Font > li {
-        width: 10%;
-        text-align: left;
-        margin-bottom: 5%;
-        font-size: 12px;
-      }
-
-      .clickElement {
-        display: none;
-        position: absolute;
-        margin: 2% 2% 2% 2%;
-      }
-
-      .clickElement2 {
-        display: none;
-        position: absolute;
-        margin: 2% 2% 2% 2%;
-        top: 0;
-      }
-
-      .divblurred {
-        border: 8px solid #ffffff;
-        position: relative;
-      }
-
-      .addp3 {
-        text-align: center;
-      }
-
-      .imgBg {
-        background-image: url(/images/bg-menu3.jpg);
-        min-height: 499px;
-        width: 100%;
-        background-position: center;
-      }
-      .h1center {
-        display: flex;
-        justify-content: center;
-        padding-top: 150px;
-        font-size: 44px;
-        font-weight: 300;
-        margin: 0px;
-        margin-bottom: 20px;
-      }
-
-      .underBar {
-        width: 30px;
-        height: 2px;
-        background-color: #202020;
-        content: "";
-      }
-
-      .center {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
-      }
-
-      .mainP {
-        font-size: 20px;
-      }
-      .h2center {
-        display: flex;
-        justify-content: center;
-        padding-top: 90px;
-        font-size: 2.187rem;
-        color: #071f60;
-        margin-bottom: 20px;
-      }
-
-      .underBar2 {
-        width: 50px;
-        height: 2px;
-        background-color: #071f60;
-        content: "";
-      }
-
-      .container {
-        margin: 0% 10% 0% 10%;
-      }
-
-      .KingUl {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      @media screen and (min-width: 670px) {
-        .container > ul > li {
-          width: 22%;
-        }
-      }
-      @media screen and (max-width: 1300px) {
-        .container > ul > li {
-          width: 50%;
-        }
-      }
-    </style>
+    <title>drink</title>
+    <link rel="stylesheet" href="/style/drink.css" />
   </head>
   <body>
     <div class="imgBg">
@@ -207,17 +23,14 @@
       <div class="center">
         <br class="underBar2" />
       </div>
-
-      <ul class="KingUl">
-        <div class="divblurred button addP clickElement"></div>
-      </ul>
+      <ul class="KingUl"></ul>
     </div>
     <script>
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
 
       // 초코라떼(HOT)
-      let img1 = "/images/HOT-완전초코-450x588.png";
+      let img = "/images/HOT-완전초코-450x588.png";
       let korean_name = "초코라떼(HOT)";
       let english_name = "CHOCO LATTE";
       let explanation =
@@ -237,7 +50,7 @@
       let protein = 9;
 
       const chocoLatteHot = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -257,7 +70,7 @@
       };
 
       // 초코라떼(ICED)
-      img1 = "/images/ICED-완전초코-450x588.png";
+      img = "/images/ICED-완전초코-450x588.png";
       korean_name = "초코라떼(ICED)";
       english_name = "CHOCO LATTE";
       explanation = "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
@@ -276,7 +89,7 @@
       protein = 10;
 
       const chocoLatteIced = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -296,7 +109,7 @@
       };
 
       // 녹차라떼(HOT)
-      img1 = "/images/HOT-녹차라떼-1-450x588.png";
+      img = "/images/HOT-녹차라떼-1-450x588.png";
       korean_name = "녹차라떼(HOT)";
       english_name = "GREEN TEA LATTE";
       explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
@@ -315,7 +128,7 @@
       protein = 12;
 
       const greenteaLatteHot = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -335,7 +148,7 @@
       };
 
       // 녹차라떼(ICED)
-      img1 = "/images/ICED-녹차라떼-2-450x588.png";
+      img = "/images/ICED-녹차라떼-2-450x588.png";
       korean_name = "녹차라떼(ICED)";
       english_name = "GREEN TEA LATTE";
       explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
@@ -354,7 +167,7 @@
       protein = 9;
 
       const greenteaLatteIced = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -374,7 +187,7 @@
       };
 
       // 민트초코라떼(HOT)
-      img1 = "/images/HOT-민트초코라떼-450x588.png";
+      img = "/images/HOT-민트초코라떼-450x588.png";
       korean_name = "민트초코라떼(HOT)";
       english_name = "MINT CHOCO LATTE";
       explanation =
@@ -394,7 +207,7 @@
       protein = 11;
 
       const mintchocoLatteHot = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -414,7 +227,7 @@
       };
 
       // 민트초코라떼(ICED)
-      img1 = "/images/ICED-민트초코라떼-450x588.png";
+      img = "/images/ICED-민트초코라떼-450x588.png";
       korean_name = "민트초코라떼(ICED)";
       english_name = "MINT CHOCO LATTE";
       explanation =
@@ -434,7 +247,7 @@
       protein = 13;
 
       const mintchocoLatteIced = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -454,7 +267,7 @@
       };
 
       // 토피넛라떼(HOT)
-      img1 = "/images/HOT-토피넛라떼-450x588.png";
+      img = "/images/HOT-토피넛라떼-450x588.png";
       korean_name = "토피넛라떼(HOT)";
       english_name = "TOFFEE NUT LATTE";
       explanation =
@@ -474,7 +287,7 @@
       protein = 8;
 
       const toffeenutLatteHot = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -493,7 +306,7 @@
         protein,
       };
       // 토피넛라떼(ICED)
-      img1 = "/images/ICED-토피넛라떼-450x588.png";
+      img = "/images/ICED-토피넛라떼-450x588.png";
       korean_name = "토피넛라떼(ICED)";
       english_name = "TOFFEE NUT LATTE";
       explanation =
@@ -513,7 +326,7 @@
       protein = 8;
 
       const toffeenutLatteIced = {
-        img1,
+        img,
         korean_name,
         english_name,
         explanation,
@@ -546,77 +359,57 @@
       // 로컬스트리지에 값넣는것
 
       const storeData = localStorage.getItem("drink");
-      const drinkData = JSON.parse(storeData);
+      const drinkdata = JSON.parse(storeData);
 
-      const chocoLatte = drinkData.chocoLatteHot;
+      const chocoLatte = drinkdata.chocoLatteHot;
 
       // 배경색 바꾸기
-
-      const button = document.querySelector(".button");
-      const img = document.querySelector(".imgblurred");
-      const p = document.querySelector(".pblurred");
-      const clickElement = document.querySelector(".clickElement");
-      console.log(clickElement);
-      let color = "white";
-
-      button.addEventListener("click", function () {
-        if (color == "white") {
-          color = "#ffe600";
-          button.style.backgroundColor = "#ffe600";
-          img.style.opacity = "0.5";
-          p.style.opacity = "0.5";
-          clickElement.style.display = "block";
-        } else {
-          color = "white";
-          button.style.backgroundColor = "white";
-          img.style.opacity = "10";
-          p.style.opacity = "10";
-          clickElement.style.display = "none";
-        }
-      });
 
       //for문 이용해서 만들기
 
       // const storeData = localStorage.getItem("coffee");
-      // const coffeeData = JSON.parse(storeData);
+      // const drinkdata = JSON.parse(storeData);
 
-      // console.log(coffeeData);
+      // console.log(drinkdata);
 
       const container = document.querySelector(".KingUl");
 
-      for (let i = 0; i < drinkData.length; i++) {
+      for (let i = 0; i < drinkdata.length; i++) {
         const li = document.createElement("li");
         li.classList.add("lineborder");
 
         const div = document.createElement("div");
-        div.classList.add("divblurred", "button", "addP");
+        div.classList.add("button", "addP");
+
+        const div2 = document.createElement("div");
+        div2.classList.add("divblurred", "clickElement2");
 
         const img = document.createElement("img");
-        img.src = drinkData[i].img1;
-        console.log(img.src);
+        img.src = drinkdata[i].img;
+        // console.log(img.src);
         img.classList.add("imgblurred", "imgWidth");
 
         const h3 = document.createElement("h3");
         // h3.innerText = coffee.korean_name;
-        h3.innerText = drinkData[i].korean_name;
+        h3.innerText = drinkdata[i].korean_name;
         h3.classList.add("h31Font");
 
         const engDiv = document.createElement("div");
-        engDiv.innerText = drinkData[i].english_name;
+        engDiv.innerText = drinkdata[i].english_name;
         engDiv.classList.add("div1Font");
 
         const br = document.createElement("br");
         br.classList.add("br1after");
 
         const explanationP = document.createElement("p");
-        explanationP.innerText = drinkData[i].explanation;
+        explanationP.innerText = drinkdata[i].explanation;
         explanationP.classList.add("p2font");
 
         const sizeDiv = document.createElement("div");
         sizeDiv.classList.add("addp3");
 
         const sizeP = document.createElement("p");
-        sizeP.innerText = drinkData[i].serving_size;
+        sizeP.innerText = drinkdata[i].serving_size;
         sizeP.classList.add("p3Font");
 
         const ul = document.createElement("ul");
@@ -635,18 +428,18 @@
         const li11 = document.createElement("li");
         const li12 = document.createElement("li");
 
-        li1.innerText = drinkData[i].caffeineName;
-        li2.innerText = drinkData[i].caffeine;
-        li3.innerText = drinkData[i].kcalName;
-        li4.innerText = drinkData[i].kcal;
-        li5.innerText = drinkData[i].saltName;
-        li6.innerText = drinkData[i].salt;
-        li7.innerText = drinkData[i].sugarsName;
-        li8.innerText = drinkData[i].sugars;
-        li9.innerText = drinkData[i].saturated_fatName;
-        li10.innerText = drinkData[i].saturated_fat;
-        li11.innerText = drinkData[i].proteinName;
-        li12.innerText = drinkData[i].protein;
+        li1.innerText = drinkdata[i].caffeineName;
+        li2.innerText = drinkdata[i].caffeine;
+        li3.innerText = drinkdata[i].kcalName;
+        li4.innerText = drinkdata[i].kcal;
+        li5.innerText = drinkdata[i].saltName;
+        li6.innerText = drinkdata[i].salt;
+        li7.innerText = drinkdata[i].sugarsName;
+        li8.innerText = drinkdata[i].sugars;
+        li9.innerText = drinkdata[i].saturated_fatName;
+        li10.innerText = drinkdata[i].saturated_fat;
+        li11.innerText = drinkdata[i].proteinName;
+        li12.innerText = drinkdata[i].protein;
 
         ul.appendChild(li1);
         ul.appendChild(li2);
@@ -661,22 +454,61 @@
         ul.appendChild(li11);
         ul.appendChild(li12);
 
-        div.appendChild(img);
-        div.appendChild(h3);
-        div.appendChild(engDiv);
-        div.appendChild(br);
-        div.appendChild(explanationP);
-        div.appendChild(sizeDiv);
+        const p1 = document.createElement("p");
+        p1.innerText = drinkdata[i].korean_name;
+        p1.classList.add("pblurred");
+
+        div.appendChild(img); //이게 이미지있는 div
+        div2.appendChild(h3); //div2는 2번째와야하는 div
+        div2.appendChild(engDiv);
+        div2.appendChild(br);
+        div2.appendChild(explanationP);
+        div2.appendChild(sizeDiv);
         sizeDiv.appendChild(sizeP);
         sizeDiv.appendChild(ul);
-
+        div.appendChild(p1);
         li.appendChild(div);
+        li.appendChild(div2);
         container.appendChild(li);
-
-        const p1 = document.createElement("p");
-        p1.innerText = drinkData[i].korean_name;
-        p1.classList.add("pblurred2");
       }
+
+      const button = document.querySelector(".button");
+      // const img = document.querySelector(".imgblurred");
+      // const p = document.querySelector(".pblurred");
+      // const kkingUL = document.querySelector(".kingUl");
+      // const liElements = kkingUL.querySelectorAll("li");//
+      // console.log(liElements);
+      // const clickElement2 = document.querySelector(".KingUl").children;
+      // const p = document.querySelector(".KingUl").children;
+
+      function toggleInfo(event) {
+        const button = event.target.closest(".button");
+        const img = button.querySelector("img");
+        const li = button.closest("li");
+        const info = li.querySelector(".clickElement2");
+        console.log(info);
+        const p = button.querySelector(".pblurred");
+
+        if (button.style.backgroundColor === "white") {
+          li.style.backgroundColor = "#ffe600";
+          button.style.backgroundColor = "#ffe600";
+          img.style.opacity = 0.5;
+          p.style.opacity = 0.5;
+          info.style.display = "block";
+        } else {
+          li.style.backgroundColor = "white";
+          button.style.backgroundColor = "white";
+          img.style.opacity = 1;
+          p.style.opacity = 1;
+          info.style.display = "none";
+        }
+      }
+
+      // 각 이미지 요소에 이벤트 리스너 추가
+      const allButtons = document.querySelectorAll(".button");
+      allButtons.forEach((button) => {
+        button.addEventListener("click", toggleInfo);
+      });
     </script>
   </body>
 </html>
