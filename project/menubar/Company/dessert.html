@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이게 최종임 ㅇㅇ</title>
+    <title>저트저트디저트</title>
     <style>
       body {
         margin: 0;
@@ -122,7 +122,7 @@
       }
 
       .imgBg {
-        background-image: url(/images/bg-menu2.jpg);
+        background-image: url(/images/bg-menu4.jpg);
         min-height: 499px;
         width: 100%;
         background-position: center;
@@ -151,7 +151,7 @@
       }
 
       .mainP {
-        font-size: 20px;
+        font-size: 18px;
       }
       .h2center {
         display: flex;
@@ -217,12 +217,12 @@
   <body>
     <div class="imgBg">
       <div>
-        <h1 class="h1center">커피</h1>
+        <h1 class="h1center">아이스크림/디저트</h1>
         <div class="center">
           <br class="underBar" />
         </div>
         <p class="center mainP">
-          뉴 크롭 원두를 사용하여 더욱더 신선한 커피 메뉴를 만나보세요.
+          달콤 아이스크림부터 든든 브레드까지 다양하게 즐기세요.
         </p>
       </div>
     </div>
@@ -234,30 +234,30 @@
       <ul class="KingUl"></ul>
       <div class="top" onclick="smoothScroll()"><span></span></div>
     </div>
+
     <script>
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
 
-      let img1 = "/images/aspreeso-2-450x588.png";
-      let koreanName = "더블에스프레소";
-      let englishName = "DOUBLE ESPRESSO";
-      let explanation =
-        "브라질 원두 블렌딩으로 다크초콜릿,카\u000A라멜,견과류의 고소함을 느낄 수 있는\u000A 에스프레소";
-      let servingSize = "※ 1회 제공량 기준 : 60ml";
+      let img1 = "/images/icecreamburn.png";
+      let koreanName = "아이스 우유크림빵";
+      let englishName = "ICE MILK CREAM BREAD";
+      let explanation = "아이스로 즐기면 더 맛있는 우유크림 가\u000A득한 빵";
+      let servingSize = "※ 1회 제공량 기준 : 100g";
       let caffeineName = "카페인(mg)";
-      let caffeine = 237;
+      let caffeine = 0;
       let saltName = "나트륨(mg)";
-      let salt = 0;
+      let salt = 200;
       let saturatedFatName = "포화지방(g)";
-      let saturatedFat = 0;
+      let saturatedFat = 15;
       let kcalName = "칼로리(kcal)";
-      let kcal = 22;
+      let kcal = 323;
       let sugarsName = "당류(g)";
-      let sugars = 0;
+      let sugars = 14;
       let proteinName = "단백질(g)";
-      let protein = 1;
+      let protein = 6;
 
-      const double_espresso = {
+      const icecreamBread = {
         img1,
         koreanName,
         englishName,
@@ -277,223 +277,25 @@
         protein,
       };
 
-      // 아메리카노
-      img1 = "/images/HOT-amricano-450x588.png";
-      koreanName = "아메리카노(HOT)";
-      englishName = "AMERICANO";
-      explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
-      servingSize = "※ 1회 제공량 기준 : 16oz";
+      img1 = "/images/iceChocoburn.png";
+      koreanName = "아이스 초코크림빵";
+      englishName = "ICE CHOCOLATE CREAM BREAD";
+      explanation = "아이스로 즐기면 더 맛있는 초코크림 가\u000A득한 빵";
+      servingSize = "※ 1회 제공량 기준 : 100g";
       caffeineName = "카페인(mg)";
-      caffeine = 237;
+      caffeine = 0;
       saltName = "나트륨(mg)";
-      salt = 4;
+      salt = 300;
       saturatedFatName = "포화지방(g)";
-      saturatedFat = 0;
-      kcalName = "칼로리(kcal)";
-      kcal = 14;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 0;
-
-      const americanoHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //아메리카노아이스
-      img1 = "/images/ICED-amricano-450x588.png";
-      koreanName = "아메리카노(ICED)";
-      englishName = "AMERICANO";
-      explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 237;
-      saltName = "나트륨(mg)";
-      salt = 4;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 0;
-      kcalName = "칼로리(kcal)";
-      kcal = 13;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 0;
-
-      const americanoIce = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //핫원조
-      img1 = "/images/HOT-onejo-450x588.png";
-      koreanName = "원조커피(HOT)";
-      englishName = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 406;
-      saltName = "나트륨(mg)";
-      salt = 24;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 7;
-      kcalName = "칼로리(kcal)";
-      kcal = 471;
-      sugarsName = "당류(g)";
-      sugars = 57;
-      proteinName = "단백질(g)";
-      protein = 3;
-
-      const onejoHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //원조아이스
-      img1 = "/images/ICED-onejo-450x588.png";
-      koreanName = "원조커피(ICED)";
-      englishName = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 371;
-      saltName = "나트륨(mg)";
-      salt = 22;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 12;
-      kcalName = "칼로리(kcal)";
-      kcal = 425;
-      sugarsName = "당류(g)";
-      sugars = 48;
-      proteinName = "단백질(g)";
-      protein = 3;
-
-      const onejoIce = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //핫원조zero
-      img1 = "/images/zerohot.png";
-      koreanName = "원조커피 제로슈거(HOT)";
-      englishName = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거\u000A 버전";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 489;
-      saltName = "나트륨(mg)";
-      salt = 87;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 18;
-      kcalName = "칼로리(kcal)";
-      kcal = 372;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 4;
-
-      const ZeroHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //Zero아이스
-      img1 = "/images/zeroIce.png";
-      koreanName = "원조커피 제로슈거(ICED)";
-      englishName = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 \u000A버전";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 452;
-      saltName = "나트륨(mg)";
-      salt = 74;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 16;
+      saturatedFat = 13;
       kcalName = "칼로리(kcal)";
       kcal = 327;
       sugarsName = "당류(g)";
-      sugars = 0;
+      sugars = 14;
       proteinName = "단백질(g)";
-      protein = 4;
+      protein = 6;
 
-      const zeroIce = {
+      const iceChocoBread = {
         img1,
         koreanName,
         englishName,
@@ -512,25 +314,220 @@
         proteinName,
         protein,
       };
-      //크림라떼
-      img1 = "/images/creamHOT-450x588.png";
-      koreanName = "슈크리미 라떼(HOT)";
-      explanation = "진한 슈크림과 에스프레소의 달달함이\u000A 어우러진 음료";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
+
+      img1 = "/images/potetoburn.png";
+      koreanName = "쫀득 감자빵";
+      englishName = "CHEWY POTATO BREAD";
+      explanation = "국내산 감자가 들어있는 짭잘하고 고소\u000A한 감자빵";
+      servingSize = "※ 1회 제공량 기준 :  100g";
       caffeineName = "카페인(mg)";
-      caffeine = 237;
+      caffeine = 0;
       saltName = "나트륨(mg)";
-      salt = 173;
+      salt = 220;
       saturatedFatName = "포화지방(g)";
-      saturatedFat = 19;
+      saturatedFat = 4;
       kcalName = "칼로리(kcal)";
-      kcal = 479;
+      kcal = 257;
+      sugarsName = "당류(g)";
+      sugars = 3;
+      proteinName = "단백질(g)";
+      protein = 4;
+
+      const potatoBread = {
+        img1,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      img1 = "/images/sweetpoteto.png";
+      koreanName = "쫀득 고구마빵";
+      englishName = "CHEWY SWEET POTATO BREAD";
+      explanation =
+        "국내산 고구마(앙금 내 수입산 혼용)가\u000A들어있는 달달하고 고소한 고구마빵";
+      servingSize = "※ 1회 제공량 기준 :  100g";
+      caffeineName = "카페인(mg)";
+      caffeine = 0;
+      saltName = "나트륨(mg)";
+      salt = 0;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 0;
+      kcalName = "칼로리(kcal)";
+      kcal = 270;
+      sugarsName = "당류(g)";
+      sugars = 8;
+      proteinName = "단백질(g)";
+      protein = 2;
+
+      const sweetPotetoBREAD = {
+        img1,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      img1 = "/images/saltburn.png";
+      koreanName = "명란 소금빵";
+      englishName = "POLLACK ROE SALT BREAD";
+      explanation = "짭조름한 명란맛과 버터의 풍미가 느껴\u000A지는 소금빵";
+      servingSize = "※ 1회 제공량 기준 :  60g";
+      caffeineName = "카페인(mg)";
+      caffeine = 0;
+      saltName = "나트륨(mg)";
+      salt = 230;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 4;
+      kcalName = "칼로리(kcal)";
+      kcal = 217;
+      sugarsName = "당류(g)";
+      sugars = 3;
+      proteinName = "단백질(g)";
+      protein = 5;
+
+      const saltBread = {
+        img1,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      img1 = "/images/cheese.png";
+      koreanName = "황치즈 크럼블 머핀";
+      englishName = "YELLOW CHEESS CRUMBLE MUFFIN";
+      explanation =
+        "짭잘하고 고소한 황치즈 머핀에 달콤한\u000A크럼블을 곁들인 단짠 디저트";
+      servingSize = "※ 1회 제공량 기준 :  130g";
+      caffeineName = "카페인(mg)";
+      caffeine = 0;
+      saltName = "나트륨(mg)";
+      salt = 240;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 10;
+      kcalName = "칼로리(kcal)";
+      kcal = 480;
+      sugarsName = "당류(g)";
+      sugars = 34;
+      proteinName = "단백질(g)";
+      protein = 7;
+
+      const cheessMuffin = {
+        img1,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      img1 = "/images/nurongji.png";
+      koreanName = "크룽지";
+      englishName = "KUNGE";
+      explanation =
+        "황설탕 카라멜라이징으로 더 달콤고소 \u000A한 빅사이즈 크룽지";
+      servingSize = "※ 1회 제공량 기준 :  38g";
+      caffeineName = "카페인(mg)";
+      caffeine = 0;
+      saltName = "나트륨(mg)";
+      salt = 162;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 3;
+      kcalName = "칼로리(kcal)";
+      kcal = 188;
+      sugarsName = "당류(g)";
+      sugars = 9;
+      proteinName = "단백질(g)";
+      protein = 4;
+
+      const kunge = {
+        img1,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      img1 = "/images/creamburn.png";
+      koreanName = "못난이 생크림 카스텔라";
+      englishName = "UGLY WHIPPED CREAM CASTELLA";
+      explanation =
+        "부드러운 우유 생크림이 가득한 폭신하\u000A고 촉촉한 카스텔라";
+      servingSize = "※ 1회 제공량 기준 :  120g";
+      caffeineName = "카페인(mg)";
+      caffeine = 0;
+      saltName = "나트륨(mg)";
+      salt = 137;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 6;
+      kcalName = "칼로리(kcal)";
+      kcal = 374;
       sugarsName = "당류(g)";
       sugars = 28;
       proteinName = "단백질(g)";
-      protein = 11;
+      protein = 6;
 
-      const creamHot = {
+      const creamCastella = {
         img1,
         koreanName,
         englishName,
@@ -551,14 +548,14 @@
       };
 
       const tabel = [
-        double_espresso,
-        americanoHot,
-        americanoIce,
-        onejoHot,
-        onejoIce,
-        ZeroHot,
-        zeroIce,
-        creamHot,
+        icecreamBread,
+        iceChocoBread,
+        potatoBread,
+        sweetPotetoBREAD,
+        saltBread,
+        cheessMuffin,
+        kunge,
+        creamCastella,
       ];
       localStorage.setItem("coffee", JSON.stringify(tabel));
       // 로컬스트리지에 값넣는것

@@ -92,6 +92,30 @@
       #blockUl > .divSizeControl {
         width: 50%;
       }
+
+      .top {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 15px;
+        right: 60px;
+        z-index: 10;
+        background-image: url(/images/off.png);
+      }
+
+      .top span {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background: url(/images/top.png) no-repeat center;
+      }
+
+      .top span:hover {
+        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat
+          center;
+      }
+
       @media screen and (min-width: 1025px) {
         #blockUl > .divSizeControl {
           width: 50%;
@@ -325,6 +349,7 @@
           </div>
         </div>
       </div>
+      <div class="top" onclick="smoothScroll()"><span></span></div>
     </div>
     <script>
       window.addEventListener("resize", function () {});
@@ -338,6 +363,10 @@
           ceoBusinessList.classList.add("addFlex");
         }
       };
+
+      function smoothScroll() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     </script>
   </body>
 </html>

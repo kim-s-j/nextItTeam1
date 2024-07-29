@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이게 최종임 ㅇㅇ</title>
+    <title>짱구 신메늌ㅋㅋ</title>
     <style>
       body {
         margin: 0;
@@ -12,14 +12,14 @@
         list-style: none;
       }
       .lineborder {
-        border: 1px solid #c7c0c0;
-        width: 25%;
+        /* width: 45%; */
         height: auto;
         max-width: 350px;
       }
       .imgWidth {
-        width: 100%;
-        max-width: 80%;
+        /* width: 100%; */
+        max-width: 300px;
+        padding-right: 80px;
       }
       .addP {
         text-align: center;
@@ -113,7 +113,7 @@
       }
 
       .divblurred {
-        border: 8px solid #ffffff;
+        /* border: 8px solid #ffffff; */
         position: relative;
       }
 
@@ -122,7 +122,7 @@
       }
 
       .imgBg {
-        background-image: url(/images/bg-menu2.jpg);
+        background-image: url(/images/bg-menu.jpg);
         min-height: 499px;
         width: 100%;
         background-position: center;
@@ -156,7 +156,7 @@
       .h2center {
         display: flex;
         justify-content: center;
-        padding-top: 90px;
+        padding-top: 10px;
         font-size: 2.187rem;
         color: #071f60;
         margin-bottom: 20px;
@@ -177,6 +177,54 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0px 180px 0px 80px;
+      }
+
+      .rightArrow {
+        right: 10px;
+        left: auto;
+        /* position: absolute; */
+        top: 50%;
+        width: 27px;
+        height: 44px;
+        margin-top: 150px;
+        background-position: center;
+      }
+
+      .leftArrow {
+        right: 10px;
+        left: auto;
+        width: 27px;
+        height: 44px;
+        margin-top: 0;
+        background-position: center;
+        padding-top: 170px;
+        color: #202020;
+      }
+
+      .titleZone {
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        -webkit-box-sizing: border-box;
+        padding-top: 90px;
+        margin-left: 180px;
+        border-bottom: 1px solid #d1cfcf;
+      }
+
+      .Arrow {
+        display: flex;
+        max-width: 1050px;
+        max-height: 360px;
+        margin-bottom: 80px;
+        padding: 0 50px;
+        position: relative;
+        padding-left: 200px;
+      }
+
+      .rightArrow img,
+      .leftArrow img {
+        filter: brightness(3) grayscale(100%);
       }
       .top {
         position: fixed;
@@ -212,52 +260,109 @@
           width: 50%;
         }
       }
+
+      @media screen and (max-width: 780px) {
+        .button > img {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1500px) {
+        .Arrow {
+          padding-left: 0px;
+        }
+      }
+
+      @media screen and (max-width: 1250px) {
+        .imgWidth {
+          max-width: 80%;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .lineborder {
+          width: 245px;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .lineborder {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 1050px) {
+        .lineborder {
+          width: 350px;
+        }
+        .KingUl {
+          padding: 0px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="imgBg">
       <div>
-        <h1 class="h1center">커피</h1>
+        <h1 class="h1center">신메뉴</h1>
         <div class="center">
           <br class="underBar" />
         </div>
         <p class="center mainP">
-          뉴 크롭 원두를 사용하여 더욱더 신선한 커피 메뉴를 만나보세요.
+          지금 바로 가까운 매장에서 빽다방 신메뉴를 만나 보실 수 있습니다.
         </p>
       </div>
     </div>
+
     <div class="container">
-      <h2 class="h2center">추천메뉴</h2>
+      <div>
+        <h2 class="titleZone">6월 짱구 신메뉴</h2>
+      </div>
+      <div class="center">
+        <iframe
+          src="https://player.vimeo.com/video/960038381?h=7f3e508df6"
+          width="640"
+          height="360"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <h2 class="h2center">신메뉴</h2>
       <div class="center">
         <br class="underBar2" />
       </div>
-      <ul class="KingUl"></ul>
+      <div class="Arrow">
+        <div class="leftArrow"><img src="/images/leftArrow.svg" /></div>
+        <div class="maxWH">
+          <ul class="KingUl center"></ul>
+        </div>
+        <div class="rightArrow"><img src="/images/rightArrow.svg" /></div>
+      </div>
       <div class="top" onclick="smoothScroll()"><span></span></div>
     </div>
+
     <script>
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
 
-      let img1 = "/images/aspreeso-2-450x588.png";
-      let koreanName = "더블에스프레소";
-      let englishName = "DOUBLE ESPRESSO";
-      let explanation =
-        "브라질 원두 블렌딩으로 다크초콜릿,카\u000A라멜,견과류의 고소함을 느낄 수 있는\u000A 에스프레소";
-      let servingSize = "※ 1회 제공량 기준 : 60ml";
+      let img1 = "/images/ChocolateMeloLatte.jpg";
+      let koreanName = "초코 멜로 쉐이크";
+      let englishName = "CHOCOLATE MELLO SHAKE";
+      let explanation = "진한 초코에 마시멜로우가 함께 블렌딩된 쉐이크";
+      let servingSize = "※ 1회 제공량 기준 : 24oz";
       let caffeineName = "카페인(mg)";
-      let caffeine = 237;
+      let caffeine = 34;
       let saltName = "나트륨(mg)";
-      let salt = 0;
+      let salt = 140;
       let saturatedFatName = "포화지방(g)";
-      let saturatedFat = 0;
+      let saturatedFat = 8;
       let kcalName = "칼로리(kcal)";
-      let kcal = 22;
+      let kcal = 479;
       let sugarsName = "당류(g)";
-      let sugars = 0;
+      let sugars = 34;
       let proteinName = "단백질(g)";
-      let protein = 1;
+      let protein = 14;
 
-      const double_espresso = {
+      const chocoMelloShake = {
         img1,
         koreanName,
         englishName,
@@ -277,27 +382,26 @@
         protein,
       };
 
-      // 아메리카노
-      img1 = "/images/HOT-amricano-450x588.png";
-      koreanName = "아메리카노(HOT)";
-      englishName = "AMERICANO";
+      img1 = "/images/StrawberryChocolateMeloLatte.jpg";
+      koreanName = "딸기초코 멜로라떼";
+      englishName = "STRAWBERRY CHOCOLATE MELLO LATTE";
       explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
-      servingSize = "※ 1회 제공량 기준 : 16oz";
+        "상콤달콤 딸기 베이스에 마시멜로우가 섞인 진한\u000A초코라떼";
+      servingSize = "※ 1회 제공량 기준 : 24oz";
       caffeineName = "카페인(mg)";
-      caffeine = 237;
+      caffeine = 12;
       saltName = "나트륨(mg)";
-      salt = 4;
+      salt = 102;
       saturatedFatName = "포화지방(g)";
-      saturatedFat = 0;
+      saturatedFat = 6;
       kcalName = "칼로리(kcal)";
-      kcal = 14;
+      kcal = 409;
       sugarsName = "당류(g)";
-      sugars = 0;
+      sugars = 47;
       proteinName = "단백질(g)";
-      protein = 0;
+      protein = 10;
 
-      const americanoHot = {
+      const strawberryChocoLatte = {
         img1,
         koreanName,
         englishName,
@@ -317,249 +421,7 @@
         protein,
       };
 
-      //아메리카노아이스
-      img1 = "/images/ICED-amricano-450x588.png";
-      koreanName = "아메리카노(ICED)";
-      englishName = "AMERICANO";
-      explanation =
-        "빽다방만의 맛과 향을 더한 100% 아라\u000A비카 로스팅 원두로 뽑아내 깊고 진한\u000A 맛의 앗!메리카노";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 237;
-      saltName = "나트륨(mg)";
-      salt = 4;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 0;
-      kcalName = "칼로리(kcal)";
-      kcal = 13;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 0;
-
-      const americanoIce = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //핫원조
-      img1 = "/images/HOT-onejo-450x588.png";
-      koreanName = "원조커피(HOT)";
-      englishName = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 406;
-      saltName = "나트륨(mg)";
-      salt = 24;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 7;
-      kcalName = "칼로리(kcal)";
-      kcal = 471;
-      sugarsName = "당류(g)";
-      sugars = 57;
-      proteinName = "단백질(g)";
-      protein = 3;
-
-      const onejoHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //원조아이스
-      img1 = "/images/ICED-onejo-450x588.png";
-      koreanName = "원조커피(ICED)";
-      englishName = "ORIGINAL MIXED COFFEE";
-      explanation = "달콤한 빽다방 대표메뉴, 믹스커피 종결\u000A자!";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 371;
-      saltName = "나트륨(mg)";
-      salt = 22;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 12;
-      kcalName = "칼로리(kcal)";
-      kcal = 425;
-      sugarsName = "당류(g)";
-      sugars = 48;
-      proteinName = "단백질(g)";
-      protein = 3;
-
-      const onejoIce = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //핫원조zero
-      img1 = "/images/zerohot.png";
-      koreanName = "원조커피 제로슈거(HOT)";
-      englishName = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거\u000A 버전";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 489;
-      saltName = "나트륨(mg)";
-      salt = 87;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 18;
-      kcalName = "칼로리(kcal)";
-      kcal = 372;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 4;
-
-      const ZeroHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      //Zero아이스
-      img1 = "/images/zeroIce.png";
-      koreanName = "원조커피 제로슈거(ICED)";
-      englishName = "ORIGINAL MIXED COFFEE - ZEROSUGAR";
-      explanation = "빽다방의 대표메뉴 원조커피 제로슈거 \u000A버전";
-      servingSize = "※ 1회 제공량 기준 :  24oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 452;
-      saltName = "나트륨(mg)";
-      salt = 74;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 16;
-      kcalName = "칼로리(kcal)";
-      kcal = 327;
-      sugarsName = "당류(g)";
-      sugars = 0;
-      proteinName = "단백질(g)";
-      protein = 4;
-
-      const zeroIce = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-      //크림라떼
-      img1 = "/images/creamHOT-450x588.png";
-      koreanName = "슈크리미 라떼(HOT)";
-      explanation = "진한 슈크림과 에스프레소의 달달함이\u000A 어우러진 음료";
-      servingSize = "※ 1회 제공량 기준 :  16oz";
-      caffeineName = "카페인(mg)";
-      caffeine = 237;
-      saltName = "나트륨(mg)";
-      salt = 173;
-      saturatedFatName = "포화지방(g)";
-      saturatedFat = 19;
-      kcalName = "칼로리(kcal)";
-      kcal = 479;
-      sugarsName = "당류(g)";
-      sugars = 28;
-      proteinName = "단백질(g)";
-      protein = 11;
-
-      const creamHot = {
-        img1,
-        koreanName,
-        englishName,
-        explanation,
-        servingSize,
-        caffeineName,
-        caffeine,
-        saltName,
-        salt,
-        saturatedFatName,
-        saturatedFat,
-        kcalName,
-        kcal,
-        sugarsName,
-        sugars,
-        proteinName,
-        protein,
-      };
-
-      const tabel = [
-        double_espresso,
-        americanoHot,
-        americanoIce,
-        onejoHot,
-        onejoIce,
-        ZeroHot,
-        zeroIce,
-        creamHot,
-      ];
+      const tabel = [chocoMelloShake, strawberryChocoLatte];
       localStorage.setItem("coffee", JSON.stringify(tabel));
       // 로컬스트리지에 값넣는것
 
@@ -579,7 +441,7 @@
 
       for (let i = 0; i < coffeeData.length; i++) {
         const li = document.createElement("li");
-        li.classList.add("lineborder");
+        li.classList.add("lineborder", "center");
 
         const div = document.createElement("div");
         div.classList.add("button", "addP");
@@ -692,13 +554,13 @@
         const p = button.querySelector(".pblurred");
 
         if (button.style.backgroundColor === "white") {
-          li.style.backgroundColor = "#ffe600";
+          //   li.style.backgroundColor = "#ffe600";
           button.style.backgroundColor = "#ffe600";
-          img.style.opacity = 0.5;
+          img.style.opacity = 0.2;
           p.style.opacity = 0.5;
           info.style.display = "block";
         } else {
-          li.style.backgroundColor = "white";
+          //   li.style.backgroundColor = "white";
           button.style.backgroundColor = "white";
           img.style.opacity = 1;
           p.style.opacity = 1;
@@ -711,6 +573,10 @@
       allButtons.forEach((button) => {
         button.addEventListener("click", toggleInfo);
       });
+
+      function clickArrow(event) {
+        const button = document.querySelector(".rightArrow");
+      }
 
       function smoothScroll() {
         window.scrollTo({ top: 0, behavior: "smooth" });
