@@ -103,14 +103,13 @@
         display: none;
         position: absolute;
         margin: 2% 2% 2% 2%;
-        top: 0;
       }
 
       .clickElement2 {
-        /* display: none; */
-        position: absolute;
-        margin: 2% 2% 2% 2%;
-        top: 0;
+        display: none;
+        /* position: absolute; */
+        margin: -110% 2% 2% 2%;
+        /* top: 0; */
       }
 
       .divblurred {
@@ -177,6 +176,19 @@
       .KingUl {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 670px) {
+        .container > ul > li {
+          width: 22%;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        .container > ul > li {
+          width: 50%;
+        }
       }
     </style>
   </head>
@@ -533,8 +545,6 @@
 
       const doubleEspresso = coffeeData.double_espresso;
 
-      // 배경색 바꾸기
-
       //for문 이용해서 만들기
 
       // const storeData = localStorage.getItem("coffee");
@@ -549,10 +559,10 @@
         li.classList.add("lineborder");
 
         const div = document.createElement("div");
-        div.classList.add("divblurred", "button", "addP");
+        div.classList.add("button", "addP");
 
         const div2 = document.createElement("div");
-        div2.classList.add("clickElement2");
+        div2.classList.add("divblurred", "clickElement2");
 
         const img = document.createElement("img");
         img.src = coffeeData[i].img1;
@@ -628,8 +638,8 @@
         p1.innerText = coffeeData[i].korean_name;
         p1.classList.add("pblurred");
 
-        div.appendChild(img);
-        div2.appendChild(h3);
+        div.appendChild(img); //이게 이미지있는 div
+        div2.appendChild(h3); //div2는 2번째와야하는 div
         div2.appendChild(engDiv);
         div2.appendChild(br);
         div2.appendChild(explanationP);
@@ -637,40 +647,41 @@
         sizeDiv.appendChild(sizeP);
         sizeDiv.appendChild(ul);
         div.appendChild(p1);
-        li.appendChild(div2);
         li.appendChild(div);
+        li.appendChild(div2);
         container.appendChild(li);
       }
 
       const button = document.querySelector(".button");
-      const img = document.querySelector(".imgblurred");
-      // const p = document.querySelector(".pblurred");
-      const kkingUL = document.querySelector(".kingUl");
-      const liElements = kkingUL.querySelectorAll("li");
-      console.log(liElements);
-      const clickElement2 = document.querySelector(".KingUl").children;
-      const p = document.querySelector(".KingUl").children;
 
-      // const clickElement2 = document.querySelectorAll(".clickElement2");
+      function toggleInfo(event) {
+        const button = event.target.closest(".button");
+        const img = button.querySelector("img");
+        const li = button.closest("li");
+        const info = li.querySelector(".clickElement2");
+        console.log(info);
+        const p = button.querySelector(".pblurred");
 
-      // for (let i = 0; i < clickElement2.length; i++) {
-      //   let color = "white";
-      //   button.addEventListener("click", function () {
-      //     if (color == "white") {
-      //       color = "#ffe600";
-      //       button.style.backgroundColor = "#ffe600";
-      //       img.style.opacity = "0.5";
-      //       p.style.opacity = "0.5";
-      //       clickElement2[i].style.display = "block";
-      //     } else {
-      //       color = "white";
-      //       button.style.backgroundColor = "white";
-      //       img.style.opacity = "10";
-      //       p.style.opacity = "10";
-      //       clickElement2[i].style.display = "none";
-      //     }
-      //   });
-      // }
+        if (button.style.backgroundColor === "white") {
+          li.style.backgroundColor = "#ffe600";
+          button.style.backgroundColor = "#ffe600";
+          img.style.opacity = 0.5;
+          p.style.opacity = 0.5;
+          info.style.display = "block";
+        } else {
+          li.style.backgroundColor = "white";
+          button.style.backgroundColor = "white";
+          img.style.opacity = 1;
+          p.style.opacity = 1;
+          info.style.display = "none";
+        }
+      }
+
+      // 각 이미지 요소에 이벤트 리스너 추가
+      const allButtons = document.querySelectorAll(".button");
+      allButtons.forEach((button) => {
+        button.addEventListener("click", toggleInfo);
+      });
     </script>
   </body>
 </html>
