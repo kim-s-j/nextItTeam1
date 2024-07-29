@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drink</title>
+    <link rel="stylesheet" href="/style/drink.css" />
+  </head>
+  <body>
+    <div class="imgBg">
+      <div>
+        <h1 class="h1center">음료</h1>
+        <div class="center">
+          <br class="underBar" />
+        </div>
+        <p class="center mainP">
+          퀄리티 높은 식자재를 사용하여 맛있는 음료를 제공합니다.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="h2center">추천메뉴</h2>
+      <div class="center">
+        <br class="underBar2" />
+      </div>
+      <ul class="KingUl"></ul>
+    </div>
+    <!-- top 버튼 -->
+    <div class="top" onclick="smoothScroll()">
+      <span></span>
+    </div>
+
+    <script>
+      // localStorage.clear();
+      //  로컬스토리지에 값 전체삭제
+
+      // 초코라떼(HOT)
+      let img = "/images/HOT-완전초코-450x588.png";
+      let koreanName = "초코라떼(HOT)";
+      let englishName = "CHOCO LATTE";
+      let explanation =
+        "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
+      let servingSize = "※ 1회 제공량 기준 : 16oz";
+      let caffeineName = "카페인(mg)";
+      let caffeine = 15;
+      let saltName = "나트륨(mg)";
+      let salt = 108;
+      let saturatedFatName = "포화지방(g)";
+      let saturatedFat = 6;
+      let kcalName = "칼로리(kcal)";
+      let kcal = 342;
+      let sugarsName = "당류(g)";
+      let sugars = 45;
+      let proteinName = "단백질(g)";
+      let protein = 9;
+
+      const chocoLatteHot = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 초코라떼(ICED)
+      img = "/images/ICED-완전초코-450x588.png";
+      koreanName = "초코라떼(ICED)";
+      englishName = "CHOCO LATTE";
+      explanation = "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
+      servingSize = "※ 1회 제공량 기준 : 24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 16;
+      saltName = "나트륨(mg)";
+      salt = 126;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 7;
+      kcalName = "칼로리(kcal)";
+      kcal = 387;
+      sugarsName = "당류(g)";
+      sugars = 56;
+      proteinName = "단백질(g)";
+      protein = 10;
+
+      const chocoLatteIced = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 녹차라떼(HOT)
+      img = "/images/HOT-녹차라떼-1-450x588.png";
+      koreanName = "녹차라떼(HOT)";
+      englishName = "GREEN TEA LATTE";
+      explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
+      servingSize = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 208;
+      saltName = "나트륨(mg)";
+      salt = 156;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 7;
+      kcalName = "칼로리(kcal)";
+      kcal = 481;
+      sugarsName = "당류(g)";
+      sugars = 63;
+      proteinName = "단백질(g)";
+      protein = 12;
+
+      const greenteaLatteHot = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 녹차라떼(ICED)
+      img = "/images/ICED-녹차라떼-2-450x588.png";
+      koreanName = "녹차라떼(ICED)";
+      englishName = "GREEN TEA LATTE";
+      explanation = "100% 국내산 녹차를 사용하여 진하고 부드러운 녹차라떼";
+      servingSize = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 152;
+      saltName = "나트륨(mg)";
+      salt = 116;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 6;
+      kcalName = "칼로리(kcal)";
+      kcal = 361;
+      sugarsName = "당류(g)";
+      sugars = 49;
+      proteinName = "단백질(g)";
+      protein = 9;
+
+      const greenteaLatteIced = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 민트초코라떼(HOT)
+      img = "/images/HOT-민트초코라떼-450x588.png";
+      koreanName = "민트초코라떼(HOT)";
+      englishName = "MINT CHOCO LATTE";
+      explanation =
+        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      servingSize = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 30;
+      saltName = "나트륨(mg)";
+      salt = 187;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 11;
+      kcalName = "칼로리(kcal)";
+      kcal = 413;
+      sugarsName = "당류(g)";
+      sugars = 58;
+      proteinName = "단백질(g)";
+      protein = 11;
+
+      const mintchocoLatteHot = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 민트초코라떼(ICED)
+      img = "/images/ICED-민트초코라떼-450x588.png";
+      koreanName = "민트초코라떼(ICED)";
+      englishName = "MINT CHOCO LATTE";
+      explanation =
+        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      servingSize = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 38;
+      saltName = "나트륨(mg)";
+      salt = 210;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 11;
+      kcalName = "칼로리(kcal)";
+      kcal = 498;
+      sugarsName = "당류(g)";
+      sugars = 43;
+      proteinName = "단백질(g)";
+      protein = 13;
+
+      const mintchocoLatteIced = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      // 토피넛라떼(HOT)
+      img = "/images/HOT-토피넛라떼-450x588.png";
+      koreanName = "토피넛라떼(HOT)";
+      englishName = "TOFFEE NUT LATTE";
+      explanation =
+        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      servingSize = "※ 1회 제공량 기준 :  16oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 51;
+      saltName = "나트륨(mg)";
+      salt = 174;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 13;
+      kcalName = "칼로리(kcal)";
+      kcal = 411;
+      sugarsName = "당류(g)";
+      sugars = 19;
+      proteinName = "단백질(g)";
+      protein = 8;
+
+      const toffeenutLatteHot = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+      // 토피넛라떼(ICED)
+      img = "/images/ICED-토피넛라떼-450x588.png";
+      koreanName = "토피넛라떼(ICED)";
+      englishName = "TOFFEE NUT LATTE";
+      explanation =
+        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      servingSize = "※ 1회 제공량 기준 :  24oz";
+      caffeineName = "카페인(mg)";
+      caffeine = 51;
+      saltName = "나트륨(mg)";
+      salt = 197;
+      saturatedFatName = "포화지방(g)";
+      saturatedFat = 14;
+      kcalName = "칼로리(kcal)";
+      kcal = 469;
+      sugarsName = "당류(g)";
+      sugars = 16;
+      proteinName = "단백질(g)";
+      protein = 8;
+
+      const toffeenutLatteIced = {
+        img,
+        koreanName,
+        englishName,
+        explanation,
+        servingSize,
+        caffeineName,
+        caffeine,
+        saltName,
+        salt,
+        saturatedFatName,
+        saturatedFat,
+        kcalName,
+        kcal,
+        sugarsName,
+        sugars,
+        proteinName,
+        protein,
+      };
+
+      const tabel = [
+        chocoLatteHot,
+        chocoLatteIced,
+        greenteaLatteHot,
+        greenteaLatteIced,
+        mintchocoLatteHot,
+        mintchocoLatteIced,
+        toffeenutLatteHot,
+        toffeenutLatteIced,
+      ];
+      localStorage.setItem("drink", JSON.stringify(tabel));
+      // 로컬스트리지에 값넣는것
+
+      const storeData = localStorage.getItem("drink");
+      const drinkdata = JSON.parse(storeData);
+
+      const chocoLatte = drinkdata.chocoLatteHot;
+
+      // 배경색 바꾸기
+
+      //for문 이용해서 만들기
+
+      // const storeData = localStorage.getItem("coffee");
+      // const drinkdata = JSON.parse(storeData);
+
+      // console.log(drinkdata);
+
+      const container = document.querySelector(".KingUl");
+
+      for (let i = 0; i < drinkdata.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("lineborder");
+
+        const div = document.createElement("div");
+        div.classList.add("button", "addP");
+
+        const div2 = document.createElement("div");
+        div2.classList.add("divblurred", "clickElement2");
+
+        const img = document.createElement("img");
+        img.src = drinkdata[i].img;
+        // console.log(img.src);
+        img.classList.add("imgblurred", "imgWidth");
+
+        const h3 = document.createElement("h3");
+        // h3.innerText = coffee.koreanName;
+        h3.innerText = drinkdata[i].koreanName;
+        h3.classList.add("h31Font");
+
+        const engDiv = document.createElement("div");
+        engDiv.innerText = drinkdata[i].englishName;
+        engDiv.classList.add("div1Font");
+
+        const br = document.createElement("br");
+        br.classList.add("br1after");
+
+        const explanationP = document.createElement("p");
+        explanationP.innerText = drinkdata[i].explanation;
+        explanationP.classList.add("p2font");
+
+        const sizeDiv = document.createElement("div");
+        sizeDiv.classList.add("addp3");
+
+        const sizeP = document.createElement("p");
+        sizeP.innerText = drinkdata[i].servingSize;
+        sizeP.classList.add("p3Font");
+
+        const ul = document.createElement("ul");
+        ul.classList.add("ulli1Font");
+
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        const li6 = document.createElement("li");
+        const li7 = document.createElement("li");
+        const li8 = document.createElement("li");
+        const li9 = document.createElement("li");
+        const li10 = document.createElement("li");
+        const li11 = document.createElement("li");
+        const li12 = document.createElement("li");
+
+        li1.innerText = drinkdata[i].caffeineName;
+        li2.innerText = drinkdata[i].caffeine;
+        li3.innerText = drinkdata[i].kcalName;
+        li4.innerText = drinkdata[i].kcal;
+        li5.innerText = drinkdata[i].saltName;
+        li6.innerText = drinkdata[i].salt;
+        li7.innerText = drinkdata[i].sugarsName;
+        li8.innerText = drinkdata[i].sugars;
+        li9.innerText = drinkdata[i].saturatedFatName;
+        li10.innerText = drinkdata[i].saturatedFat;
+        li11.innerText = drinkdata[i].proteinName;
+        li12.innerText = drinkdata[i].protein;
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        ul.appendChild(li6);
+        ul.appendChild(li7);
+        ul.appendChild(li8);
+        ul.appendChild(li9);
+        ul.appendChild(li10);
+        ul.appendChild(li11);
+        ul.appendChild(li12);
+
+        const p1 = document.createElement("p");
+        p1.innerText = drinkdata[i].koreanName;
+        p1.classList.add("pblurred");
+
+        div.appendChild(img); //이게 이미지있는 div
+        div2.appendChild(h3); //div2는 2번째와야하는 div
+        div2.appendChild(engDiv);
+        div2.appendChild(br);
+        div2.appendChild(explanationP);
+        div2.appendChild(sizeDiv);
+        sizeDiv.appendChild(sizeP);
+        sizeDiv.appendChild(ul);
+        div.appendChild(p1);
+        li.appendChild(div);
+        li.appendChild(div2);
+        container.appendChild(li);
+      }
+
+      const button = document.querySelector(".button");
+      // const img = document.querySelector(".imgblurred");
+      // const p = document.querySelector(".pblurred");
+      // const kkingUL = document.querySelector(".kingUl");
+      // const liElements = kkingUL.querySelectorAll("li");//
+      // console.log(liElements);
+      // const clickElement2 = document.querySelector(".KingUl").children;
+      // const p = document.querySelector(".KingUl").children;
+
+      function toggleInfo(event) {
+        const button = event.target.closest(".button");
+        const img = button.querySelector("img");
+        const li = button.closest("li");
+        const info = li.querySelector(".clickElement2");
+        console.log(info);
+        const p = button.querySelector(".pblurred");
+
+        if (button.style.backgroundColor === "white") {
+          li.style.backgroundColor = "#ffe600";
+          button.style.backgroundColor = "#ffe600";
+          img.style.opacity = 0.5;
+          p.style.opacity = 0.5;
+          info.style.display = "block";
+        } else {
+          li.style.backgroundColor = "white";
+          button.style.backgroundColor = "white";
+          img.style.opacity = 1;
+          p.style.opacity = 1;
+          info.style.display = "none";
+        }
+      }
+
+      // 각 이미지 요소에 이벤트 리스너 추가
+      const allButtons = document.querySelectorAll(".button");
+      allButtons.forEach((button) => {
+        button.addEventListener("click", toggleInfo);
+      });
+
+      // top 버튼
+      function smoothScroll() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>

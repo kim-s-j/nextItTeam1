@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.lineborder {
+  border: 1px solid #c7c0c0;
+  width: 25%;
+  height: auto;
+  max-width: 350px;
+}
+.imgWidth {
+  width: 100%;
+  max-width: 80%;
+}
+.addP {
+  text-align: center;
+}
+
+.addP4 {
+  text-align: center;
+}
+.addh3 {
+  top: 0;
+  left: 5%;
+  margin-top: 20px;
+}
+
+.h31Font {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 0px;
+
+  color: #000000;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.div1Font {
+  font-size: 15px;
+  font-weight: 900;
+  color: #071f60;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.br1after {
+  display: block;
+  margin-top: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: #202020;
+
+  content: "";
+  text-align: left;
+  margin-left: 3%;
+}
+
+.p2font {
+  font-size: 14px;
+  text-align: left;
+  color: #202020;
+  font-weight: 300;
+  padding-left: 3%;
+}
+
+.p3Font {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 80px;
+  text-align: left;
+  padding-left: 3%;
+}
+
+.pblurred {
+  margin-top: 0;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.ulli1Font {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 3%;
+}
+
+.ulli1Font > li {
+  width: 25%;
+  text-align: left;
+  margin-bottom: 5%;
+  font-size: 12px;
+}
+
+.clickElement {
+  display: none;
+  position: absolute;
+  margin: 2% 2% 2% 2%;
+}
+
+.clickElement2 {
+  display: none;
+  /* position: absolute; */
+  margin: -115% 2% 2% 2%;
+  /* top: 0; */
+}
+
+.divblurred {
+  border: 8px solid #ffffff;
+  position: relative;
+}
+
+.addp3 {
+  text-align: center;
+}
+
+.imgBg {
+  background-image: url(/images/bg-menu3.jpg);
+  min-height: 499px;
+  width: 100%;
+  background-position: center;
+}
+.h1center {
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  font-size: 44px;
+  font-weight: 300;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.underBar {
+  width: 30px;
+  height: 2px;
+  background-color: #202020;
+  content: "";
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.mainP {
+  font-size: 20px;
+}
+.h2center {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+  font-size: 2.187rem;
+  color: #071f60;
+  margin-bottom: 20px;
+}
+
+.underBar2 {
+  width: 50px;
+  height: 2px;
+  background-color: #071f60;
+  content: "";
+}
+
+.container {
+  margin: 0% 10% 0% 10%;
+}
+
+.KingUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 670px) {
+  .container > ul > li {
+    width: 22%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container > ul > li {
+    width: 50%;
+  }
+}
+/* top 버튼  style */
+.top {
+  position: fixed;
+  bottom: 15px;
+  right: 60px;
+  z-index: 10;
+}
+.top span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: url(/images/top.png) no-repeat center;
+}
+.top span:hover {
+  background: url(/images/on.png) no-repeat center;
+}
