@@ -1,0 +1,64 @@
+header > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 1%;
+      }
+      header ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+      }
+      header div button {
+        position: relative;
+        padding-top: 12%;
+        font-weight: 600;
+        font-size: 100%;
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      header .flexSize1 {
+        width: 40%;
+      }
+      header .flexSize2 {
+        width: 20%;
+        height: 110px;
+        text-align: center;
+      }
+      header .flexSize3 {
+        width: 20%;
+        margin-left: 20%;
+      }
+      header .backColorY {
+        background-color: yellow;
+      }
+      header .displayIsNone {
+        display: none;
+      }
+      header #menubarList > li > a > img {
+        width: 200px;
+        height: auto;
+      }
+      header #menubarList li a {
+        text-decoration-line: none;
+      }
+      @media screen and (max-width: 685px) {
+        header .flexSize2 {
+          height: 125px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        header .flexSize1 {
+          width: 0%;
+        }
+        header .flexSize2 {
+          width: 33.3%;
+        }
+        header .flexSize3 {
+          width: 100%;
+          margin: 0%;
+          text-align: center;
+        }
+      }
