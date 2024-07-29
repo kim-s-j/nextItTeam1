@@ -1,0 +1,45 @@
+const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="">CEO 인사말</a><br /><a href="">빽다방 소개</a><br /><a href="">멤버십/앱 소개</a><br /><a href="">커피 이야기</a><br /><a
+              href=""
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="">신메뉴</a><br />
+            <a href="">커피</a><br />
+            <a href="">음료</a><br />
+            <a href="">아이스크림/디저트</a><br />
+            <a href="">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }

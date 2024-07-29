@@ -109,7 +109,8 @@
               objchild[j].style.backgroundColor = "#FFFFFF";
               objchild[j].style.display = "none";
             }
-            if (0 > btnNum - 2) for (let j = 0; j < enableBtnCount; j++) objchild[j].style.display = "";
+            if (0 > btnNum - 2 && !(objchild.length == 2)) for (let j = 0; j < enableBtnCount; j++) objchild[j].style.display = "";
+            else if (objchild.length == 2) for (let j = 1; j <= enableBtnCount - 1; j++) objchild[objchild.length - j].style.display = "";
             else if (objchild.length <= btnNum) for (let j = 1; j <= enableBtnCount; j++) objchild[objchild.length - j].style.display = "";
             else if (0 <= btnNum - 2) for (let j = 0; j < enableBtnCount; j++) objchild[btnNum - j].style.display = "";
             obj.target.style.backgroundColor = "#DCDCDC";
