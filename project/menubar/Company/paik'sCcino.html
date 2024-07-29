@@ -25,6 +25,11 @@
       </div>
       <ul class="KingUl"></ul>
     </div>
+    <!-- top 버튼 -->
+    <div class="top" onclick="smoothScroll()">
+      <span></span>
+    </div>
+
     <script>
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
@@ -506,6 +511,11 @@
       allButtons.forEach((button) => {
         button.addEventListener("click", toggleInfo);
       });
+
+      // top 버튼
+      function smoothScroll() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     </script>
   </body>
 </html>

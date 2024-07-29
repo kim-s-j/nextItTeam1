@@ -183,3 +183,17 @@ ul {
     width: 50%;
   }
 }
+/* top 버튼  style */
+.top {
+  position: fixed;
+  bottom: 15px;
+  right: 60px;
+  z-index: 10;
+}
+.top span {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: url(/images/top.png) no-repeat center;
+}
