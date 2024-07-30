@@ -6,16 +6,99 @@
     <title>drink</title>
     <link rel="stylesheet" href="/style/drink.css" />
   </head>
+  <style>
+    header > div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding-top: 1%;
+    }
+    header ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      list-style: none;
+    }
+    header div button {
+      position: relative;
+      padding-top: 12%;
+      font-weight: 600;
+      font-size: 100%;
+      border: none;
+      background: none;
+      width: 100%;
+    }
+    header .flexSize1 {
+      width: 40%;
+    }
+    header .flexSize2 {
+      width: 20%;
+      height: 110px;
+      text-align: center;
+    }
+    header .flexSize3 {
+      width: 20%;
+      margin-left: 20%;
+    }
+    header .backColorY {
+      background-color: yellow;
+    }
+    header .displayIsNone {
+      display: none;
+    }
+    header #menubarList > li > a > img {
+      width: 200px;
+      height: auto;
+    }
+    header #menubarList li a {
+      text-decoration-line: none;
+    }
+    @media screen and (max-width: 685px) {
+      header .flexSize2 {
+        height: 125px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      header .flexSize1 {
+        width: 0%;
+      }
+      header .flexSize2 {
+        width: 33.3%;
+      }
+      header .flexSize3 {
+        width: 100%;
+        margin: 0%;
+        text-align: center;
+      }
+    }
+    #menubarList {
+      padding: 0;
+    }
+  </style>
   <body>
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <div class="imgBg">
       <div>
         <h1 class="h1center">음료</h1>
         <div class="center">
           <br class="underBar" />
         </div>
-        <p class="center mainP">
-          퀄리티 높은 식자재를 사용하여 맛있는 음료를 제공합니다.
-        </p>
+        <p class="center mainP">퀄리티 높은 식자재를 사용하여 맛있는 음료를 제공합니다.</p>
       </div>
     </div>
     <div class="container">
@@ -31,6 +114,51 @@
     </div>
 
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
 
@@ -38,8 +166,7 @@
       let img = "/images/HOT-완전초코-450x588.png";
       let koreanName = "초코라떼(HOT)";
       let englishName = "CHOCO LATTE";
-      let explanation =
-        "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
+      let explanation = "초코에 퐁당 빠지고 싶을때~!? 진짜~! 완~전 진한 초코라떼";
       let servingSize = "※ 1회 제공량 기준 : 16oz";
       let caffeineName = "카페인(mg)";
       let caffeine = 15;
@@ -195,8 +322,7 @@
       img = "/images/HOT-민트초코라떼-450x588.png";
       koreanName = "민트초코라떼(HOT)";
       englishName = "MINT CHOCO LATTE";
-      explanation =
-        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      explanation = "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
       servingSize = "※ 1회 제공량 기준 :  16oz";
       caffeineName = "카페인(mg)";
       caffeine = 30;
@@ -235,8 +361,7 @@
       img = "/images/ICED-민트초코라떼-450x588.png";
       koreanName = "민트초코라떼(ICED)";
       englishName = "MINT CHOCO LATTE";
-      explanation =
-        "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
+      explanation = "초코칩으로 더한 깊은 초콜릿의 맛과 민트의 상쾌함이 어우러진 진한 민트초코라떼";
       servingSize = "※ 1회 제공량 기준 :  24oz";
       caffeineName = "카페인(mg)";
       caffeine = 38;
@@ -275,8 +400,7 @@
       img = "/images/HOT-토피넛라떼-450x588.png";
       koreanName = "토피넛라떼(HOT)";
       englishName = "TOFFEE NUT LATTE";
-      explanation =
-        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      explanation = "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
       servingSize = "※ 1회 제공량 기준 :  16oz";
       caffeineName = "카페인(mg)";
       caffeine = 51;
@@ -314,8 +438,7 @@
       img = "/images/ICED-토피넛라떼-450x588.png";
       koreanName = "토피넛라떼(ICED)";
       englishName = "TOFFEE NUT LATTE";
-      explanation =
-        "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
+      explanation = "견과류와 카라멜의 고소하고 달콤함이 느껴지는 부드럽고 진한 맛의 토피넛라떼(샷추가 +500원)";
       servingSize = "※ 1회 제공량 기준 :  24oz";
       caffeineName = "카페인(mg)";
       caffeine = 51;

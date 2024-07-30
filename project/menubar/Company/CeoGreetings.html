@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>찐최종 인사말임 ㅇㅇ</title>
+    <title>CeoGreetings</title>
     <style>
       body {
         margin: 45px;
@@ -112,8 +112,7 @@
       }
 
       .top span:hover {
-        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat
-          center;
+        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat center;
       }
 
       @media screen and (min-width: 1025px) {
@@ -179,20 +178,98 @@
           height: 35px;
         }
       }
+      header > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 1%;
+      }
+      header ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+      }
+      header div button {
+        position: relative;
+        padding-top: 12%;
+        font-weight: 600;
+        font-size: 100%;
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      header .flexSize1 {
+        width: 40%;
+      }
+      header .flexSize2 {
+        width: 20%;
+        height: 110px;
+        text-align: center;
+      }
+      header .flexSize3 {
+        width: 20%;
+        margin-left: 20%;
+      }
+      header .backColorY {
+        background-color: yellow;
+      }
+      header .displayIsNone {
+        display: none;
+      }
+      header #menubarList > li > a > img {
+        width: 200px;
+        height: auto;
+      }
+      header #menubarList li a {
+        text-decoration-line: none;
+      }
+      @media screen and (max-width: 685px) {
+        header .flexSize2 {
+          height: 125px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        header .flexSize1 {
+          width: 0%;
+        }
+        header .flexSize2 {
+          width: 33.3%;
+        }
+        header .flexSize3 {
+          width: 100%;
+          margin: 0%;
+          text-align: center;
+        }
+      }
+      #menubarList {
+        padding: 0;
+      }
     </style>
   </head>
-  <body id="body" style="display: flex; justify-content: center">
+  <body id="body" style="margin: 0; justify-content: center">
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <div style="width: 100%">
       <div style="padding: 0% 30% 0% 45%">
-        <img
-          style="width: 100%"
-          height="100%"
-          class="logoImg"
-          src="/images/PAIK'S COFFEE.png"
-        />
+        <img style="width: 100%" height="100%" class="logoImg" src="/images/PAIK'S COFFEE.png" />
       </div>
 
-      <div id="blockUl" class="blockUl addFlex" style="width: 100%">
+      <div id="blockUl" class="blockUl addFlex" style="width: 86%">
         <div class="responsiveCeoImg divSizeControl">
           <!-- style="margin: 0% 7% 0% 5%" -->
           <div class="ceoImg">
@@ -203,57 +280,41 @@
             <div class="lineChangeDiv1">
               <div class="lineChangeDiv2">
                 <ul>
-                  <li>
-                    <strong class="letterBold">2012</strong> 더본재팬 대표이사
-                  </li>
+                  <li><strong class="letterBold">2012</strong> 더본재팬 대표이사</li>
                 </ul>
               </div>
 
               <div class="lineChangeDiv3">
                 <ul>
-                  <li>
-                    ‘백종원이 추천하는 집밥 메뉴 55’출간(국내 및 대만판 출간)
-                  </li>
+                  <li>‘백종원이 추천하는 집밥 메뉴 55’출간(국내 및 대만판 출간)</li>
                 </ul>
               </div>
               <div class="lineChangeDiv2">
                 <ul>
-                  <li>
-                    <strong class="letterBold">2008</strong> 더본아메리카
-                    대표이사
-                  </li>
+                  <li><strong class="letterBold">2008</strong> 더본아메리카 대표이사</li>
                 </ul>
               </div>
 
               <div class="lineChangeDiv3">
                 <ul>
-                  <li>
-                    ‘백종원이 추천하는 집밥 메뉴 54’출간(국내 및 대만판 출간)
-                  </li>
+                  <li>‘백종원이 추천하는 집밥 메뉴 54’출간(국내 및 대만판 출간)</li>
                 </ul>
               </div>
               <div class="lineChangeDiv2">
                 <ul>
-                  <li>
-                    <strong class="letterBold">2005</strong> 더본차이나 대표이사
-                  </li>
+                  <li><strong class="letterBold">2005</strong> 더본차이나 대표이사</li>
                 </ul>
               </div>
 
               <div class="lineChangeDiv3">
                 <ul>
-                  <li>
-                    ‘백종원이 추천하는 집밥 메뉴 52’출간(국내 및
-                    중국판/대만판출간)
-                  </li>
+                  <li>‘백종원이 추천하는 집밥 메뉴 52’출간(국내 및 중국판/대만판출간)</li>
                 </ul>
               </div>
 
               <div class="lineChangeDiv2">
                 <ul>
-                  <li>
-                    <strong class="letterBold">1993</strong> 더본코리아 대표이사
-                  </li>
+                  <li><strong class="letterBold">1993</strong> 더본코리아 대표이사</li>
                 </ul>
               </div>
 
@@ -279,21 +340,14 @@
               <br class="underScore" />
             </h1>
             <span
-              ><strong
-                style="font-size: 15px; font-weight: 2000; margin-bottom: 25px"
-                >빽다방의 역사는 재미있는 에피소드로 시작합니다.</strong
-              ></span
+              ><strong style="font-size: 15px; font-weight: 2000; margin-bottom: 25px">빽다방의 역사는 재미있는 에피소드로 시작합니다.</strong></span
             >
             <br />
             <p class="textCloudy" style="margin-bottom: 25px">
-              2006년, 논현동에 몰려있던 저희 식당들 때문에 식당 주변에 고객들의
-              불법 주정차가 <br />많았습니다. 이러한 차량 때문에 가장 피해를
-              많이 보신 분이 저희 원조쌈밥집 입구에 <br />위치한 작은
-              카페였습니다. 카페 앞 정차 차량으로 인해 항상 죄송한 마음이
-              있었는데,
+              2006년, 논현동에 몰려있던 저희 식당들 때문에 식당 주변에 고객들의 불법 주정차가 <br />많았습니다. 이러한 차량 때문에 가장 피해를 많이
+              보신 분이 저희 원조쌈밥집 입구에 <br />위치한 작은 카페였습니다. 카페 앞 정차 차량으로 인해 항상 죄송한 마음이 있었는데,
               <br />
-              아예 인수를 하는 것이 어떻겠냐는 카페 사장님의 부탁에 어쩌다 보니
-              운영하게 된
+              아예 인수를 하는 것이 어떻겠냐는 카페 사장님의 부탁에 어쩌다 보니 운영하게 된
               <br />
               작은 카페가 바로 빽다방의 시초가 되었습니다.
               <br />
@@ -303,32 +357,20 @@
               <br />
               커피에 대해 연구하면서 머릿속으로 수많은 물음표를 만들었습니다.
               <br />
-              원두의 유통 구조가 어떠하길래 커피가 이렇게 비쌀까? 아이스커피를
-              목덜미가 서늘할 <br />정도로 시원하게 마실 수 있는 방법은
-              무엇일까? 내가 좋아하는 믹스커피를 질리지 않게<br />대용량으로
-              즐기는 방법은 없을까? 테이크아웃이라고 빵을 못 팔 수는 없지
-              않을까?<br />
+              원두의 유통 구조가 어떠하길래 커피가 이렇게 비쌀까? 아이스커피를 목덜미가 서늘할 <br />정도로 시원하게 마실 수 있는 방법은 무엇일까?
+              내가 좋아하는 믹스커피를 질리지 않게<br />대용량으로 즐기는 방법은 없을까? 테이크아웃이라고 빵을 못 팔 수는 없지 않을까?<br />
             </p>
             <p>
               <span>
-                <strong
-                  style="
-                    font-size: 14.5px;
-                    font-weight: 2000;
-                    margin-bottom: 25px;
-                    line-height: 28px;
-                  "
-                  >이러한 호기심으로 시작했던 작은 카페의 메뉴가 국내를 넘어
-                  세계인에게도 인정받는 <br />시그니처 메뉴인 아이스
-                  아메리카노와 원조커피로 성장하게 되었습니다.<br
+                <strong style="font-size: 14.5px; font-weight: 2000; margin-bottom: 25px; line-height: 28px"
+                  >이러한 호기심으로 시작했던 작은 카페의 메뉴가 국내를 넘어 세계인에게도 인정받는 <br />시그니처 메뉴인 아이스 아메리카노와
+                  원조커피로 성장하게 되었습니다.<br
                 /></strong>
               </span>
             </p>
             <p class="textCloudy">
-              이는 모두 가성비 중심의 스마트하고, 합리적인 소비를 원하는
-              고객분들께서 만들어<br />
-              주신 성장입니다. 그 기대를 저버리지 않기 위한 막중한 책임감을
-              느끼며 좋은 품질, 부담<br />
+              이는 모두 가성비 중심의 스마트하고, 합리적인 소비를 원하는 고객분들께서 만들어<br />
+              주신 성장입니다. 그 기대를 저버리지 않기 위한 막중한 책임감을 느끼며 좋은 품질, 부담<br />
               없는 가격의 커피와 음료로 보답하겠습니다.<br />
             </p>
             <p class="textCloudy">
@@ -339,8 +381,7 @@
             <div>
               (주)더본코리아 대표이사 <br />
               <h3 style="float: left; justify-content: center; margin: 0px">
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;백
-                종 원
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;백 종 원
               </h3>
             </div>
             <div>
@@ -352,6 +393,51 @@
       <div class="top" onclick="smoothScroll()"><span></span></div>
     </div>
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       window.addEventListener("resize", function () {});
       window.onresize = function () {
         const width = window.innerWidth;

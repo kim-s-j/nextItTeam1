@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>저트저트디저트</title>
+    <title>dessert</title>
     <style>
       body {
         margin: 0;
@@ -197,8 +197,7 @@
       }
 
       .top span:hover {
-        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat
-          center;
+        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat center;
       }
 
       @media screen and (min-width: 670px) {
@@ -212,18 +211,99 @@
           width: 50%;
         }
       }
+      header > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 1%;
+      }
+      header ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+      }
+      header div button {
+        position: relative;
+        padding-top: 12%;
+        font-weight: 600;
+        font-size: 100%;
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      header .flexSize1 {
+        width: 40%;
+      }
+      header .flexSize2 {
+        width: 20%;
+        height: 110px;
+        text-align: center;
+      }
+      header .flexSize3 {
+        width: 20%;
+        margin-left: 20%;
+      }
+      header .backColorY {
+        background-color: yellow;
+      }
+      header .displayIsNone {
+        display: none;
+      }
+      header #menubarList > li > a > img {
+        width: 200px;
+        height: auto;
+      }
+      header #menubarList li a {
+        text-decoration-line: none;
+      }
+      @media screen and (max-width: 685px) {
+        header .flexSize2 {
+          height: 125px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        header .flexSize1 {
+          width: 0%;
+        }
+        header .flexSize2 {
+          width: 33.3%;
+        }
+        header .flexSize3 {
+          width: 100%;
+          margin: 0%;
+          text-align: center;
+        }
+      }
+      #menubarList {
+        padding: 0;
+      }
     </style>
   </head>
   <body>
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <div class="imgBg">
       <div>
         <h1 class="h1center">아이스크림/디저트</h1>
         <div class="center">
           <br class="underBar" />
         </div>
-        <p class="center mainP">
-          달콤 아이스크림부터 든든 브레드까지 다양하게 즐기세요.
-        </p>
+        <p class="center mainP">달콤 아이스크림부터 든든 브레드까지 다양하게 즐기세요.</p>
       </div>
     </div>
     <div class="container">
@@ -236,6 +316,51 @@
     </div>
 
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       // localStorage.clear();
       //  로컬스토리지에 값 전체삭제
 
@@ -356,8 +481,7 @@
       img1 = "/images/sweetpoteto.png";
       koreanName = "쫀득 고구마빵";
       englishName = "CHEWY SWEET POTATO BREAD";
-      explanation =
-        "국내산 고구마(앙금 내 수입산 혼용)가\u000A들어있는 달달하고 고소한 고구마빵";
+      explanation = "국내산 고구마(앙금 내 수입산 혼용)가\u000A들어있는 달달하고 고소한 고구마빵";
       servingSize = "※ 1회 제공량 기준 :  100g";
       caffeineName = "카페인(mg)";
       caffeine = 0;
@@ -433,8 +557,7 @@
       img1 = "/images/cheese.png";
       koreanName = "황치즈 크럼블 머핀";
       englishName = "YELLOW CHEESS CRUMBLE MUFFIN";
-      explanation =
-        "짭잘하고 고소한 황치즈 머핀에 달콤한\u000A크럼블을 곁들인 단짠 디저트";
+      explanation = "짭잘하고 고소한 황치즈 머핀에 달콤한\u000A크럼블을 곁들인 단짠 디저트";
       servingSize = "※ 1회 제공량 기준 :  130g";
       caffeineName = "카페인(mg)";
       caffeine = 0;
@@ -472,8 +595,7 @@
       img1 = "/images/nurongji.png";
       koreanName = "크룽지";
       englishName = "KUNGE";
-      explanation =
-        "황설탕 카라멜라이징으로 더 달콤고소 \u000A한 빅사이즈 크룽지";
+      explanation = "황설탕 카라멜라이징으로 더 달콤고소 \u000A한 빅사이즈 크룽지";
       servingSize = "※ 1회 제공량 기준 :  38g";
       caffeineName = "카페인(mg)";
       caffeine = 0;
@@ -511,8 +633,7 @@
       img1 = "/images/creamburn.png";
       koreanName = "못난이 생크림 카스텔라";
       englishName = "UGLY WHIPPED CREAM CASTELLA";
-      explanation =
-        "부드러운 우유 생크림이 가득한 폭신하\u000A고 촉촉한 카스텔라";
+      explanation = "부드러운 우유 생크림이 가득한 폭신하\u000A고 촉촉한 카스텔라";
       servingSize = "※ 1회 제공량 기준 :  120g";
       caffeineName = "카페인(mg)";
       caffeine = 0;
@@ -547,16 +668,7 @@
         protein,
       };
 
-      const tabel = [
-        icecreamBread,
-        iceChocoBread,
-        potatoBread,
-        sweetPotetoBREAD,
-        saltBread,
-        cheessMuffin,
-        kunge,
-        creamCastella,
-      ];
+      const tabel = [icecreamBread, iceChocoBread, potatoBread, sweetPotetoBREAD, saltBread, cheessMuffin, kunge, creamCastella];
       localStorage.setItem("coffee", JSON.stringify(tabel));
       // 로컬스트리지에 값넣는것
 

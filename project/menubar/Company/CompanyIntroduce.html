@@ -3,17 +3,96 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>기업소개</title>
+    <title>CompanyIntroduce</title>
     <link rel="stylesheet" href="/style/CompanyIntroduce.css" />
     <!-- <style></style> -->
+    <style>
+      header > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 1%;
+      }
+      header ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+      }
+      header div button {
+        position: relative;
+        padding-top: 12%;
+        font-weight: 600;
+        font-size: 100%;
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      header .flexSize1 {
+        width: 40%;
+      }
+      header .flexSize2 {
+        width: 20%;
+        height: 110px;
+        text-align: center;
+      }
+      header .flexSize3 {
+        width: 20%;
+        margin-left: 20%;
+      }
+      header .backColorY {
+        background-color: yellow;
+      }
+      header .displayIsNone {
+        display: none;
+      }
+      header #menubarList > li > a > img {
+        width: 200px;
+        height: auto;
+      }
+      header #menubarList li a {
+        text-decoration-line: none;
+      }
+      @media screen and (max-width: 685px) {
+        header .flexSize2 {
+          height: 125px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        header .flexSize1 {
+          width: 0%;
+        }
+        header .flexSize2 {
+          width: 33.3%;
+        }
+        header .flexSize3 {
+          width: 100%;
+          margin: 0%;
+          text-align: center;
+        }
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <div class="content1">
       <h2 class="contentEng1">BRAND IDENTIFIER</h2>
 
@@ -24,17 +103,10 @@
           <p>빽다방 브랜드 규정</p>
         </dt>
         <dd>
+          <p>빽다방 Idenfitire는 빽다방을 대표하는 중요한 상징요소로, 심볼마크와 로고타입의 조합을 의미합니다.</p>
           <p>
-            빽다방 Idenfitire는 빽다방을 대표하는 중요한 상징요소로, 심볼마크와
-            로고타입의 조합을 의미합니다.
-          </p>
-          <p>
-            빽다방의 시각 아이덴티티 구축은 정확한 Identifier 규정에 따라야
-            하며,
-            <span class="blockText"
-              >어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는
-              안됩니다.</span
-            >
+            빽다방의 시각 아이덴티티 구축은 정확한 Identifier 규정에 따라야 하며,
+            <span class="blockText">어떠한 경우에도 훼손, 변형 등의 이미지 손상을 가해서는 안됩니다.</span>
           </p>
         </dd>
       </dl>
@@ -146,12 +218,8 @@
             <dt>소통</dt>
             <dd>
               각 분기별로 지역별 소규모 간담회를 진행하고,
-              <span class="blockText">
-                매년 말 전체 점주님을 대상으로 하는 점주연수를 진행합니다.</span
-              >
-              <em
-                >가맹본부가 발전할 수 있는 방향성에 대해 함께 논의하며 토론</em
-              >
+              <span class="blockText"> 매년 말 전체 점주님을 대상으로 하는 점주연수를 진행합니다.</span>
+              <em>가맹본부가 발전할 수 있는 방향성에 대해 함께 논의하며 토론</em>
               합니다.
             </dd>
           </dl>
@@ -161,9 +229,7 @@
           <dl>
             <dt>고객만족도</dt>
             <dd>
-              유통과정에서 발생하는 가맹본부의 수익을 최소화하여,<span
-                class="blockText"
-              >
+              유통과정에서 발생하는 가맹본부의 수익을 최소화하여,<span class="blockText">
                 고급 식자재를 사용하되 합리적인 가격을 유지하고,
                 <em>만족도 높은 서비스를 제공</em>합니다.</span
               >
@@ -177,10 +243,7 @@
       <ul class="trendContent">
         <li>
           <div class="imgCon">
-            <img
-              src="/images/trend_img01.jpg"
-              alt="다양한 맛과 비주얼의 시그니처 커피메뉴"
-            />
+            <img src="/images/trend_img01.jpg" alt="다양한 맛과 비주얼의 시그니처 커피메뉴" />
           </div>
           <dl class="trendName">
             <dt>
@@ -193,9 +256,7 @@
             </dt>
             <dd>
               <p>
-                퀄리티 높은 커피를 다양한 맛과 비주얼로<span class="blockText">
-                  고객들에게 제공하여 달달연유라떼, 아샷추 등의</span
-                >
+                퀄리티 높은 커피를 다양한 맛과 비주얼로<span class="blockText"> 고객들에게 제공하여 달달연유라떼, 아샷추 등의</span>
                 <em>빽다방 시그니처 커피메뉴로 안착</em>시켰습니다.
               </p>
             </dd>
@@ -203,10 +264,7 @@
         </li>
         <li>
           <div class="imgCon">
-            <img
-              src="/images/trend_img02.jpg"
-              alt="다시 돌아오는 계속 생각나는 그 음료"
-            />
+            <img src="/images/trend_img02.jpg" alt="다시 돌아오는 계속 생각나는 그 음료" />
           </div>
           <dl class="trendName">
             <dt>
@@ -220,16 +278,11 @@
             <dd>
               <p>
                 고객들이 즐겨 마셨던 시그널한 메뉴들을 재출시하며,
-                <span class="blockText"
-                  >끊임없이 생각나는 브랜드로 자리잡았습니다.</span
-                >
+                <span class="blockText">끊임없이 생각나는 브랜드로 자리잡았습니다.</span>
               </p>
               <p>
                 부담 없이 들를 수 있는
-                <em
-                  >합리적인 가격에 트렌디하고 맛있는 음료가 항상 반겨주는
-                  빽다방</em
-                >이 되겠습니다.
+                <em>합리적인 가격에 트렌디하고 맛있는 음료가 항상 반겨주는 빽다방</em>이 되겠습니다.
               </p>
             </dd>
           </dl>
@@ -242,6 +295,51 @@
     </div>
 
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       function smoothScroll() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
