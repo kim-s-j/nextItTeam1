@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>커피이야기</title>
+    <title>coffeestory</title>
     <style>
       * {
         padding: 0;
@@ -400,8 +400,7 @@
       }
 
       .top span:hover {
-        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat
-          center;
+        background: url(/images/TalkMedia_i_8056c953a8a4.png.png) no-repeat center;
       }
 
       @media screen and (min-width: 1020px) {
@@ -757,9 +756,89 @@
           margin-left: 80px;
         }
       }
+      header > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 1%;
+      }
+      header ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        list-style: none;
+      }
+      header div button {
+        position: relative;
+        padding-top: 12%;
+        font-weight: 600;
+        font-size: 100%;
+        border: none;
+        background: none;
+        width: 100%;
+      }
+      header .flexSize1 {
+        width: 40%;
+      }
+      header .flexSize2 {
+        width: 20%;
+        height: 120px;
+        text-align: center;
+      }
+      header .flexSize3 {
+        width: 20%;
+        margin-left: 20%;
+      }
+      header .backColorY {
+        background-color: yellow;
+      }
+      header .displayIsNone {
+        display: none;
+      }
+      header #menubarList > li > a > img {
+        width: 200px;
+        height: auto;
+      }
+      header #menubarList li a {
+        text-decoration-line: none;
+      }
+      @media screen and (max-width: 685px) {
+        header .flexSize2 {
+          height: 135px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        header .flexSize1 {
+          width: 0%;
+        }
+        header .flexSize2 {
+          width: 33.3%;
+        }
+        header .flexSize3 {
+          width: 100%;
+          margin: 0%;
+          text-align: center;
+        }
+      }
     </style>
   </head>
   <body>
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <div class="bgYellow">
       <h1 class="coffeeStory">PAIK’S COFFEE STORY</h1>
       <div class="ceoLogoCenter">
@@ -814,8 +893,7 @@
                 </dd>
                 <dd class="specialScaa">
                   <strong class="specialTee">*스페셜티 커피란?</strong> <br />
-                  미국 스페셜티 커피 협회(SCAA)의 평가에서 80점 이상을 받은
-                  우수등급의 커피입니다.
+                  미국 스페셜티 커피 협회(SCAA)의 평가에서 80점 이상을 받은 우수등급의 커피입니다.
                 </dd>
               </dl>
             </div>
@@ -892,8 +970,7 @@
                 <dd class="coffeeCherry">
                   <strong class="specialTee">*DOT 프로세싱이란?</strong>
                   <br />
-                  커피체리를 바로 수확하지 않고 나무에서 건조해 단맛을 충분하게
-                  입히는 방식입니다.
+                  커피체리를 바로 수확하지 않고 나무에서 건조해 단맛을 충분하게 입히는 방식입니다.
                 </dd>
               </dl>
             </div>
@@ -909,16 +986,9 @@
               <br class="underScore" />
             </div>
             <div>
-              <p class="center brazilColor">
-                브라질 원두 고유의 묵직한 바디감이 느껴지며,
-              </p>
-              <p class="center brazilColor">
-                아몬드의 고소함과 밀크초콜릿의 은은한 단맛이 균형을 이루는
-                매력적인 맛입니다
-              </p>
-              <p class="center brazilColor">
-                커피를 머금었을 때 느껴지는 부드러운 실키함을 느껴보세요!
-              </p>
+              <p class="center brazilColor">브라질 원두 고유의 묵직한 바디감이 느껴지며,</p>
+              <p class="center brazilColor">아몬드의 고소함과 밀크초콜릿의 은은한 단맛이 균형을 이루는 매력적인 맛입니다</p>
+              <p class="center brazilColor">커피를 머금었을 때 느껴지는 부드러운 실키함을 느껴보세요!</p>
 
               <ul class="ulNone" style="height: 1400px">
                 <div id="middleChoco" style="justify-content: center">
@@ -943,10 +1013,7 @@
                   <div>
                     <li>
                       <span class="circle icon4Span">
-                        <img
-                          class="circleImg icon4"
-                          src="/images/story_icon04.png"
-                        />
+                        <img class="circleImg icon4" src="/images/story_icon04.png" />
                       </span>
                       <p class="center circleFont">Almond</p>
                     </li>
@@ -1155,10 +1222,7 @@
               </div>
               <dl>
                 <dt class="signatureName">원조커피</dt>
-                <dd class="signaturecoffee">
-                  익숙한 듯 색다른 믹스커피 업그레 <br />이드 버전. 빽다방만의
-                  시그니처 커 <br />피메뉴
-                </dd>
+                <dd class="signaturecoffee">익숙한 듯 색다른 믹스커피 업그레 <br />이드 버전. 빽다방만의 시그니처 커 <br />피메뉴</dd>
               </dl>
             </li>
             <!--  -->
@@ -1168,6 +1232,51 @@
       </div>
     </div>
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       function smoothScroll() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }

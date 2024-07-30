@@ -346,9 +346,28 @@
           text-align: center;
         }
       }
+      .top {
+        position: fixed;
+        bottom: 15px;
+        right: 60px;
+        z-index: 10;
+      }
+      .top span {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background: url(/images/top.png) no-repeat center;
+      }
+      .top span:hover {
+        background: url(/images/on.png) no-repeat center;
+      }
     </style>
   </head>
   <body>
+    <div class="top" onclick="smoothScroll()">
+      <span></span>
+    </div>
     <header>
       <div id="headerDiv1">
         <ul id="menubarList">
@@ -407,7 +426,7 @@
       </a>
     </section>
     <section class="flex">
-      <a href="/testPage.html" class="goPage3">
+      <a href="/menubar/Company/coffeemenu.html" class="goPage3">
         <dl>
           <dt class="content5 contentSet">FRESH<br />COFFEE</dt>
           <dd class="content6">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
@@ -416,14 +435,14 @@
       </a>
     </section>
     <section class="flex">
-      <a href="/testPage.html" class="goPage4">
+      <a href="/menubar/Company/drink.html" class="goPage4">
         <dl>
           <dt class="content7 contentSet">VARIOUS<br />BEVERAGE</dt>
           <dd class="content8">에이드, 티, 주스 등 취향대로<br />골라 먹는 즐거움!</dd>
         </dl>
         <img src="/images/various_beverage.jpg" class="goPageImg" />
       </a>
-      <a href="/testPage.html" class="goPage5">
+      <a href="/menubar/Company/paik'sCcino.html" class="goPage5">
         <dl>
           <dt class="content9 contentSet">SWEET<br />PAIK'S CCINO</dt>
           <dd class="content10">신선한 뉴크롭 원두를 사용하여<br />추출한 커피메뉴!</dd>
@@ -432,7 +451,7 @@
       </a>
     </section>
     <section class="flex">
-      <a href="/testPage.html" class="goPage6">
+      <a href="/menubar/Company/dessert.html" class="goPage6">
         <dl>
           <dt class="content11 contentSet">TASTY<br />ICE CREAM<br />DESSERT</dt>
           <dd class="content12">달콤한 아이스크림부터<br />든든한 브레드까지!</dd>
@@ -449,6 +468,9 @@
     </section>
 
     <script>
+      function smoothScroll() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
       let x_pos = -100;
       let i = 1;
       function moveSlide() {
@@ -473,7 +495,7 @@
       document.getElementById("keyWord").addEventListener("keydown", (key) => {
         if (key.keyCode === 13) {
           localStorage.setItem("keyWordData", JSON.stringify(document.getElementById("keyWord").value));
-          window.location.href = "http://192.168.0.63:5500/menubar/storeSearch/storeSearch.html";
+          window.location.href = "/menubar/storeSearch/storeSearch.html";
         }
       });
 
@@ -496,18 +518,18 @@
             }
           }
           if (menuBtnList[idx1] == menubarList[1]) {
-            menubarList[5].innerHTML = `<a href="">CEO 인사말</a><br /><a href="">빽다방 소개</a><br /><a href="">멤버십/앱 소개</a><br /><a href="">커피 이야기</a><br /><a
-              href=""
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
               >교육 이야기</a
             ><br />`;
           } else if (menuBtnList[idx1] == menubarList[2]) {
-            menubarList[6].innerHTML = `     <a href="">신메뉴</a><br />
-            <a href="">커피</a><br />
-            <a href="">음료</a><br />
-            <a href="">아이스크림/디저트</a><br />
-            <a href="">빽스치노</a>`;
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
           } else if (menuBtnList[idx1] == menubarList[3]) {
-            menubarList[7].innerHTML = `<a href="">매장찾기</a>`;
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
           }
         });
       }

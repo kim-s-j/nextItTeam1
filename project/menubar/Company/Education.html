@@ -3,16 +3,98 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Education</title>
     <link rel="stylesheet" href="/style/Education.css" />
   </head>
+  <style>
+    header > div {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding-top: 1%;
+    }
+    header ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      list-style: none;
+    }
+    header div button {
+      position: relative;
+      padding-top: 12%;
+      font-weight: 600;
+      font-size: 100%;
+      border: none;
+      background: none;
+      width: 100%;
+    }
+    header .flexSize1 {
+      width: 40%;
+    }
+    header .flexSize2 {
+      width: 20%;
+      height: 110px;
+      text-align: center;
+    }
+    header .flexSize3 {
+      width: 20%;
+      margin-left: 20%;
+    }
+    header .backColorY {
+      background-color: yellow;
+    }
+    header .displayIsNone {
+      display: none;
+    }
+    header #menubarList > li > a > img {
+      width: 200px;
+      height: auto;
+    }
+    header #menubarList li a {
+      text-decoration-line: none;
+    }
+    @media screen and (max-width: 685px) {
+      header .flexSize2 {
+        height: 125px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      header .flexSize1 {
+        width: 0%;
+      }
+      header .flexSize2 {
+        width: 33.3%;
+      }
+      header .flexSize3 {
+        width: 100%;
+        margin: 0%;
+        text-align: center;
+      }
+    }
+    body {
+      margin: 0;
+    }
+  </style>
   <body>
+    <header>
+      <div id="headerDiv1">
+        <ul id="menubarList">
+          <li class="flexSize3">
+            <a href=""><img src="/images/logo.png" alt="" /></a>
+          </li>
+          <li class="flexSize2 menuBtn"><button>빽다방</button></li>
+          <li class="flexSize2 menuBtn"><button>메뉴</button></li>
+          <li class="flexSize2 menuBtn"><button>매장 찾기</button></li>
+          <li class="flexSize1 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+          <li class="flexSize2 backColorY displayIsNone"></li>
+        </ul>
+      </div>
+    </header>
     <!--  -->
     <div class="eduStory">
       <div class="barista">
@@ -20,15 +102,10 @@
         <dl class="baristaInfo">
           <dt>
             <em>빽다방만의 자격검정제도</em>로,
-            <span class="blockText"
-              >커피 추출, 메뉴 제조, 위생, 고객 응대 및 서비스 등</span
-            >
+            <span class="blockText">커피 추출, 메뉴 제조, 위생, 고객 응대 및 서비스 등</span>
             빽다방 바리스타로서의 역량을 섬세하게 평가하는 제도입니다.
           </dt>
-          <dd>
-            한국산업인력공단에서 인증을 완료한 사업 내 자격검정 제도입니다. (2급
-            : 19년 9월 / 1급 : 20년 7월 인증 완료)
-          </dd>
+          <dd>한국산업인력공단에서 인증을 완료한 사업 내 자격검정 제도입니다. (2급 : 19년 9월 / 1급 : 20년 7월 인증 완료)</dd>
         </dl>
 
         <ul>
@@ -42,10 +119,7 @@
               <p>커피 추출, 스티밍, 메뉴 제조 및 응대 관련 기술 평가</p>
               <dl>
                 <dt>응시 자격</dt>
-                <dd>
-                  빽<em>'S</em> 바리스타 2급 특강을 이수한 모든 가맹점 점주와
-                  직원
-                </dd>
+                <dd>빽<em>'S</em> 바리스타 2급 특강을 이수한 모든 가맹점 점주와 직원</dd>
               </dl>
 
               <dl>
@@ -68,16 +142,13 @@
               <p></p>
               <p>
                 2급의 기술을 더 정확하고 신속하게 이행할 수 있도록 하며,
-                <span class="blockText"
-                  >라떼 아트를 적용한 메뉴 제공이 가능한지를 평가</span
-                >
+                <span class="blockText">라떼 아트를 적용한 메뉴 제공이 가능한지를 평가</span>
               </p>
 
               <dl>
                 <dt>응시 자격</dt>
                 <dd>
-                  바리스타 2급을 취득하고 빽 <em> 'S</em> 바리스타 1급 특강
-                  교육과정을 이수한 가맹점 점주와 직원
+                  바리스타 2급을 취득하고 빽 <em> 'S</em> 바리스타 1급 특강 교육과정을 이수한 가맹점 점주와 직원
                   <p></p>
                   <p>(* 바리스타 2급 취득 후 1년 이내 응시 가능)</p>
                 </dd>
@@ -100,22 +171,13 @@
           <dl class="qualificationInfo">
             <dt class="qualificationMain">
               “빽’S 바리스타”라는 사업 내 자격검정을 통하여
-              <span class="blockText"
-                >더 전문적인 바리스타의 커피를 빽다방에서 만날 수
-                있습니다.</span
-              >
+              <span class="blockText">더 전문적인 바리스타의 커피를 빽다방에서 만날 수 있습니다.</span>
             </dt>
             <dd>
               <em>* 사업 내 자격검정이란?</em>
               <p></p>
-              <p>
-                사업주가 근로자의 직무능력 향상을 위해 자체 자격검정제도를 도입,
-                운영하는 것
-              </p>
-              <p>
-                국가 자격으로 검정하기 어려운 특수 직무를 한국산업인력공단에서
-                평가하여 사업 내 자격으로 인증하는 제도
-              </p>
+              <p>사업주가 근로자의 직무능력 향상을 위해 자체 자격검정제도를 도입, 운영하는 것</p>
+              <p>국가 자격으로 검정하기 어려운 특수 직무를 한국산업인력공단에서 평가하여 사업 내 자격으로 인증하는 제도</p>
             </dd>
           </dl>
           <div class="goal">
@@ -129,9 +191,7 @@
                   <dt>브랜드 일관성</dt>
                   <dd>
                     빽다방의 생산성과 품질의 상향평준화로
-                    <span class="blockText"
-                      >일관성 있는 서비스를 제공합니다.</span
-                    >
+                    <span class="blockText">일관성 있는 서비스를 제공합니다.</span>
                   </dd>
                 </dl>
               </li>
@@ -144,9 +204,7 @@
                   <dt>고객 신뢰</dt>
                   <dd>
                     전문 바리스타를 양성하여
-                    <span class="blockText"
-                      >고객 응대 서비스 및 소통 수준과</span
-                    >
+                    <span class="blockText">고객 응대 서비스 및 소통 수준과</span>
                     브랜드에 대한 고객 이해도를 높입니다.
                   </dd>
                 </dl>
@@ -159,9 +217,7 @@
                   <dt>직원 성장</dt>
                   <dd>
                     차별화된 교육을 통해 인재를 양성하고,
-                    <span class="blockText"
-                      >소속감을 증진하며, 자부심을 부여해</span
-                    >
+                    <span class="blockText">소속감을 증진하며, 자부심을 부여해</span>
                     즐거운 근무환경을 조성합니다.
                   </dd>
                 </dl>
@@ -177,6 +233,51 @@
     </div>
 
     <script>
+      const menuBtnList = document.querySelectorAll(".menuBtn");
+      const menubarList = document.getElementById("menubarList").children;
+      for (let idx1 = 0; idx1 < menuBtnList.length; idx1++) {
+        menuBtnList[idx1].addEventListener("mouseenter", (el1) => {
+          for (let idx2 = 4; idx2 < menubarList.length; idx2++) {
+            menubarList[idx2].style.display = "block";
+            switch (idx2) {
+              case 5:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 6:
+                menubarList[idx2].innerHTML = "";
+                break;
+              case 7:
+                menubarList[idx2].innerHTML = "";
+                break;
+            }
+          }
+          if (menuBtnList[idx1] == menubarList[1]) {
+            menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
+              >교육 이야기</a
+            ><br />`;
+          } else if (menuBtnList[idx1] == menubarList[2]) {
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
+          } else if (menuBtnList[idx1] == menubarList[3]) {
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
+          }
+        });
+      }
+
+      for (let idx1 = 1; idx1 < menubarList.length; idx1++) {
+        menubarList[idx1].addEventListener("mouseleave", (el1) => {
+          if (idx1 > 3) {
+            menubarList[4].style.display = "none";
+            menubarList[5].style.display = "none";
+            menubarList[6].style.display = "none";
+            menubarList[7].style.display = "none";
+          }
+        });
+      }
       function smoothScroll() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }

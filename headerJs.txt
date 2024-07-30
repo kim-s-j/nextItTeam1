@@ -17,18 +17,18 @@ const menuBtnList = document.querySelectorAll(".menuBtn");
             }
           }
           if (menuBtnList[idx1] == menubarList[1]) {
-            menubarList[5].innerHTML = `<a href="">CEO 인사말</a><br /><a href="">빽다방 소개</a><br /><a href="">멤버십/앱 소개</a><br /><a href="">커피 이야기</a><br /><a
-              href=""
+  menubarList[5].innerHTML = `<a href="/menubar/Company/CeoGreetings.html">CEO 인사말</a><br /><a href="/menubar/Company/CompanyIntroduce.html">빽다방 소개</a><br /><a href="/menubar/Company/Membership.html">멤버십/앱 소개</a><br /><a href="/menubar/Company/coffeestory.html">커피 이야기</a><br /><a
+              href="/menubar/Company/Education.html"
               >교육 이야기</a
             ><br />`;
           } else if (menuBtnList[idx1] == menubarList[2]) {
-            menubarList[6].innerHTML = `     <a href="">신메뉴</a><br />
-            <a href="">커피</a><br />
-            <a href="">음료</a><br />
-            <a href="">아이스크림/디저트</a><br />
-            <a href="">빽스치노</a>`;
+            menubarList[6].innerHTML = `     <a href="/menubar/Company/newMenu.html">신메뉴</a><br />
+            <a href="/menubar/Company/coffeestory.html">커피</a><br />
+            <a href="/menubar/Company/drink.html">음료</a><br />
+            <a href="/menubar/Company/dessert.html">아이스크림/디저트</a><br />
+            <a href="/menubar/Company/paik'sCcino.html">빽스치노</a>`;
           } else if (menuBtnList[idx1] == menubarList[3]) {
-            menubarList[7].innerHTML = `<a href="">매장찾기</a>`;
+            menubarList[7].innerHTML = `<a href="/menubar/storeSearch/storeSearch.html">매장찾기</a>`;
           }
         });
       }
